@@ -1,0 +1,176 @@
+.body-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120vh;
+    background: #eee;
+}
+
+.cr-acc-container {
+    width: 400px;
+    background: #fff;
+    border-radius: 5px;
+    text-align: center;
+    padding: 50px 35px 10px 35px;
+}
+
+.cr-acc-container header {
+    font-size: 35px;
+    font-weight: 600;
+    margin: 0 0 30px 0;
+}
+
+.cr-acc-container .form-outer {
+    width: 100%;
+    overflow: hidden;
+}
+
+.cr-acc-container .form-outer form {
+    display: flex;
+    width: 400%;
+}
+
+.cr-acc-container .form-outer form .page {
+    transition: margin-left 0.3s ease-in-out;
+    width: 25%;
+}
+
+.cr-acc-container .form-outer form .page .title {
+    text-align: left;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.cr-acc-container .form-outer form .page .field {
+    height: 45px;
+    width: 330px;
+    margin: 45px 0;
+    position: relative;
+    display: flex;
+}
+
+.cr-acc-container .form-outer form .page .field .label {
+    position: absolute;
+    top: -30px;
+}
+
+.cr-acc-container .form-outer form .page .field input {
+    height: 100%;
+    width: 100%;
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    font-size: 18px;
+    padding-left: 15px;
+}
+
+.cr-acc-container .form-outer form .page .field select {
+    width: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.cr-acc-container .form-outer form .page .field button {
+    width: 100%;
+    height: calc(100% + 5px);
+    margin-top: -20px;
+    border: none;
+    border-radius: 5px;
+    background: #d43f8d;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s ease;
+}
+
+.cr-acc-container .form-outer form .page .field button .field button:hover {
+    background: #000;
+}
+
+.cr-acc-container .form-outer form .page .btns button {
+    margin-top: -20px !important;
+    margin-right: 5px;
+}
+
+.cr-acc-container .form-outer form .page .btns button .prev {
+    margin-right: 3px;
+    font-size: 17px;
+}
+
+.cr-acc-container .form-outer form .page .btns button .next {
+    margin-left: 3px;
+}
+
+.cr-acc-container .progress-bar-cr {
+    display: flex;
+    margin: 40px 0;
+}
+
+.cr-acc-container .progress-bar-cr .step-cr {
+    text-align: center;
+    width: 100%;
+}
+
+.cr-acc-container .progress-bar-cr .step-cr p {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 8px;
+}
+
+.cr-acc-container .progress-bar-cr .step-cr .bullet {
+    height: 25px;
+    width: 25px;
+    border: 2px solid #000;
+    display: inline-block;
+    border-radius: 50%;
+    transition: 0.2s;
+}
+
+.cr-acc-container .progress-bar-cr .step-cr .bullet.active {
+    border-color: #d43f8d;
+}
+
+.cr-acc-container .progress-bar-cr .step-cr .bullet:before,
+.cr-acc-container .progress-bar-cr .step-cr .bullet:after {
+    display: none;
+}
+
+.cr-acc-container .progress-bar-cr .step-cr .bullet:before,
+.cr-acc-container .progress-bar-cr .step-cr .bullet:after {
+    position: absolute;
+    content: '';
+    bottom: 11px;
+    right: -51px;
+    height: 3px;
+    width: 44px;
+    background: #262626;
+}
+
+.cr-acc-container .progress-bar-cr .step-cr .bullet.active:after {
+    background: #d43f8d;
+    animation: animate 0.3s linear forwards;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+.cr-acc-container .progress-bar-cr .step-cr span {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.cr-acc-container .progress-bar-cr .step-cr  .check {
+    display: none;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
