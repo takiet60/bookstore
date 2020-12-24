@@ -4,7 +4,6 @@ import com.project.store.model.UserModel;
 import com.project.store.service.IUserService;
 
 import javax.inject.Inject;
-import javax.jws.soap.SOAPBinding;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -15,7 +14,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
-
+// lấy dữ liệu từ V đưa
 
 @WebServlet(name = "RegisterController)", urlPatterns = "/register")
 

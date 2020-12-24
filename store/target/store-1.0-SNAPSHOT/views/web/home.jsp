@@ -93,6 +93,7 @@
             </div>
             <!-- Start Single Product -->
             <!-- Start Single Product -->
+            <c:forEach items="${listProduct} var = {p}">
             <div class="product product__style--3">
                 <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                     <div class="product__thumb">
@@ -103,10 +104,10 @@
                         </div>
                     </div>
                     <div class="product__content content--center">
-                        <h4><a href="single-product.html">Animal life</a></h4>
+                        <h4><a href="single-product.html">${p.name}</a></h4>
                         <ul class="prize d-flex">
-                            <li>$35.00</li>
-                            <li class="old_prize">$35.00</li>
+                            <li>${p.value}</li>
+                            <li class="old_prize">${p.cost} - ${p.value}</li>
                         </ul>
                         <div class="action">
                             <div class="actions_inner">
@@ -130,6 +131,7 @@
                     </div>
                 </div>
             </div>
+            </c:forEach>
             <!-- Start Single Product -->
             <!-- Start Single Product -->
             <div class="product product__style--3">

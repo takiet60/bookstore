@@ -1,0 +1,204 @@
+ Category id: 1.Sinh học - 2.Kinh doanh - 3.Nấu ăn - 4.Sức khỏe và thể thao - 5.Lịch sử
+        - 6.Bí ẩn - 7.Truyền cảm hứng - 8.Tiểu thuyết Lãng mạn - 9.Kỹ năng sống -
+        10. Kỹ năng sống - 11. Hài hước - 12. Kinh dị  - 13. Thần thoại  - 14. Tác phẩm kinh điển
+        - 15.Phiêu lưu - 16.Trinh thám - 17.Giao duc - 18.Truyện ngắn
+
+            URL Images sẽ là 1 mảng gồm nhiều hình - Tải và lưu trong thư mục như trong ví dụ
+        - Nếu được thì tải nhiều hình cùng một sản phẩm để demo
+            Không cần thay đổi shortDescription
+
+
+
+--insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values("Nhà Giả Kim",15,54400,21, 68861
+, "https://salt.tikicdn.com/cache/280x280/ts/product/83/30/87/737846efdb9f28f0f51352cacf9225c5.jpg","Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.","Tất cả những trải nghiệm trong chuyến phiêu du theo đuổi vận mệnh của mình đã giúp Santiago thấu hiểu được ý nghĩa sâu xa nhất của hạnh phúc, hòa hợp với vũ trụ và con người.
+
+Tiểu thuyết Nhà giả kim của Paulo Coelho như một câu chuyện cổ tích giản dị, nhân ái, giàu chất thơ, thấm đẫm những minh triết huyền bí của phương Đông. Trong lần xuất bản đầu tiên tại Brazil vào năm 1988, sách chỉ bán được 900 bản. Nhưng, với số phận đặc biệt của cuốn sách dành cho toàn nhân loại, vượt ra ngoài biên giới quốc gia, Nhà giả kim đã làm rung động hàng triệu tâm hồn, trở thành một trong những cuốn sách bán chạy nhất mọi thời đại, và có thể làm thay đổi cuộc đời người đọc.
+
+“Nhưng nhà luyện kim đan không quan tâm mấy đến những điều ấy. Ông đã từng thấy nhiều người đến rồi đi, trong khi ốc đảo và sa mạc vẫn là ốc đảo và sa mạc. Ông đã thấy vua chúa và kẻ ăn xin đi qua biển cát này, cái biển cát thường xuyên thay hình đổi dạng vì gió thổi nhưng vẫn mãi mãi là biển cát mà ông đã biết từ thuở nhỏ. Tuy vậy, tự đáy lòng mình, ông không thể không cảm thấy vui trước hạnh phúc của mỗi người lữ khách, sau bao ngày chỉ có cát vàng với trời xanh nay được thấy chà là xanh tươi hiện ra trước mắt. ‘Có thể Thượng đế tạo ra sa mạc chỉ để cho con người biết quý trọng cây chà là,’ ông nghĩ.”", "Nhà Xuất Bản Văn Học");
+
+
+--insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values("Đắc Nhân Tâm (Khổ Lớn)", 7,56100,26, 75811, https://salt.tikicdn.com/cache/280x280/ts/product/df/7d/da/d340edda2b0eacb7ddc47537cddb5e08.jpg","Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.","Đắc nhân tâm của Dale Carnegie là quyển sách duy nhất về thể loại self-help liên tục đứng đầu danh mục sách bán chạy nhất (best-selling Books) do báo The New York Times bình chọn suốt 10 năm liền. Được xuất bản năm 1936, với số lượng bán ra hơn 15 triệu bản, tính đến nay, sách đã được dịch ra ở hầu hết các ngôn ngữ, trong đó có cả Việt Nam, và đã nhận được sự đón tiếp nhiệt tình của đọc giả ở hầu hết các quốc gia.
+
+Là quyển sách đầu tiên có ảnh hưởng làm thay đổi cuộc đời của hàng triệu người trên thế giới, Đắc Nhân Tâm là cuốn sách đem lại những giá trị tuyệt vời cho người đọc, bao gồm những lời khuyên cực kì bổ ích về cách ứng xử trong cuộc sống hàng ngày. Sức lan toả của quyển sách vô cùng rộng lớn – với nhiều tầng lớp, đối tượng.", "Nhà Xuất Bản Tổng hợp TP.HCM");
+
+
+--insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values("Chủ Nghĩa Khắc Kỷ - Phong Cách Sống Bản Lĩnh Và Bình Thản", 7, 82,800
+, 34,125455, "https://salt.tikicdn.com/cache/280x280/ts/product/97/61/91/a9b293f184d4dbbc2afc416b539f2bca.jpg","Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.","Chủ Nghĩa Khắc Kỷ - Phong Cách Sống Bản Lĩnh Và Bình Thản
+Bạn mong muốn điều gì từ cuộc sống này? Có thể câu trả lời của bạn là muốn có một người bạn đời biết quan tâm, một công việc tốt và một ngôi nhà đẹp, nhưng chúng thực ra chỉ là một số thứ bạn muốn có trong cuộc sống. Khi hỏi bạn mong muốn điều gì từ cuộc sống này, tôi đang hỏi theo nghĩa rộng nhất. Tôi không hỏi về những mục tiêu mà bạn đề ra khi thực hiện các hoạt động hằng ngày, mà tôi đang hỏi về mục tiêu lớn lao trong cuộc sống của bạn. Nói cách khác, trong số những thứ bạn có thể theo đuổi trong cuộc sống, thứ nào bạn tin là có giá trị nhất?
+Nhiều người sẽ khó lòng nêu ra được mục tiêu này. Họ biết mình muốn gì trong từng phút một hoặc thậm chí từng thập kỷ một trong suốt cuộc đời mình, nhưng họ chưa bao giờ dành thời gian để suy ngẫm về mục tiêu sống lớn lao của bản thân. Chuyện này có lẽ cũng dễ hiểu. Nền văn hóa của chúng ta vốn không khuyến khích mọi người nghĩ về những điều như vậy, mà chỉ tạo ra hết xao lãng này đến xao lãng khác, để chúng ta không bao giờ phải bận tâm đến chúng. Nhưng một mục tiêu lớn lao trong đời là thành phần đầu tiên của một triết lý sống. Nếu bạn không có một mục tiêu lớn lao trong đời, tức là bạn không có một triết lý sống chặt chẽ.", "Nhà Xuất Bản Công Thương");
+
+
+--insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values("Giải Thích Ngữ Pháp Tiếng Anh (Tái Bản 2020)", 17,116,600
+,35, 179385, "https://salt.tikicdn.com/cache/280x280/ts/product/37/59/f1/1101788da61ed1ad411251aff1927a29.jpg","Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.","GIẢI THÍCH NGỮ PHÁP TIẾNG ANH, tác giả Mai Lan Hương - Hà Thanh Uyên, là cuốn sách ngữ pháp đã được phát hành và tái bản rất nhiều lần trong suốt những năm vừa qua.
+Trong lần tái bản GIẢI THÍCH NGỮ PHÁP TIẾNG ANH năm 2020 này, nhằm nâng cao chất lượng sách và giúp người học trau dồi, củng cố và nâng cao kiến thức ngữ pháp tiếng Anh, chúng tôi chỉnh sửa, bổ sung và cập nhật một số kiến thức ngữ pháp mới.
+Ấn bản mới GIẢI THÍCH NGỮ PHÁP TIẾNG ANH gồm 5 chương, hệ thống hóa toàn diện kiến thức ngữ pháp tiếng Anh từ cơ bản đến nâng cao:
+Chương 1: Từ Loại (Parts of Speech)
+Chương 2: Thì và Sự Phối Hợp Thì (Tenses and Sequence of Tenses)
+Chương 3: Mệnh Đề (Clauses)
+Chương 4: Câu (Sentences)
+Chương 5: Từ Vựng Học (Word Study)", "Nhà Xuất Bản Đà Nẵng");
+
+
+--insert into product(name,categoryId,cost,discount,value,images,shortDescription,description,production)values("Hẹn Nhau Phía Sau Tan Vỡ",8,73100,15,86000,"https://salt.tikicdn.com/cache/280x280/ts/product/26/47/ed/1b71072e67efb0da20acc3a6e2371c86.jpg","Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.",
+"Cuốn sách này…
+Dành tặng những tâm hồn tan vỡ, đã yêu, đã chia ly, đã từ biệt…
+Và lời chúc cho một cuộc hạnh ngộ đủ đầy yêu thương.", "NXB Phụ Nữ Việt Nam");
+
+--insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values("Combo Truyện Tranh Song Ngữ Việt - Anh Cho Bé (12 Tập)",17,130000,28,180556
+,"https://salt.tikicdn.com/cache/280x280/ts/product/95/96/0e/ba09a3f89d09449d64a53e91bf9dc042.jpg","Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.","1. Tư duy phóng khoáng và sẵn sàng tiếp thu điều mới mẻ
+
+2. Cơ hội nghề nghiệp tốt hơn trong tương lai
+
+3. Dễ dàng hơn khi học những ngôn ngữ khác trong giai đoạn sau này của cuộc đời
+
+4. Được hưởng sự giáo dục văn hóa đa dạng hơn (với văn học, phim ảnh, âm nhạc…)
+
+5. Khả năng tập trung cao hơn
+
+6. Khả biến thần kinh (giúp thông minh hơn)
+
+7. Làm chậm lại sự khởi phát bệnh Alzheimer so với những người chỉ dùng một ngôn ngữ…", "Nhà Xuất Bản Phụ Nữ");
+
+
+--insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values("Rich Habits - Poor Habits Sự khác biệt giữa người giàu và người nghèo",10,96000
+,40,160000,"","Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.","Chúng ta thường đặt câu hỏi: “Tại sao người giàu ngày càng giàu?”. Hầu như không phải do may mắn. Không phải vì nơi họ sinh ra và cũng không phải vì họ thắng xổ số. Chỉ là người giàu làm mọi thứ theo một cách khác. Họ nghĩ khác, họ hành động khác và họ có những thói quen khác.
+
+Có câu ngạn ngữ: “Cho một người một con cá giúp anh ấy ấm bụng một ngày. Dạy một người cách câu cá giúp họ ấm bụng cả đời”.
+
+Cuốn sách “Sự khác biệt giữa người giàu và người nghèo” giúp bạn phát triển các thói quen giàu có và loại bỏ thói quen nghèo khó.", "Nhà Xuất Bản Hồng Đức");
+
+
+--insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values("Hai Số Phận (Bìa Cứng)",8,106100,39,173934,"https://salt.tikicdn.com/cache/280x280/ts/product/0a/fb/51/202015881b04b7c8a4b47d15cf9c049f.jpg
+","Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.","“Hai số phận” không chỉ đơn thuần là một cuốn tiểu thuyết, đây có thể xem là "thánh kinh" cho những người đọc và suy ngẫm, những ai không dễ dãi, không chấp nhận lối mòn.
+
+“Hai số phận” làm rung động mọi trái tim quả cảm, nó có thể làm thay đổi cả cuộc đời bạn. Đọc cuốn sách này, bạn sẽ bị chi phối bởi cá tính của hai nhân vật chính, hoặc bạn là Kane, hoặc sẽ là Abel, không thể nào nhầm lẫn. Và điều đó sẽ khiến bạn thấy được chính mình.
+
+Khi bạn yêu thích tác phẩm này, người ta sẽ nhìn ra cá tính và tâm hồn thú vị của bạn!","Nhà Xuất Bản Văn Học);
+
+--insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values("Yêu Những Điều Không Hoàn Hảo",8,100400,28,139444,"https://salt.tikicdn.com/cache/280x280/ts/product/54/55/d6/4ceb6ba3bd81614df8ff4c1411b11f59.jpg
+","Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.","Đại đức Hae Min sinh ra và lớn lên tại Hàn Quốc. Sau khi hoàn thành bằng Thạc sĩ Tôn giáo học đối chiếu ở Đại học Havard và Tiến sĩ Tôn giáo học ở Đại học Princeton, ông ở lại Mỹ tham gia giảng dạy về tôn giáo ở trường Đại học Hampshire, Massachusetts. Không chỉ dừng lại ở nghiên cứu lý thuyết, mùa xuân năm 2000 ông quyết định xuất gia theo tông phái Tào Khê, một tông phái tiêu biểu của Phật giáo Hàn Quốc. Năm 2015, Đại đức Hae Min trở về Seoul, cùng nhiều chuyên gia mở trường Trị liệu tâm hồn, điều trị miễn phí cho những người gặp bất hạnh trong cuộc sống hay đang mang trong lòng nhiều khổ tâm. Đại đức Haemin là một trong những người rất có ảnh hưởng tới giới trẻ Hàn Quốc, trang Twitter cá nhân (https://twitter.com/haeminsunim) của ông hiện có tới hơn một triệu người theo dõi. Sách cùng tác giả: - Những vỡ lẽ của tuổi trẻ - Yêu lấy những điều không hoàn hảo.",Nhà Xuất Bản Thế Giới");
+
+
+--insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values("Combo 999 Lá Thư Gửi Cho Chính Mình - Tặng kèm bookmark (Trọn bộ 2 tập)",8,136100,31,197246, "https://salt.tikicdn.com/cache/280x280/ts/product/2e/c6/a6/a555919afeb01514cfe054ed0167bb40.jpg
+","Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.","999 lá thư gửi cho chính mình” là một tác phẩm đặc biệt đầy cảm hứng đến từ tác giả văn học mạng nổi tiếng Miêu Công Tử, mang một màu sắc riêng biệt qua những lời thư nhỏ nhắn nhủ đến người đọc về giá trị cuộc sống, tình yêu, tuổi trẻ, tương lai… đã làm lay động trái tim của hàng vạn độc giả trẻ.
+Cầm trên tay cuốn sách “999 lá thư gửi cho chính mình” – bạn sẽ hiểu rằng: tuổi trẻ của chúng ta dù có mong manh đến đâu thì cũng sẽ thành công vượt qua mọi khó khăn một cách mạnh mẽ ngoài sức tưởng tượng. Một ngày nào đó, bạn sẽ cảm nhận được hạnh phúc, tự tin của chính bản thân và học được cách mỉm cười trước những nỗi đau của quá khứ.", "Nhà Xuất Bản Thanh Niên");
+
+--insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values("999 Lá Thư Gửi Cho Chính Mình – Mong Bạn Trở Thành Phiên Bản Hoàn Hảo Nhất",8,70700,29, 99577, "https://salt.tikicdn.com/cache/280x280/ts/product/c4/46/99/0dcc6e04aca0a78cda09a2d8b156dccb.jpg
+","Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.","Cầm trên tay cuốn sách “999 lá thư gửi cho chính mình” – bạn sẽ hiểu rằng: tuổi trẻ của chúng ta dù có mong manh đến đâu thì cũng sẽ thành công vượt qua mọi khó khăn một cách mạnh mẽ ngoài sức tưởng tượng. Một ngày nào đó, bạn sẽ cảm nhận được hạnh phúc, tự tin của chính bản thân và học được cách mỉm cười trước những nỗi đau của quá khứ.", "Nhà Xuất Bản Thanh Niên");
+
+--insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values("Bạn Đắt Giá Bao Nhiêu?",18,66200,33,98806,"https://salt.tikicdn.com/cache/280x280/ts/product/87/c9/c0/bfebf4adcb31c8eb5c39fd3779cc4b68.jpg https://salt.tikicdn.com/ts/upload/51/ac/cc/528e80fe3f464f910174e2fdf8887b6f.png","Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất."," “Bạn đắt giá bao nhiêu ?” là một tác phẩm văn học Trung Quốc của nhà văn Vãn Tình. Cuốn sách này không sử dụng ngôn từ sướt mướt hay lãng mạn nhưng lại rất cuốn hút. Những câu chuyện trải đời được đề cập đến trong cuốn sách dưới ngòi bút của Vãn Tình không hề khô khan, nhàm chán. Mỗi vấn đề mà tác giả đề cập đến đều rất gần gũi, thân quen. Những giải pháp tác giả đưa ra cũng rất hợp lý, logic, không giáo điều, sáo rỗng. Nếu bạn chấp nhận bỏ cuốn truyện ngôn tình trên tay xuống và cầm cuốn sách “Bạn đắt giá bao nhiêu?” lên thì bạn sẽ không thể rời mắt khỏi nó.", "Nhà Xuất Bản Thế Giới");
+
+
+--insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values("Tony Buổi Sáng - Trên Đường Băng (Tái Bản 2017)",16,53200,34,80606,"https://salt.tikicdn.com/cache/280x280/ts/product/61/87/8a/082a07cec3232115e2b22636fd71593c.jpg
+","Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.","Khi còn trẻ, hãy ra ngoài nhiều hơn ở nhà. Hãy nhào vô xin người khác “bóc hết, lột sạch” khả năng của mình. Chỉ sợ bất tài nộp hồ sơ “xin việc”, mà chả ai thèm cho, chả ai thèm bóc lột. Khi đã được bóc và lột hết, dù sau này đi đâu, làm gì, bạn đều cực kỳ thành công. Vì năng lực được trui rèn trong quá trình làm cho người khác. Sự chăm chỉ, tính kỷ luật, quen tay quen chân, quen ngáp, quen lười… cũng từ công việc mà ra. Mọi ông chủ vĩ đại đều từng là những người làm công ở vị trí thấp nhất. Họ đều rẽ trái trong khi mọi người rẽ phải. Họ có những quyết định không theo đám đông, không cam chịu sống một cuộc đời tầm thường, nhạt nhòa… rồi chết.
+
+Còn những bạn thu nhập 6 triệu cũng túng thiếu, 20 triệu cũng đi vay mượn để tiêu dùng, thì thôi, cuộc đời họ chấm dứt giấc mơ lớn. Tiền nong cá nhân quản lý không được, thì làm sao mà quản trị tài chính một cơ nghiệp lớn?”. Tư duy thế nào thì nó ra số phận thế đó."", "NXB Trẻ");
+
+
+--insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values("Chẳng Mùa Đông Nào Không Thể Vượt Qua",9,73400,25,97867, "https://salt.tikicdn.com/cache/280x280/ts/product/d3/3c/c5/762b50376055f39812a164acc63a54ac.jpg
+","Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.","Mùa đông chỉ lui tới vài ba tháng một năm, nhưng có những người lại bị sự lạnh lẽo theo chân cả cuộc đời. Khó khăn vốn xuất hiện vào một giai đoạn nhất thời, nhưng bởi những suy nghĩ tiêu cực mà trở thành gánh nặng trong lòng chúng ta.
+
+Rất nhiều khoảnh khắc, con người vô tình quên mất lý do vì sao bản thân bắt đầu và nỗ lực đến tận hôm nay. Họ cứ mải miết lạc lối trong màn đêm mà không nhận ra khoảng cách đi tới ánh sáng chỉ cách một lần dũng cảm mở mắt nhìn trời. Có những vấn đề trong đời thật ra không quá nghiêm trọng, nhưng bởi chẳng dám đối mặt nên thành nỗi lo thấm qua ngày ngày tháng tháng, hủy hoại dần từng mảnh linh hồn.
+
+Gió lạnh mùa đông phóng đại mọi nỗi sợ. Sợ trời dần chuyển rét, sợ bầu trời âm u xám xịt, sợ tiếng gió rít vào thanh cửa mang hơi lạnh về. Sợ một mình qua đường giữa phố, người với người ai cũng có tay đan. May mà mùa đông rất ngắn ngủi, vượt qua được những thời điểm khó khăn nhất, tất cả sẽ trở thành quá khứ đã xa. Bởi chẳng mùa đông nào không thể vượt qua.", "Nhà Xuất Bản Thế Giới");
+
+--insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values("Tôi Từng Nghĩ Mọi Thứ Sẽ Ổn Khi Trở Thành Người Lớn (Tặng Kèm 1 Bookmark)
+",9,63600,34,96364,"https://salt.tikicdn.com/cache/280x280/ts/product/0b/e4/9d/9819a2afb854e301ebaf93e8e4a8a9d3.jpg
+","Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.","“Tôi từng nghĩ mọi thứ sẽ ổn khi trở thành người lớn” chính là cuốn sách chữa lành mọi đau đớn mà con người phải đối mặt hàng ngày dưới cái mác “người lớn”!
+21 chương sách lột tả chi tiết từng khía cạnh về 21 căn bệnh phổ biến của người hiện đại. Đó là căn bệnh Sợ thứ 2, bệnh Thích mang mặt nạ, bệnh Không thể ăn uống theo ý muốn của mình…. Khi các biểu hiện đã trở thành bệnh lý thì vấn đề sẽ trở nên nghiêm trong hơn, đó là căn bệnh Trầm cảm, Rối loạn cảm xúc lượng cực, Chứng rối loạn hoảng sợ, Nhân cách trầm uất…", "Nhà Xuất Bản Văn Học");
+
+
+--insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values("Dám Bị Ghét
+",8,66800,30,95429,"https://salt.tikicdn.com/cache/280x280/ts/product/74/11/ff/6304c47fec56e6f0b2110be65af0c7c2.jpg","Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.","Các mối quan hệ xã hội thật mệt mỏi.
+
+Cuộc sống sao mà nhạt nhẽo và vô nghĩa.
+
+Bản thân mình xấu xí và kém cỏi.
+
+Quá khứ đầy buồn đau còn tương lai thì mờ mịt.
+
+Yêu cầu của người khác thật khắc nghiệt và phi lý.
+
+TẠI SAO BẠN CỨ PHẢI SỐNG THEO KHUÔN MẪU NGƯỜI KHÁC ĐẶT RA?
+
+Dưới hình thức một cuộc đối thoại giữa Chàng thanh niên và Triết gia, cuốn sách trình bày một cách sinh động và hấp dẫn những nét chính trong tư tưởng của nhà tâm lý học Alfred Adler, người được mệnh danh là một trong “ba người khổng lồ của tâm lý học hiện đại”, sánh ngang với Freud và Jung. Khác với Freud cho rằng quá khứ và hoàn cảnh là động lực làm nên con người ta của hiện tại, Adler chủ trương “cuộc đời ta là do ta lựa chọn”, và tâm lý học Adler được gọi là “tâm lý học của lòng can đảm”.", "Nhà Xuất Bản Lao Động");
+
+
+--insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values("Tôi Tự Học",9,32900,45,597818,"https://salt.tikicdn.com/cache/280x280/media/catalog/product/n/x/nxbtre_full_28032017_020337.u5102.d20170331.t150309.516945.jpg https://salt.tikicdn.com/ts/upload/51/ac/cc/528e80fe3f464f910174e2fdf8887b6f.png","Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.","Sách “Tôi tự học” của tác giả Nguyễn Duy Cần đề cập đến khái niệm, mục đích của học vấn đối với con người đồng thời nêu lên một số phương pháp học tập đúng đắn và hiệu quả. Tác giả cho rằng giá trị của học vấn nằm ở sự lĩnh hội và mở mang tri thức của con người chứ không đơn thuần thể hiện trên bằng cấp. Trong xã hội ngày nay, không ít người quên đi ý nghĩa đích thực của học vấn, biến việc học của mình thành công cụ để kiếm tiền nhưng thực ra nó chỉ là phương tiện để  đưa con người đến thành công mà thôi. Bởi vì học không phải để lấy bằng mà học còn để “biết mình” và để “đối nhân xử thế”.","NXB Trẻ");
+
+
+--insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values("Tuổi Trẻ Đáng Giá Bao Nhiêu (Tái Bản)",9,56600,29,79718, "https://salt.tikicdn.com/cache/280x280/ts/product/f8/34/c8/5fbf2a6f9d07b76d98e2fff2b29b0d3c.jpg
+","Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất."," "Bạn hối tiếc vì không nắm bắt lấy một cơ hội nào đó, chẳng có ai phải mất ngủ.
+
+Bạn trải qua những ngày tháng nhạt nhẽo với công việc bạn căm ghét, người ta chẳng hề bận lòng.
+
+Bạn có chết mòn nơi xó tường với những ước mơ dang dở, đó không phải là việc của họ.
+
+Suy cho cùng, quyết định là ở bạn. Muốn có điều gì hay không là tùy bạn.
+
+Nên hãy làm những điều bạn thích. Hãy đi theo tiếng nói trái tim. Hãy sống theo cách bạn cho là mình nên sống.
+
+Vì sau tất cả, chẳng ai quan tâm." ", "NXB Trẻ");
+
+--insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values("Trời Sinh Vụng Về, Hãy Bù Đắp Bằng Sự Kiên Trì",9,96550,25,128733
+ , "https://salt.tikicdn.com/cache/280x280/ts/product/e7/3a/33/d90504644a26715758f68aa20eebbde5.jpg
+","Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.","Có khi nào bạn tự hỏi: Tại sao chúng ta phải cố gắng hết mình, trong khi những người khác chẳng cần làm gì cũng có được mọi thứ?
+
+Tại sao chúng ta phải chạy hết tốc lực, trong khi những người khác chỉ cần thả bước thong dong?
+
+Thực ra, đa phần chúng ta đều là những người không được ông trời ưu ái, cũng chẳng hề có tài năng thiên bẩm. Vậy mà ai ai cũng mơ ước một cuộc sống viên mãn, muốn được tự do tự tại đi du lịch nhiều nơi, muốn được sống là chính mình trong những năm tháng tuổi trẻ…
+
+Mơ ước thì nhiều, nhưng người thực sự kiên trì được thì có mấy ai?
+
+Chúng ta muốn thay đổi thế giới, nhưng ngay đến thói quen bản thân ghét cay ghét đắng cũng không bỏ được.
+
+Chúng ta muốn đi du lịch, nhưng ngay cả xuống tầng mua đồ ăn cũng lười chẳng buồn nhấc chân.
+
+Chúng ta muốn học thêm những điều mới, nhưng ngay cả dũng khí mở trang sách đầu tiên cũng không có.
+
+Dần dà, chúng ta trở thành những con người thụ động, chỉ biết than thân trách phận, không chịu nỗ lực nhưng lại muốn nhanh chóng đạt được ước mơ.", "Nhà Xuất Bản Phụ Nữ Việt Nam");
+
+--insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values("Giáo Trình Hán Ngữ 1 - Tập 1 - Quyển Thượng (Phiên Bản Mới)",17,57650,35,88692,"https://salt.tikicdn.com/cache/280x280/ts/product/0f/6a/97/2aa2278d0efe410ea66257d0ec367eeb.jpg https://salt.tikicdn.com/ts/upload/51/ac/cc/528e80fe3f464f910174e2fdf8887b6f.png
+","Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.","Giáo trình Hán ngữ tập 1 phiên bản mới tải app – Cuốn giáo trình Hán ngữ phiên bản mới duy nhất tại Việt Nam
+
+“Giáo trình Hán ngữ phiên bản mới tập 1” là cuốn đầu tiên trong bộ, nằm ở trình độ Sơ cấp dành cho người bắt đầu tiếng Trung.
+
+Trong quá trình học những khó khăn trên có đang ngăn cản bạn chinh phục ngôn ngữ này không?
+
+Bạn là người mới bắt đầu học tiếng Trung, bạn không biết nên tự học như thế nào
+
+Trong khi tiếng Việt và tiếng Anh được viết bằng chữ cái Latinh thì tiếng Trung được viết bằng chữ tượng hình nên rất khó khi bạn tự tìm hiểu ngôn ngữ này. Bạn là người mới bắt đầu học tiếng Trung, bạn muốn tự học nhưng không biết nên học những kiến thức nào, đâu là những kiến thức nền tảng phù hợp với trình độ của những người mới học. Và quan trọng nhất là bạn không biết được nên tìm học từ những tài liệu nào. Trên thị trường tài liệu học tiếng Trung thì nhiều nhưng tài liệu vừa bám sát chương trình dạy học, vừa cập nhật những điểm đổi mới cùng như được biên soạn dễ hiểu thì lại rất ít.", "Nhà Xuất Bản Hồng Đức");
+
+--insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values("Hành Trình Về Phương Đông (Tái Bản 2019)",9,59900,32,88088, "https://salt.tikicdn.com/cache/280x280/ts/product/46/9d/88/6560a409f40c37ac63d4e279bbea34b7.jpg
+","Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất."," “Hành trình về phương Đông” kể về những trải nghiệm của một đoàn khoa học gồm các chuyên gia hàng đầu của Hội Khoa Học Hoàng Gia Anh được cử sang Ấn Độ nghiên cứu về huyền học và những khả năng siêu nhiên của con người. Suốt hai năm trời rong ruổi khắp các đền chùa Ấn Độ, diện kiến nhiều pháp thuật, nhiều cảnh mê tín dị đoan, thậm chí lừa đảo…của nhiều pháp sư, đạo sĩ…họ được tiếp xúc với những vị chân tu thông thái sống ẩn dật ở thị trấn hay trên rặng Tuyết Sơn. Nhờ thế, họ được chứng kiến, trải nghiệm, hiểu biết sâu sắc về các khoa học cổ xưa và bí truyền của văn hóa Ấn Độ như yoga, thiền định, thuật chiêm tin, các phép dưỡng sinh và chữa bệnh, những kiến thức về nhân duyên, nghiệp báo, luật nhân quả, cõi sống và cõi chết…", "Nhà Xuất Bản Văn Học");
+
+--insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values("Biên Sử Nước (Tiểu Thuyết)",8,68400,28,95000,"https://salt.tikicdn.com/cache/280x280/ts/product/4e/6b/c5/348c12a449b62df2a2f13aed8eb9ae57.jpg
+","Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.","Sau 8 năm Nguyễn Ngọc Tư mới trở lại với độc giả bằng một cuốn tiểu thuyết đậm chất huyền ảo: Biên sử nước. Tinh tế và sắc sảo, huyền ảo và hiện thực cùng hòa quyện, đan xen trong lớp lớp ngôn từ khiến người đọc không thể rời mắt.
+
+Biên Sử Nước là tác phẩm đặc sắc đánh dấu sự trở lại của Nguyễn Ngọc Tư với tiểu thuyết, sau nhiều năm định danh bằng truyện ngắn. Một tiểu thuyết kết tinh được những đặc sắc trong những tìm tòi sáng tạo của Nguyễn Ngọc Tư về nội dung lẫn bút pháp.
+
+Biên Sử Nước vì thế vừa quen thuộc vừa lạ lẫm, cho phép người đọc tái khám phá một Nguyễn Ngọc Tư điêu luyện nhưng mới mẻ.
+
+Biên Sử Nước là cuốn sách thứ hai của Nguyễn Ngọc Tư do Phanbook & NXB Phụ Nữ ấn hành.", "Nhà Xuất Bản Phụ Nữ Việt Nam");
+
+--insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values("Đời Ngắn Đừng Ngủ Dài (Tái Bản)",9, 52000,31,75362, "https://salt.tikicdn.com/cache/280x280/ts/product/57/44/86/19de0644beef19b9b885d0942f7d6f25.jpg https://salt.tikicdn.com/ts/upload/51/ac/cc/528e80fe3f464f910174e2fdf8887b6f.png","Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất."," “Mọi lựa chọn đều giá trị. Mọi bước đi đều quan trọng. Cuộc sống vẫn diễn ra theo cách của nó, không phải theo cách của ta. Hãy kiên nhẫn. Tin tưởng. Hãy giống như người thợ cắt đá, đều đặn từng nhịp, ngày qua ngày. Cuối cùng, một nhát cắt duy nhất sẽ phá vỡ tảng đá và lộ ra viên kim cương. Người tràn đầy nhiệt huyết và tận tâm với việc mình làm không bao giờ bị chối bỏ. Sự thật là thế.”
+
+Bằng những lời chia sẻ thật ngắn gọn, dễ hiểu về những trải nghiệm và suy ngẫm trong đời, Robin Sharma tiếp tục phong cách viết của ông từ cuốn sách Điều vĩ đại đời thường để mang đến cho độc giả những bài viết như lời tâm sự, vừa chân thành vừa sâu sắc.", "NXB Trẻ");
+
+--insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values("Power Vs Force - Trường Năng Lượng Và Những Nhân Tố Quyết Định Tinh Thần Và Sức Khỏe Con Người
+", 10,101500,35, 156154, "https://salt.tikicdn.com/cache/280x280/ts/product/99/91/33/5e3634829f1bf05e16aef5cd1b1f3479.jpg
+", "Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.", "Tiến sĩ, bác sĩ tâm thần, nhà nghiên cứu nhận thức và giảng viên tâm linh nổi tiếng người Mỹ, ông David R.Hawkins (1927–2012), đã chứng minh được mối liên hệ mật thiết giữa bệnh tật của con người và những suy giảm năng lượng trong cơ thể, đến từ những tư tưởng tiêu cực. Kết quả nghiên cứu được ông trình bày trong cuốn sách bán chạy nhất của mình- “Power vs Force – Trường năng lượng và những nhân tố quyết định tinh thần, sức khỏe con người”.", "Nhà Xuất Bản Tổng Hợp");
+
+--insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values("Từ Tốt Đến Vĩ Đại",17,77100,33,115075, "https://salt.tikicdn.com/cache/280x280/media/catalog/product/n/x/nxbtre_full_06372017_103735.u547.d20170117.t105220.139884.jpg
+","Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.","Jim Collins cùng nhóm nghiên cứu đã miệt mài nghiên cứu những công ty có bước nhảy vọt và bền vững để rút ra những kết luận sát sườn, những yếu tố cần kíp để đưa công ty từ tốt đến vĩ đại. Đó là những yếu tố khả năng lãnh đạo, con người, văn hóa, kỷ luật, công nghệ… Những yếu tố này được nhóm nghiên cứu xem xét tỉ mỉ và kiểm chứng cụ thể qua 11 công ty nhảy vọt lên vĩ đại. Mỗi kết luận của nhóm nghiên cứu đều hữu ích, vượt thời gian, ý nghĩa vô cùng to lớn đối với mọi lãnh đạo và quản lý ở mọi loại hình công ty (từ công ty có nền tảng và xuất phát tốt đến những công ty mới khởi nghiệp), và mọi lĩnh vực ngành nghề. Đây là cuốn sách nên đọc đối với bất kỳ lãnh đạo hay quản lý nào!", "NXB Trẻ");
+
+--insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values("Sống Thực Tế Giữa Đời Thực Dụng
+",10,65600,33,97910, "https://salt.tikicdn.com/cache/280x280/ts/product/25/d6/2c/f88080bba78a779fb78e1b76b73a9813.jpg https://salt.tikicdn.com/ts/upload/51/ac/cc/528e80fe3f464f910174e2fdf8887b6f.png","Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.","Con người muốn trưởng thành đều phải trải qua ba lần lột xác “phá kén hóa bướm”. Lần đầu tiên là khi nhận ra mình không phải trung tâm thế giới. Lần thứ hai là khi phát hiện ra dù cố gắng đến đâu vẫn có những việc cảm thấy thật bất lực. Lần thứ ba là khi biết rõ có những việc bản thân không thể làm được nhưng vẫn cố tranh đấu đến cùng.
+
+Trưởng thành là khi chúng ta hiểu ra rằng, không thể sống quá thật thà, quá trong sáng giữa cuộc đời đầy biến cố này. Thay vì kêu than “Thế giới này thực tế đến thực dụng!”, sao bạn không tự hỏi “Thực tế có gì không tốt?” Ít nhất, thực tế sẽ giúp bạn mạnh mẽ hơn, bản lĩnh hơn, dạy bạn cách vượt qua nghịch cảnh, trung thực với chính mình.
+
+Khi bạn chưa đủ mạnh mẽ, cơ hội dù là nhỏ nhất cũng không đến với bạn. Khi bạn đủ tài giỏi, bạn chẳng thể ngăn nổi hàng vạn cơ hội đến với mình, mọi thứ bạn muốn đều chủ động chạy về phía bạn.
+
+Thế giới này làm gì có đưa than ngày tuyết rơi, chỉ có dệt hoa lên gấm thôi. Bạn muốn được người khác dệt hoa lên gấm, trước tiên bạn phải trở thành gấm đã.", "Nhà Xuất Bản Dân Trí");
+
+
