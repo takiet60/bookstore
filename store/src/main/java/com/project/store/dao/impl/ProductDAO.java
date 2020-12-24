@@ -16,7 +16,8 @@ public class ProductDAO extends AbtractDAO<ProductModel> implements IProductDAO 
 
     @Override
     public ProductModel findById(long id) {
-        return null;
+        String sql = "SELECT * FROM product WHERE id = ?";
+        return query(sql, new ProductMapper(), id).get(0);
     }
 
     @Override
@@ -25,4 +26,12 @@ public class ProductDAO extends AbtractDAO<ProductModel> implements IProductDAO 
         return insert(sql, productModel.getName(), productModel.getCategoryId(), productModel.getCost(), productModel.getDiscount(), productModel.getValue(),
                 productModel.getImages(), productModel.getShortDescription(), productModel.getDescription(), productModel.getProduction());
     }
+
+    @Override
+    public List<ProductModel> findByCategory(int id) {
+        String sql = "SELECT * FROM product WHERE categoryId = ?";
+        return query(sql, new ProductMapper(), id);
+    }
+
+
 }

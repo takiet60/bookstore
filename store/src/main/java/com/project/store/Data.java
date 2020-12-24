@@ -4,10 +4,23 @@ import com.project.store.model.ProductModel;
 import com.sun.org.apache.xpath.internal.objects.XString;
 
 import javax.swing.*;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Data {
+
+    /* insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values(1, "Con Chim Xanh Biếc Bay Về (Nguyễn Nhật Ánh) (Bìa Mềm)",
+                   7, 149865, 26, 110900, "http://localhost:8080/store_war_exploded/template/webtemplate/web/images/products/1.jpg",
+                    "Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.",
+                 "Không giống như những tác phẩm trước đây lấy bối cảnh vùng quê miền Trung đầy ắp những hoài niệm tuổi thơ dung dị, trong trẻo với các nhân vật ở độ tuổi dậy thì, trong quyển sách mới lần này nhà văn Nguyễn Nhật Ánh lấy bối cảnh chính là Sài Gòn – Thành phố Hồ Chí Minh nơi tác giả sinh sống (như là một sự đền đáp ân tình với mảnh đất miền Nam). Các nhân vật chính trong truyện cũng “lớn” hơn, với những câu chuyện mưu sinh lập nghiệp lắm gian nan thử thách của các sinh viên trẻ đầy hoài bão. Tất nhiên không thể thiếu những câu chuyện tình cảm động, kịch tính và bất ngờ khiến bạn đọc ngẩn ngơ, cười ra nước mắt. Và như trong mọi tác phẩm Nguyễn Nhật Ánh, sự tử tế và tinh thần hướng thượng vẫn là điểm nhấn quan trọng trong quyển sách mới này.",
+                   "NXB Trẻ"));
+        insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values(2, "Tô Bình Yên Vẽ Hạnh Phúc", 7, 78000, 25, 58500, "https://salt.tikicdn.com/cache/280x280/ts/product/97/bc/ae/7fe8a253cce6da248aebe6679bb9c88f.jpg",
+                "Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.",
+                "Sau thành công của cuốn sách đầu tay “Phải lòng với cô đơn” chàng họa sĩ nổi tiếng và tài năng Kulzsc đã trở lại với một cuốn sách vô cùng đặc biệt mang tên:\n" +
+                        "\"Tô bình yên - vẽ hạnh phúc” – sắc nét phong cách cá nhân với một chút “thơ thẩn, rất hiền”.", "NXB Trẻ")
+     */
+
     public static Map<Integer, ProductModel> data = new HashMap<Integer, ProductModel>();
 
     /*
@@ -24,7 +37,7 @@ public class Data {
 
     static {
         data.put(1, new ProductModel(1, "Con Chim Xanh Biếc Bay Về (Nguyễn Nhật Ánh) (Bìa Mềm)",
-                7, 149865, 26, 110900, "http://localhost:8080/store_war_exploded/images/products/1.jpg",
+                7, 149865, 26, 110900, "http://localhost:8080/store_war_exploded/template/webtemplate/web/images/products/1.jpg",
                 "Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.",
                 "Không giống như những tác phẩm trước đây lấy bối cảnh vùng quê miền Trung đầy ắp những hoài niệm tuổi thơ dung dị, trong trẻo với các nhân vật ở độ tuổi dậy thì, trong quyển sách mới lần này nhà văn Nguyễn Nhật Ánh lấy bối cảnh chính là Sài Gòn – Thành phố Hồ Chí Minh nơi tác giả sinh sống (như là một sự đền đáp ân tình với mảnh đất miền Nam). Các nhân vật chính trong truyện cũng “lớn” hơn, với những câu chuyện mưu sinh lập nghiệp lắm gian nan thử thách của các sinh viên trẻ đầy hoài bão. Tất nhiên không thể thiếu những câu chuyện tình cảm động, kịch tính và bất ngờ khiến bạn đọc ngẩn ngơ, cười ra nước mắt. Và như trong mọi tác phẩm Nguyễn Nhật Ánh, sự tử tế và tinh thần hướng thượng vẫn là điểm nhấn quan trọng trong quyển sách mới này.",
                 "NXB Trẻ"));
@@ -62,9 +75,7 @@ public class Data {
 
         data.put(9, new ProductModel(9, "Biên Niên Cô Đơn", 8, 98000, 15, 84000, "https://salt.tikicdn.com/cache/280x280/ts/product/7a/fb/4e/4df230b5dbd95ef93e67d0b18df28d7a.jpg",
                 "Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.",
-                "“Mất bao lâu để quên một người?!\n" +
-                        "\n" +
-                        "Sau khi chia tay người cũ, mình mất hết một năm loay hoay trong mớ bòng bong cảm xúc trong lòng. Lúc đó không buồn, cũng chẳng quá đau khổ dằn vặt gì, vẫn cứ sống và làm việc bình thường, thậm chí làm việc còn nhiều hơn trước và thành công hơn trước.", "NXB Trẻ"));
+                "“Mất bao lâu để quên một người?! Sau khi chia tay người cũ, mình mất hết một năm loay hoay trong mớ bòng bong cảm xúc trong lòng. Lúc đó không buồn, cũng chẳng quá đau khổ dằn vặt gì, vẫn cứ sống và làm việc bình thường, thậm chí làm việc còn nhiều hơn trước và thành công hơn trước.", "NXB Trẻ"));
 
         data.put(10, new ProductModel(10, "Sapiens: Lược Sử Loài Người (Tái Bản Có Chỉnh Sửa)", 5, 210000, 36, 134000, "https://salt.tikicdn.com/cache/280x280/ts/product/56/3f/4f/f4e6621e69775643d22604bccef281bf.jpg",
                 "Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.",
@@ -379,4 +390,22 @@ Thế giới này làm gì có đưa than ngày tuyết rơi, chỉ có dệt ho
          */
     }
 
+
+    public static void insertAll(Collection<ProductModel> data){
+        String sql = "insert into product(name, categoryId, cost, discount, value, images, shortDescription, description, production)  values";
+        int i = 0;
+        for(ProductModel p : data){
+            if(++i < data.size()){
+                sql += "(\""+p.getName()+"\" , "+p.getCategoryId()+" , "+p.getCost()+" , "+p.getDiscount()+" , " + p.getCost() + " , \"" + p.getImages() + "\" , \"" + p.getShortDescription() + "\" , \"" + p.getDescription() + "\" , \"" + p.getProduction() + "\""  + "),";
+            }else{
+                sql += "(\""+p.getName()+"\" , "+p.getCategoryId()+" , "+p.getCost()+" , "+p.getDiscount()+" , " + p.getCost() + " , \"" + p.getImages() + "\" , \"" + p.getShortDescription() + "\" , \"" + p.getDescription() + "\" , \"" + p.getProduction()  + "\")";
+            }
+        }
+
+        System.out.println(sql);
+    }
+
+    public static void main(String[] args) {
+        insertAll(data.values());
+    }
 }
