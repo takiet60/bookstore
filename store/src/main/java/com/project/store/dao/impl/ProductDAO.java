@@ -16,7 +16,8 @@ public class ProductDAO extends AbtractDAO<ProductModel> implements IProductDAO 
 
     @Override
     public ProductModel findById(long id) {
-        return null;
+        String sql = "SELECT * FROM product WHERE id = ?";
+        return query(sql, new ProductMapper(), id).get(0);
     }
 
     @Override

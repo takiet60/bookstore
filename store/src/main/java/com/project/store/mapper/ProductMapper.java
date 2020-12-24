@@ -10,6 +10,7 @@ public class ProductMapper implements RowMapper<ProductModel> {
     public ProductModel mapRow(ResultSet rs) {
         try{
             ProductModel productModel = new ProductModel();
+            productModel.setId(rs.getLong("id"));
             productModel.setName(rs.getString("name"));
             productModel.setCategoryId(rs.getInt("categoryId"));
             productModel.setCost(rs.getInt("cost"));
