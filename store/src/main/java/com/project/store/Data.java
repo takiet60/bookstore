@@ -23,7 +23,7 @@ public class Data {
 
     static {
         data.put(1, new ProductModel(1, "Con Chim Xanh Biếc Bay Về (Nguyễn Nhật Ánh) (Bìa Mềm)",
-                7, 149865, 26, 110900, http://localhost:8080/store_war_exploded/images/products/1.jpg",
+                7, 149865, 26, 110900, "http://localhost:8080/store_war_exploded/images/products/1.jpg",
                 "Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.",
                 "Không giống như những tác phẩm trước đây lấy bối cảnh vùng quê miền Trung đầy ắp những hoài niệm tuổi thơ dung dị, trong trẻo với các nhân vật ở độ tuổi dậy thì, trong quyển sách mới lần này nhà văn Nguyễn Nhật Ánh lấy bối cảnh chính là Sài Gòn – Thành phố Hồ Chí Minh nơi tác giả sinh sống (như là một sự đền đáp ân tình với mảnh đất miền Nam). Các nhân vật chính trong truyện cũng “lớn” hơn, với những câu chuyện mưu sinh lập nghiệp lắm gian nan thử thách của các sinh viên trẻ đầy hoài bão. Tất nhiên không thể thiếu những câu chuyện tình cảm động, kịch tính và bất ngờ khiến bạn đọc ngẩn ngơ, cười ra nước mắt. Và như trong mọi tác phẩm Nguyễn Nhật Ánh, sự tử tế và tinh thần hướng thượng vẫn là điểm nhấn quan trọng trong quyển sách mới này.",
                 "NXB Trẻ"));
@@ -75,7 +75,7 @@ public class Data {
                         "\n" +
                         "Berkshire Hathaway là một cuốn sách đáng chú ý về sự khôn ngoan vượt thời gian, hào phóng và thông minh dí dỏm của Warren Buffett (Chủ tịch kiêm CEO) cùng Charlie Munger (Phó chủ tịch) thông qua những chiến lược đầu tư được truyền lại cho các cổ đông trong suốt 30 năm tại các cuộc họp thường niên.", "NXB Trẻ"));
 
-        data.put(12, new ProductModel(12, "Từ Điển Tiếng “Em”", 8, 69000, 20, 55200 "https://salt.tikicdn.com/cache/280x280/ts/product/e6/a5/3a/14338e7ae795f56d66996b611070b173.jpg",
+        data.put(12, new ProductModel(12, "Từ Điển Tiếng “Em”", 8, 69000, 20, 55200, "https://salt.tikicdn.com/cache/280x280/ts/product/e6/a5/3a/14338e7ae795f56d66996b611070b173.jpg",
                 "Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.",
                 "TỪ ĐIỂN TIẾNG “EM” – Định nghĩa về thế giới mới!\n" +
                         "\n" +
