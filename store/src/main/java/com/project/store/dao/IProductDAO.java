@@ -8,4 +8,5 @@ public interface IProductDAO extends IGenericDAO<ProductModel> {
     List<ProductModel> findAll();
     ProductModel findById(long id);
     long save(ProductModel productModel);
+    List<ProductModel> findByCategory(int id);
 }

@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.Arrays;
 import java.util.List;
 
 @WebServlet(urlPatterns = {"/home"})
@@ -24,7 +25,10 @@ public class HomeController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<ProductModel> list = productService.findAll();
+
+        List<ProductModel> listByCategory7 = productService.findByCategoryId(7);
         req.setAttribute("listProduct", list);
+        req.setAttribute("listByCategory7", listByCategory7);
         RequestDispatcher rd = req.getRequestDispatcher("/views/web/home.jsp");
         rd.forward(req, resp);
     }

@@ -21,4 +21,9 @@ public class ProductService implements IProductService {
     public ProductModel findById(long id) {
         return productDAO.findById(id);
     }
+
+    @Override
+    public List<ProductModel> findByCategoryId(int id) {
+        return productDAO.findByCategory(id);
+    }
 }
