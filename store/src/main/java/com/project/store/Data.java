@@ -21,9 +21,7 @@ public class Data {
             Không cần thay đổi shortDescription
      */
 
-<<<<<<< HEAD
-    
-=======
+
     static {
         data.put(1, new ProductModel(1, "Con Chim Xanh Biếc Bay Về (Nguyễn Nhật Ánh) (Bìa Mềm)",
                 7, 149865, 26, 110900, "http://localhost:8080/store_war_exploded/images/products/1.jpg",
@@ -40,7 +38,7 @@ public class Data {
                 "Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.",
                 "Cuốn sách Thay đổi cuộc sống với Nhân số học là tác phẩm được chị Lê Đỗ Quỳnh Hương phát triển từ tác phẩm gốc “The Complete Book of Numerology” của tiến sỹ David A. Phillips, khiến bộ môn Nhân số học khởi nguồn từ nhà toán học Pythagoras trở nên gần gũi, dễ hiểu hơn với độc giả Việt Nam.", "NXB Trẻ"));
 
-        data.put(4, new ProductModel(4, "Đàn Ông Sao Hỏa Đàn Bà Sao Kim", 10, 188000, 40, 112800, "https://salt.tikicdn.com/cache/280x280/ts/product/0a/f6/38/bc10734989977da424642a1c4750eee2.jpg", "https://salt.tikicdn.com/ts/upload/51/ac/cc/528e80fe3f464f910174e2fdf8887b6f.png",
+        data.put(4, new ProductModel(4, "Đàn Ông Sao Hỏa Đàn Bà Sao Kim", 10, 188000, 40, 112800, "https://salt.tikicdn.com/cache/280x280/ts/product/0a/f6/38/bc10734989977da424642a1c4750eee2.jpg",
                 "Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.",
                 "Ngày xửa ngày xưa, những người sao Hỏa và sao Kim đã gặp gỡ, yêu nhau và sống hạnh phúc bởi họ tôn trọng và chấp nhận mọi điều khác biệt. Rồi họ đến Trái Đất và chứng lãng quên đã xảy ra: Họ quên rằng họ đến từ những hành tinh khác", "NXB Trẻ"));
 
@@ -96,7 +94,7 @@ public class Data {
                         "Cái gì cũng nói toạc ra, cái gì cũng bộc lộ hết không phải là thẳng tính, mà là thiếu bản lĩnh. Suy cho cùng, tất cả những cảm xúc tiêu cực của con người đều là sự phẫn nộ dành cho bất lực của bản thân. Nếu bạn đúng, bạn không cần phải nổi giận. Nếu bạn sai, bạn không có tư cách nổi giận.",
                 "Nhà Xuất Bản Thế Giới"));
 
-        data.put(14, new ProductModel(14, "Siêu Cò – How To Be A Power Connector", 2, 250000, 20, 200000, "https://salt.tikicdn.com/ts/upload/f3/74/46/f4c52053d220e94a047410420eaf9faf.png https://salt.tikicdn.com/cache/280x280/ts/product/ed/f7/02/6273208f38c2cd0e0b5a4d3a445c801e.png", "https://salt.tikicdn.com/ts/upload/51/ac/cc/528e80fe3f464f910174e2fdf8887b6f.png",
+        data.put(14, new ProductModel(14, "Siêu Cò – How To Be A Power Connector", 2, 250000, 20, 200000, "https://salt.tikicdn.com/ts/upload/f3/74/46/f4c52053d220e94a047410420eaf9faf.png",
                 "Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.",
                 "Một câu nói nổi tiếng trong tiếng Tây Ban Nha “Nói cho tôi biết bạn chơi với ai, và tôi sẽ nói cho bạn biết bạn là người thế nào” hay Người Việt cũng có rất nhiều câu nói tương tự: “Đi với bụt mặc áo cà sa, đi với ma mặc áo giấy”.",
                 "Nhà Xuất Bản Thế Giới"));
@@ -204,5 +202,5 @@ public class Data {
                         "Câu Chuyện Nghệ Thuật là một tác phẩm kể về lịch sử nghệ thuật châu Âu từ thời cổ đại đến hiện đại, được tác giả khảo sát và đánh giá trong các lĩnh vực khác nhau như hội họa, điêu khắc, kiến trúc… song hành với những chuyển biến và giao thoa của các nền văn hóa, chính trị, và tôn giáo. Nguồn tư liệu phong phú về các tác phẩm đáng chú ý, những tên tuổi tài năng, những trường phái, phong cách đặc sắc trong dòng chảy nghệ thuật.",
                 "Nhà Xuất Bản Dân Trí"));
     }
->>>>>>> d60c964e9ccc23c9f57d195d6e14f144434a2199
+
 }
