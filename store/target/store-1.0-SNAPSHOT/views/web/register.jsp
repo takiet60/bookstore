@@ -170,6 +170,7 @@
 </div>
 
 <script type="text/javascript">
+
     let fname = document.forms['vform']['fname'];
     let lname = document.forms['vform']['lname'];
     let address = document.forms['vform']['address'];
@@ -296,6 +297,7 @@
             return true;
         }
     }
+
 
 </script>
 </body>

@@ -222,7 +222,7 @@
                                                 <span><a href="cart.html">Giỏ hàng</a></span>
                                                 <span><a href="wishlist.html">Yêu thích</a></span>
                                                 <span><a href="my-account.html">Đăng nhập</a></span>
-                                                <span><a href="create-account.html">Tạo tài khoản</a></span>
+                                                <span><a href="<c:url value="/register"/> ">Tạo tài khoản</a></span>
                                             </div>
                                         </div>
                                     </div>
