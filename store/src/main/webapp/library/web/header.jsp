@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-6 col-sm-6 col-6 col-lg-2">
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="<c:url value="/home"/>">
                         <img src="images/logo/logo.png" alt="logo images">
                     </a>
                 </div>
@@ -13,7 +13,7 @@
             <div class="col-lg-8 d-none d-lg-block">
                 <nav class="mainmenu__nav">
                     <ul class="meninmenu d-flex justify-content-start">
-                        <li class="drop with--one--item"><a href="index.html">Trang chủ</a>
+                        <li class="drop with--one--item"><a href="<c:url value="/home"/>">Trang chủ</a>
 
                         </li>
                         <li class="drop"><a href="#">Shop</a>
@@ -221,7 +221,7 @@
                                                 <span><a href="#">So sánh sản phẩm</a></span>
                                                 <span><a href="cart.html">Giỏ hàng</a></span>
                                                 <span><a href="wishlist.html">Yêu thích</a></span>
-                                                <span><a href="my-account.html">Đăng nhập</a></span>
+                                                <span><a href="<c:url value="/login"/> ">Đăng nhập</a></span>
                                                 <span><a href="<c:url value="/register"/> ">Tạo tài khoản</a></span>
                                             </div>
                                         </div>
