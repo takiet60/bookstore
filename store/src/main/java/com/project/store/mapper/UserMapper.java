@@ -13,18 +13,11 @@ public class UserMapper implements RowMapper<UserModel>{
         try{
             UserModel userModel = new UserModel();
             userModel.setId(rs.getLong("id"));
-            System.out.println(userModel.getId());
             userModel.setName(rs.getString("name"));
-            System.out.println(userModel.getName());
             userModel.setPhone(rs.getString("phone"));
-            System.out.println(userModel.getPhone());
             userModel.setEmail(rs.getString("email"));
             userModel.setUsername(rs.getString("username"));
             userModel.setPassword(rs.getString("password"));
-
-
-
-            System.out.println(userModel.getUsername());
             return userModel;
         } catch (SQLException throwables) {
             throwables.printStackTrace();

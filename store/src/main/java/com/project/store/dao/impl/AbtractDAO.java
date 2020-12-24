@@ -19,7 +19,6 @@ public class AbtractDAO<T> implements IGenericDAO<T> {
 
     @Override
     public <T> List<T> query(String sql, RowMapper<T> rowMapper, Object... parameters) {
-        System.out.println(3);
         List<T> result = new ArrayList<T>();
         Connection connection = null;
         PreparedStatement statement = null;
@@ -101,7 +100,6 @@ public class AbtractDAO<T> implements IGenericDAO<T> {
 
     @Override
     public Long insert(String sql, Object... parameters) {
-
         Connection connection = null;
         PreparedStatement statement = null;
         ResultSet resultSet = null;

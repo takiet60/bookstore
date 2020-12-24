@@ -1,13 +1,13 @@
 package com.project.store.model;
 
-public class ProductModel extends AbstractModel{
+public class ProductModel {
     private long id;
     private String name;
     private int categoryId;
     private int cost;
     private int discount;
     private int value;
-    private String[] images;
+    private String images;
     private String shortDescription;
     private String description;
     private String production;
@@ -16,7 +16,7 @@ public class ProductModel extends AbstractModel{
 
     }
 
-    public ProductModel(long id, String name, int categoryId, int cost, int discount, int value, String[] images, String shortDescription, String description, String production) {
+    public ProductModel(long id, String name, int categoryId, int cost, int discount, int value, String images, String shortDescription, String description, String production) {
         this.id = id;
         this.name = name;
         this.categoryId = categoryId;
@@ -29,12 +29,11 @@ public class ProductModel extends AbstractModel{
         this.production = production;
     }
 
-    @Override
+
     public long getId() {
         return id;
     }
 
-    @Override
     public void setId(long id) {
         this.id = id;
     }
@@ -79,11 +78,11 @@ public class ProductModel extends AbstractModel{
         this.value = value;
     }
 
-    public String[] getImages() {
+    public String getImages() {
         return images;
     }
 
-    public void setImages(String[] images) {
+    public void setImages(String images) {
         this.images = images;
     }
 
