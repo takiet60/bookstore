@@ -98,7 +98,7 @@ public class Data {
                 "Một câu nói nổi tiếng trong tiếng Tây Ban Nha “Nói cho tôi biết bạn chơi với ai, và tôi sẽ nói cho bạn biết bạn là người thế nào” hay Người Việt cũng có rất nhiều câu nói tương tự: “Đi với bụt mặc áo cà sa, đi với ma mặc áo giấy”.",
                 "Nhà Xuất Bản Thế Giới"));
 
-        data.put(15, new ProductModel(15, "Sách Bứt phá 9+ môn Tiếng anh lớp 10", 17, 200000, 8, 184000, "https://salt.tikicdn.com/ts/upload/f3/74/46/f4c52053d220e94a047410420eaf9faf.png", "https://salt.tikicdn.com/cache/280x280/ts/product/b7/3e/f0/fc53364d31527a1dcdb2114143a30299.png",
+        data.put(15, new ProductModel(15, "Sách Bứt phá 9+ môn Tiếng anh lớp 10", 17, 200000, 8, 184000, "https://salt.tikicdn.com/ts/upload/f3/74/46/f4c52053d220e94a047410420eaf9faf.png",
                 "Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.",
                 "Cuốn sách Bứt phá 9+ môn Tiếng anh lớp 10 là cuốn sách giúp học sinh củng cố kiến thức và tăng cường kĩ năng vận dụng, nắm chắc phương pháp để ứng dụng giải thành thạo mọi dạng bài tập.\n" +
                         "\n" +
@@ -120,5 +120,85 @@ public class Data {
                         "Thả lỏng và tận hưởng sự vui vẻ đi. Vì chẳng phải cuộc đời đang ghét bạn đâu, mà chính bạn bạn đang loay hoay với những mệt nhọc ở trên đời. Ví dụ như nay đã là deadline mà bỗng bị rớt mạng, sáng nay đi làm quên đem theo ví, hay đồng nghiệp ở công ty nói xấu mình,",
                 "Nhà Xuất Bản Phụ Nữ"));
 
+        data.put(17, new ProductModel(17, "Thiên Tài Bên Trái, Kẻ Điên Bên Phải", 1, 144328, 33, 96700, "https://salt.tikicdn.com/cache/280x280/ts/product/be/95/53/6a6e9ccf4adf23c2c40463cc29563051.JPG",
+                "Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.",
+                "NẾU MỘT NGÀY ANH THẤY TÔI ĐIÊN, THỰC RA CHÍNH LÀ ANH ĐIÊN ĐẤY!\n" +
+                        "\n" +
+                        "Hỡi những con người đang oằn mình trong cuộc sống, bạn biết gì về thế giới của mình? Là vô vàn thứ lý thuyết được các bậc vĩ nhân kiểm chứng, là luật lệ, là cả nghìn thứ sự thật bọc trong cái lốt hiển nhiên, hay những triết lý cứng nhắc của cuộc đời?\n" +
+                        "\n" +
+                        "Lại đây, vượt qua thứ nhận thức tẻ nhạt bị đóng kín bằng con mắt trần gian, khai mở toàn bộ suy nghĩ, để dòng máu trong bạn sục sôi trước những điều kỳ vĩ, phá vỡ mọi quy tắc. Thế giới sẽ gọi bạn là kẻ điên, nhưng vậy thì có sao? Ranh giới duy nhất giữa kẻ điên và thiên tài chẳng qua là một sợi chỉ mỏng manh: Thiên tài chứng minh được thế giới của mình, còn kẻ điên chưa kịp làm điều đó. Chọn trở thành một kẻ điên để vẫy vùng giữa nhân gian loạn thế hay khóa hết chúng lại, sống mãi một cuộc đời bình thường khiến bạn cảm thấy hạnh phúc hơn?",
+                "Nhà Xuất Bản Thế Giới"));
+
+        data.put(18, new ProductModel(18, "Con Chim Xanh Biếc Bay Về (Nguyễn Nhật Ánh) (Bìa Cứng)", 14, 270000, 30, 189000, "https://salt.tikicdn.com/cache/280x280/ts/product/da/6a/6c/dd77b39d450443cc6b5f714c8a3fcb4e.jpg",
+                "Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.",
+                "Không giống như những tác phẩm trước đây lấy bối cảnh vùng quê miền Trung đầy ắp những hoài niệm tuổi thơ dung dị, trong trẻo với các nhân vật ở độ tuổi dậy thì, trong quyển sách mới lần này nhà văn Nguyễn Nhật Ánh lấy bối cảnh chính là Sài Gòn – Thành phố Hồ Chí Minh nơi tác giả sinh sống (như là một sự đền đáp ân tình với mảnh đất miền Nam). Các nhân vật chính trong truyện cũng “lớn” hơn, với những câu chuyện mưu sinh lập nghiệp lắm gian nan thử thách của các sinh viên trẻ đầy hoài bão. Tất nhiên không thể thiếu những câu chuyện tình cảm động, kịch tính và bất ngờ khiến bạn đọc ngẩn ngơ, cười ra nước mắt. Và như trong mọi tác phẩm Nguyễn Nhật Ánh, sự tử tế và tinh thần hướng thượng vẫn là điểm nhấn quan trọng trong quyển sách mới này.",
+                "NXB Trẻ"));
+
+        data.put(19, new ProductModel(19, "The Big Four - 4 Đại Gia Kiểm Toán: Deloitte - PWC - EY - KPMG: Quá Khứ Kỳ Lạ Và Tương Lai Hiểm Trở Của Sự Độc Quyền Kiểm Toán Toàn Cầu", 2, 168000, 20, 134000, "https://salt.tikicdn.com/ts/upload/f3/74/46/f4c52053d220e94a047410420eaf9faf.png",
+                "Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.",
+                "“Big Four” hình thành thế nào?\n" +
+                        "\n" +
+                        "Trước năm 1989, thế giới kiểm toán vẫn được thống trị bởi nhóm “Big 8”: (1) Arthur Andersen, (2) Arthur Young & Co., (3) Coopers & Lybrand, (4) Ernst & Whinney, (5) Deloitte, Haskins & Sells, (6) KPMG, (7) Touche Ross, (8) Price Waterhouse.\n" +
+                        "\n" +
+                        "Năm 1989, hai vụ sát nhập vô cùng lớn đã giảm nhóm “Big 8” xuống còn “Big 6”: Ernst & Whinney và Arthur Young & Co sát nhập để tạo ra Ernst and Young (EY); Deloitte, Haskins & Sells hợp nhất với Touche Ross tạo thành Deloitte Touche.\n" +
+                        "\n" +
+                        "Năm 1998, Price Waterhouse sát nhập với Coopers & Lybrand tạo nên PriceWaterhouseCoopers (PwC). “Big 6” trở thành “Big 5”.\n" +
+                        "\n" +
+                        "Năm 2002, Arthur Anderson phá sản. “Big Four” hình thành và tồn tại đến ngày nay.",
+                "NXB Tài Chính"));
+
+        data.put(20, new ProductModel(20, "Tự Học 2000 Từ Vựng Tiếng Anh Theo Chủ Đề", 17, 65000, 35, 42250, "https://salt.tikicdn.com/cache/280x280/ts/product/d5/53/0e/fc00028419754638dd5b250abbcb0de7.jpg",
+                "Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.",
+                "Tự Học 2000 Từ Vựng Tiếng Anh Theo Chủ Đề\n" +
+                        "\n" +
+                        "Nghe nói đọc viết là 4 kĩ năng quan trọng để có thể học và sử dụng tốt tiếng Anh - ngôn ngữ toàn cầu. Tuy nhiên không phải ai cũng có thể thành thạo những kĩ năng này. Nghe hiểu là một trong những kĩ năng đòi hỏi sự tập trung và rèn luyện của người học.\n" +
+                        "\n" +
+                        "Luyện nghe từ vựng tiếng Anh theo chủ điểm sẽ cung cấp những bài tập với trình độ nâng cao, là tài liệu bổ ích cho những ai muốn nâng cao khả năng nghe hiểu thông qua học từ vựng.",
+                "Nhà Xuất Bản Đại Học Quốc Gia Hà Nội"
+                ));
+
+        data.put(21, new ProductModel(21, "Tôi Quyết Định Sống Cho Chính Tôi (Tặng Kèm 1 Sổ To Do List 2020)", 10, 87794, 32, 59700, "https://salt.tikicdn.com/cache/280x280/ts/product/c1/6a/3e/537f7b9bb219be81e217e0c7b5b037e6.jpg",
+                "Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.",
+                "Cuốn sách đạt giải thưởng “Cuốn sách của năm” tại Hàn Quốc vào năm 2017.\n" +
+                        "\n" +
+                        "Đã tái bản hơn 100 lần kể từ lần xuất bản đầu tiên vào năm 2016.\n" +
+                        "\n" +
+                        "Được nhiều nghệ sĩ chọn đọc và giới thiệu đến các fan của mình, đơn cử là JungKook (BTS).\n" +
+                        "\n" +
+                        " Như tác giả Kim Suhyun đã chia sẻ về quá trình sáng tác cuốn sách này:\n" +
+                        "\n" +
+                        "“Tôi đã cố gắng ghi ra những điều quan trọng nhất trong cuộc sống như:\n" +
+                        "\n" +
+                        "Công việc, các mối quan hệ, niềm vui, tinh thần, thể chất, sức khỏe…\n" +
+                        "\n" +
+                        "Tôi đã không lường trước những việc có thể xảy ra . Mà tôi chỉ làm (Do) những việc tôi muốn (Want) và có thể (Can). ",
+                "Nhà Xuất Bản Thanh Niên"));
+
+        data.put(22, new ProductModel(22, "Cân Bằng Cảm Xúc, Cả Lúc Bão Giông", 1, 95821, 33, 64200, "https://salt.tikicdn.com/cache/280x280/ts/product/fd/61/1d/a19424cfe9d113c32732d93cf2d5f59a.jpg",
+                "Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.",
+                "Một ngày, chúng ta có khoảng 16 tiếng tiếp xúc với con người, công việc, các nguồn thông tin từ mạng xã hội, loa đài báo giấy… Việc này mang đến cho bạn vô vàn cảm xúc, cả tiêu cực lẫn tích cực.\n" +
+                        "Bạn có thể thấy vui khi nhìn một em bé đến trường nhưng 5 phút sau đã nổi cơn tam bành khi bị đứa trẻ con đi xe đạp đâm sầm vào lại còn ăn vạ.\n" +
+                        "Hoặc bạn rất dễ phát điên nếu như chỉ còn 5 giây nữa đèn giao thông chuyển từ đỏ sang xanh mà kẻ đi đằng sau bấm còi inh ỏi.\n" +
+                        "Hay là, bạn thấy buồn chỉ vì hôm nay trời mưa man mác, mà vẫn phải ngồi trong văn phòng làm việc, bạn bi quan rằng tuổi trẻ thật buồn tẻ.\n" +
+                        "Hãy thừa nhận đi! Ai trong số chúng ta cũng sẽ trải qua những điều này. Và cuốn sách này dạy bạn cách làm hòa với chính những tiêu cực bên trong mình…",
+                "Nhà Xuất Bản Thế Giới"));
+
+        data.put(23, new ProductModel(23, "The Story Of Art - Câu Chuyện Nghệ Thuật", 7, 994286, 30, 696000, "https://salt.tikicdn.com/cache/280x280/ts/product/d8/4e/2e/30df9a1b00d7bfb638d63bd96e30dc38.jpg",
+                "Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.",
+                "“The Story of Art\" (Câu Chuyện Nghệ Thuật) được in lần đầu năm 1950 và trong 70 năm qua, được dịch ra gần 30 thứ tiếng và hơn tám triệu bản đã được bán ra trên toàn thế giới. Điều đó khiến tác phẩm trở thành cuốn sách nghệ thuật bán chạy nhất mọi thời đại và là tác phẩm nhập môn nghệ thuật thị giác cho vô số thế hệ độc giả.\n" +
+                        "\n" +
+                        "Tác giả E.H Gombrich (1909-2001) là một trong những nhà sử học nghệ thuật lỗi lạc nhất của nửa sau thế kỷ 20, đối với giới hàn lâm cũng như với tầng lớp công chúng rộng rãi. Những tác phẩm khác mang tính lý thuyết của ông cũng đã trở thành những công trình then chốt đối với các nhà nghiên cứu lịch sử nghệ thuật.",
+                "Nhà Xuất Bản Dân Trí"));
+
+        data.put(24, new ProductModel(24, "Sức Mạnh Của Ngôn Từ (Tặng Kèm 1 Photocard Mintbooks Limited)", 10, 96364, 34, 63600, "https://salt.tikicdn.com/cache/280x280/ts/product/54/6d/2f/b4be918982e5df06cc057454e806651e.jpg",
+                "Bạn hãy NHẬP ĐỊA CHỈ nhận hàng để được dự báo thời gian & chi phí giao hàng một cách chính xác nhất.",
+                "\n" +
+                        "\n" +
+                        "“The Story of Art\" (Câu Chuyện Nghệ Thuật) được in lần đầu năm 1950 và trong 70 năm qua, được dịch ra gần 30 thứ tiếng và hơn tám triệu bản đã được bán ra trên toàn thế giới. Điều đó khiến tác phẩm trở thành cuốn sách nghệ thuật bán chạy nhất mọi thời đại và là tác phẩm nhập môn nghệ thuật thị giác cho vô số thế hệ độc giả.\n" +
+                        "\n" +
+                        "Tác giả E.H Gombrich (1909-2001) là một trong những nhà sử học nghệ thuật lỗi lạc nhất của nửa sau thế kỷ 20, đối với giới hàn lâm cũng như với tầng lớp công chúng rộng rãi. Những tác phẩm khác mang tính lý thuyết của ông cũng đã trở thành những công trình then chốt đối với các nhà nghiên cứu lịch sử nghệ thuật.\n" +
+                        "\n" +
+                        "Câu Chuyện Nghệ Thuật là một tác phẩm kể về lịch sử nghệ thuật châu Âu từ thời cổ đại đến hiện đại, được tác giả khảo sát và đánh giá trong các lĩnh vực khác nhau như hội họa, điêu khắc, kiến trúc… song hành với những chuyển biến và giao thoa của các nền văn hóa, chính trị, và tôn giáo. Nguồn tư liệu phong phú về các tác phẩm đáng chú ý, những tên tuổi tài năng, những trường phái, phong cách đặc sắc trong dòng chảy nghệ thuật.",
+                "Nhà Xuất Bản Dân Trí"));
     }
 }
