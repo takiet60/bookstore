@@ -22,7 +22,7 @@
                             <div class="input_box space_between">
                                 <label >Tên<span>*</span></label>
                                 <div id="l_name_error"></div>
-                                <input type="text" name="lname">
+                                ===========================<input type="text" name="lname">
                             </div>
                         </div>
                         <div class="input_box">

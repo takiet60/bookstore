@@ -25,10 +25,15 @@ public class HomeController extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<ProductModel> list = productService.findAll();
-
         List<ProductModel> listByCategory7 = productService.findByCategoryId(7);
+        List<ProductModel> listByNewest = productService.findByNewest();
+        List<ProductModel> listByCategory8 = productService.findByCategoryId(8);
+        List<ProductModel> listByCategory9 = productService.findByCategoryId(9);
         req.setAttribute("listProduct", list);
         req.setAttribute("listByCategory7", listByCategory7);
+        req.setAttribute("listByNewest", listByNewest);
+        req.setAttribute("listByCategory8", listByCategory8);
+        req.setAttribute("listByCategory9", listByCategory9);
         RequestDispatcher rd = req.getRequestDispatcher("/views/web/home.jsp");
         rd.forward(req, resp);
     }

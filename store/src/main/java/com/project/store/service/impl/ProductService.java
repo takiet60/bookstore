@@ -26,4 +26,9 @@ public class ProductService implements IProductService {
     public List<ProductModel> findByCategoryId(int id) {
         return productDAO.findByCategory(id);
     }
+
+    @Override
+    public List<ProductModel> findByNewest() {
+        return productDAO.findByNewest();
+    }
 }

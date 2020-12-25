@@ -16,10 +16,11 @@ public class ProductMapper implements RowMapper<ProductModel> {
             productModel.setCost(rs.getInt("cost"));
             productModel.setDiscount(rs.getInt("discount"));
             productModel.setValue(rs.getInt("value"));
+            productModel.setProduction(rs.getString("production"));
             productModel.setImages(rs.getString("images"));
             productModel.setShortDescription(rs.getString("shortDescription"));
             productModel.setDescription(rs.getString("description"));
-            productModel.setProduction(rs.getString("production"));
+
             return productModel;
         } catch (SQLException throwables) {
             throwables.printStackTrace();

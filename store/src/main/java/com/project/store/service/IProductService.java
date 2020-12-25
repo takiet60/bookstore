@@ -8,4 +8,5 @@ public interface IProductService {
     List<ProductModel> findAll();
     ProductModel findById(long id);
     List<ProductModel> findByCategoryId(int id);
+    List<ProductModel> findByNewest();
 }

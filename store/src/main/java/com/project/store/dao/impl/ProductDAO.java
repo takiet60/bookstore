@@ -27,10 +27,15 @@ public class ProductDAO extends AbtractDAO<ProductModel> implements IProductDAO 
                 productModel.getImages(), productModel.getShortDescription(), productModel.getDescription(), productModel.getProduction());
     }
 
-    @Override
     public List<ProductModel> findByCategory(int id) {
         String sql = "SELECT * FROM product WHERE categoryId = ?";
         return query(sql, new ProductMapper(), id);
+    }
+
+    @Override
+    public List<ProductModel> findByNewest() {
+        String sql = "SELECT * FROM product ORDER BY id DESC";
+        return query(sql, new ProductMapper());
     }
 
 
