@@ -1,3 +1,6 @@
+<%@ page import="com.project.store.model.UserModel" %>
+<%@ page import="com.mysql.cj.Session" %>
+<%@ page import="javax.jws.soap.SOAPBinding" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="/library/taglib.jsp"%>
 <header id="wn__header" class="header__area header__absolute sticky__header">
@@ -213,16 +216,25 @@
 
                                 <div class="switcher-currency">
                                     <strong class="label switcher-label">
-                                        <span>Tài khoản</span>
+                                        <span>
+                                            <%
+                                                UserModel user =(UserModel) session.getAttribute("user");
+                                                if(user != null){
+                                                    out.print("Xin chào " + user.getName());
+                                                }else{
+                                                    out.print("Tài khoản");
+                                                }
+                                            %>
+                                        </span>
                                     </strong>
                                     <div class="switcher-options">
                                         <div class="switcher-currency-trigger">
                                             <div class="setting__menu">
-                                                <span><a href="#">So sánh sản phẩm</a></span>
                                                 <span><a href="cart.html">Giỏ hàng</a></span>
                                                 <span><a href="wishlist.html">Yêu thích</a></span>
                                                 <span><a href="<c:url value="/login"/> ">Đăng nhập</a></span>
                                                 <span><a href="<c:url value="/register"/> ">Tạo tài khoản</a></span>
+                                                <span><a href="<c:url value="/logout"/> ">Đăng xuất</a></span>
                                             </div>
                                         </div>
                                     </div>

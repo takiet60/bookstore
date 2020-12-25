@@ -20,7 +20,6 @@ public class ProductMapper implements RowMapper<ProductModel> {
             productModel.setImages(rs.getString("images"));
             productModel.setShortDescription(rs.getString("shortDescription"));
             productModel.setDescription(rs.getString("description"));
-
             return productModel;
         } catch (SQLException throwables) {
             throwables.printStackTrace();

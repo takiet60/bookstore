@@ -11,6 +11,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -26,12 +27,16 @@ public class LoginController extends HttpServlet {
         UserModel userModel = userService.findByUsername(username);
         if(userModel != null){
             if(userModel.getPassword().equals(password)){
+                HttpSession session = request.getSession();
+                session.setAttribute("user", userModel);
                 response.sendRedirect("home");
             }else{
                 response.sendRedirect("login");
             }
         }else{
+
             response.sendRedirect("login");
+
         }
     }
 

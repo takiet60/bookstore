@@ -28,4 +28,5 @@ public class UserService implements IUserService {
         long id = userDAO.save(userModel);
         return userDAO.findOneUser(id);
     }
+
 }
