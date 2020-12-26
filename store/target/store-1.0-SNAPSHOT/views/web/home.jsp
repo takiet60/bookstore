@@ -169,7 +169,10 @@
                                         <div class="action">
                                             <div class="actions_inner">
                                                 <ul class="add_to_links">
-                                                    <li><a class="cart" href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
+                                                    <li>
+                                                        <a class="cart" href="<c:url value = "cart/add?id=${p.id}"/> "><i class="fas fa-shopping-bag"></i>
+                                                        </a>
+                                                    </li>
                                                     <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>
                                                     <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>
                                                     <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>

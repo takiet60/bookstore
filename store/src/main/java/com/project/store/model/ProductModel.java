@@ -1,6 +1,8 @@
 package com.project.store.model;
 
-public class ProductModel {
+import java.io.Serializable;
+
+public class ProductModel implements Serializable {
     private long id;
     private String name;
     private int categoryId;
@@ -109,4 +111,6 @@ public class ProductModel {
     public void setProduction(String production) {
         this.production = production;
     }
+
+
 }

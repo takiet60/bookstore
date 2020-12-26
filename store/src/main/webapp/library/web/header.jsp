@@ -1,6 +1,9 @@
 <%@ page import="com.project.store.model.UserModel" %>
 <%@ page import="com.mysql.cj.Session" %>
 <%@ page import="javax.jws.soap.SOAPBinding" %>
+<%@ page import="com.project.store.model.CartModel" %>
+<%@ page import="java.util.Collection" %>
+<%@ page import="com.project.store.model.ItemModel" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="/library/taglib.jsp"%>
 <header id="wn__header" class="header__area header__absolute sticky__header">
@@ -123,54 +126,31 @@
                                 </div>
                                 <div class="single__items">
                                     <div class="miniproduct">
-                                        <div class="item01 d-flex">
-                                            <div class="thumb">
-                                                <a href="product-details.html"><img src="images/product/sm-img/1.jpg" alt="product images"></a>
-                                            </div>
-                                            <div class="content">
-                                                <h6><a href="product-details.html">Voyage Yoga Bag</a></h6>
-                                                <span class="prize">$30.00</span>
-                                                <div class="product_prize d-flex justify-content-between">
-                                                    <span class="qun">Số lượng: 01</span>
-                                                    <ul class="d-flex justify-content-end">
-                                                        <li><a href="#"><i class="fas fa-cog"></i></a></li>
-                                                        <li><a href="#"><i class="far fa-trash-alt"></i></a></li>
-                                                    </ul>
+                                        <%
+                                            CartModel cart = CartModel.getCart(session);
+                                            Collection<ItemModel> data = cart.getCart();
+                                            request.setAttribute("data", data);
+                                        %>
+                                        <c:forEach items="${data}" var="d">
+                                            <div class="item01 d-flex mt--20">
+                                                <div class="thumb">
+                                                    <a href="product-details.html"><img src="${p.productModel.images}" alt="product images"></a>
+                                                </div>
+                                                <div class="content">
+                                                    <h6><a href="product-details.html">${p.productModel.name}</a></h6>
+                                                    <span class="prize">${p.productModel.value}</span>
+                                                    <div class="product_prize d-flex justify-content-between">
+                                                        <span class="qun">Số lượng: ${p.quantity}</span>
+                                                        <ul class="d-flex justify-content-end">
+                                                            <li><a href="#"><i class="fas fa-cog"></i></a></li>
+                                                            <li><a href="#"><i class="far fa-trash-alt"></i></a></li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="item01 d-flex mt--20">
-                                            <div class="thumb">
-                                                <a href="product-details.html"><img src="images/product/sm-img/3.jpg" alt="product images"></a>
-                                            </div>
-                                            <div class="content">
-                                                <h6><a href="product-details.html">Impulse Duffle</a></h6>
-                                                <span class="prize">$40.00</span>
-                                                <div class="product_prize d-flex justify-content-between">
-                                                    <span class="qun">Số lượng: 03</span>
-                                                    <ul class="d-flex justify-content-end">
-                                                        <li><a href="#"><i class="fas fa-cog"></i></a></li>
-                                                        <li><a href="#"><i class="far fa-trash-alt"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item01 d-flex mt--20">
-                                            <div class="thumb">
-                                                <a href="product-details.html"><img src="images/product/sm-img/2.jpg" alt="product images"></a>
-                                            </div>
-                                            <div class="content">
-                                                <h6><a href="product-details.html">Compete Track Tote</a></h6>
-                                                <span class="prize">$40.00</span>
-                                                <div class="product_prize d-flex justify-content-between">
-                                                    <span class="qun">Số lượng: 03</span>
-                                                    <ul class="d-flex justify-content-end">
-                                                        <li><a href="#"><i class="fas fa-cog"></i></a></li>
-                                                        <li><a href="#"><i class="far fa-trash-alt"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
+                                        </c:forEach>
+
+
                                     </div>
                                 </div>
                                 <div class="mini_action cart">
@@ -232,9 +212,23 @@
                                             <div class="setting__menu">
                                                 <span><a href="cart.html">Giỏ hàng</a></span>
                                                 <span><a href="wishlist.html">Yêu thích</a></span>
-                                                <span><a href="<c:url value="/login"/> ">Đăng nhập</a></span>
+                                                <span><a href="<c:url value="/login"/> ">
+                                                    <%
+                                                        if(user == null){
+                                                            out.print("Đăng nhập");
+                                                        }
+                                                    %>
+                                                   </a>
+                                                </span>
                                                 <span><a href="<c:url value="/register"/> ">Tạo tài khoản</a></span>
-                                                <span><a href="<c:url value="/logout"/> ">Đăng xuất</a></span>
+                                                <span><a href="<c:url value="/logout"/> ">
+                                                    <%
+                                                        if(user != null){
+                                                            out.print("Đăng xuất");
+                                                        }
+                                                    %>
+                                                    </a>
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
