@@ -1,16 +1,18 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: Asus
-  Date: 12/24/2020
-  Time: 2:38 PM
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="com.project.store.model.CartModel" %>
+<%@ page import="com.project.store.model.ItemModel" %>
+<%@ page import="java.util.Collection" %>
+<%@include file="/library/taglib.jsp"%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
     <title>Title</title>
 </head>
 <body>
+<%
+    CartModel cart = CartModel.getCart(session);
+    Collection<ItemModel> data = cart.getCart();
+    request.setAttribute("data", data);
+%>
 <div class="cart-main-area section-padding--lg bg--white">
     <div class="container">
         <div class="row">
@@ -18,6 +20,7 @@
                 <form action="#">
                     <div class="table-content wnro__table table-responsive">
                         <table>
+
                             <thead>
                             <tr class="title-top">
                                 <th class="product-thumbnail">Hình ảnh</th>
@@ -29,30 +32,16 @@
                             </tr>
                             </thead>
                             <tbody>
+                            <c:forEach items="${data}" var="d">
                             <tr>
-                                <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/1.jpg" alt="product img"></a></td>
-                                <td class="product-name"><a href="#">Natoque penatibus</a></td>
-                                <td class="product-price"><span class="amount">$165.00</span></td>
-                                <td class="product-quantity"><input type="number" value="1"></td>
-                                <td class="product-subtotal">$165.00</td>
+                                <td class="product-thumbnail"><a href="#"><img src="${d.productModel.images}" alt="product img"></a></td>
+                                <td class="product-name"><a href="#">${d.productModel.name}</a></td>
+                                <td class="product-price"><span class="amount">${d.productModel.value}₫</span></td>
+                                <td class="product-quantity"><input type="number" value="${d.quantity}"></td>
+                                <td class="product-subtotal">${d.productModel.value * d.quantity}₫</td>
                                 <td class="product-remove"><a href="#">X</a></td>
                             </tr>
-                            <tr>
-                                <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/2.jpg" alt="product img"></a></td>
-                                <td class="product-name"><a href="#">Quisque fringilla</a></td>
-                                <td class="product-price"><span class="amount">$50.00</span></td>
-                                <td class="product-quantity"><input type="number" value="1"></td>
-                                <td class="product-subtotal">$50.00</td>
-                                <td class="product-remove"><a href="#">X</a></td>
-                            </tr>
-                            <tr>
-                                <td class="product-thumbnail"><a href="#"><img src="images/product/sm-3/3.jpg" alt="product img"></a></td>
-                                <td class="product-name"><a href="#">Vestibulum suscipit</a></td>
-                                <td class="product-price"><span class="amount">$50.00</span></td>
-                                <td class="product-quantity"><input type="number" value="1"></td>
-                                <td class="product-subtotal">$50.00</td>
-                                <td class="product-remove"><a href="#">X</a></td>
-                            </tr>
+                            </c:forEach>
                             </tbody>
                         </table>
                     </div>
@@ -76,8 +65,8 @@
                             <li>Tổng</li>
                         </ul>
                         <ul class="cart__total__tk">
-                            <li>$70</li>
-                            <li>$70</li>
+                            <li></li>
+                            <li></li>
                         </ul>
                     </div>
                     <div class="cart__total__amount">

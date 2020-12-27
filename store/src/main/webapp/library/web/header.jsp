@@ -109,6 +109,11 @@
                     <li class="wishlist"><a href="wishlist.html"></a></li>
                     <li class="shopcart"><a class="cartbox_active" href="#"><span class="product_qun">3</span></a>
                         <!-- Start Shopping Cart -->
+                        <%
+                            CartModel cart = CartModel.getCart(session);
+                            Collection<ItemModel> data = cart.getCart();
+                            request.setAttribute("data", data);
+                        %>
                         <div class="block-minicart minicart__active">
                             <div class="minicart-content-wrapper">
                                 <div class="micart__close">
@@ -126,21 +131,17 @@
                                 </div>
                                 <div class="single__items">
                                     <div class="miniproduct">
-                                        <%
-                                            CartModel cart = CartModel.getCart(session);
-                                            Collection<ItemModel> data = cart.getCart();
-                                            request.setAttribute("data", data);
-                                        %>
+
                                         <c:forEach items="${data}" var="d">
                                             <div class="item01 d-flex mt--20">
                                                 <div class="thumb">
-                                                    <a href="product-details.html"><img src="${p.productModel.images}" alt="product images"></a>
+                                                    <a href="product-details.html"><img src="${d.productModel.images}" alt="product images"></a>
                                                 </div>
                                                 <div class="content">
-                                                    <h6><a href="product-details.html">${p.productModel.name}</a></h6>
-                                                    <span class="prize">${p.productModel.value}</span>
+                                                    <h6><a href="product-details.html">${d.productModel.name}</a></h6>
+                                                    <span class="prize">${d.productModel.value}₫</span>
                                                     <div class="product_prize d-flex justify-content-between">
-                                                        <span class="qun">Số lượng: ${p.quantity}</span>
+                                                        <span class="qun">Số lượng: ${d.quantity}</span>
                                                         <ul class="d-flex justify-content-end">
                                                             <li><a href="#"><i class="fas fa-cog"></i></a></li>
                                                             <li><a href="#"><i class="far fa-trash-alt"></i></a></li>
@@ -210,7 +211,7 @@
                                     <div class="switcher-options">
                                         <div class="switcher-currency-trigger">
                                             <div class="setting__menu">
-                                                <span><a href="cart.html">Giỏ hàng</a></span>
+                                                <span><a href="<c:url value="/cart"/>">Giỏ hàng</a></span>
                                                 <span><a href="wishlist.html">Yêu thích</a></span>
                                                 <span><a href="<c:url value="/login"/> ">
                                                     <%

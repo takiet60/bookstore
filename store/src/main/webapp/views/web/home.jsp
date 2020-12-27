@@ -169,8 +169,11 @@
                                         <div class="action">
                                             <div class="actions_inner">
                                                 <ul class="add_to_links">
-                                                    <li>
-                                                        <a class="cart" href="<c:url value = "cart/add?id=${p.id}"/> "><i class="fas fa-shopping-bag"></i>
+                                                    <li id="${p.id}" class="add_to_cart">
+                                                        <a class="cart" href="<c:url value = "cart/add?id=${p.id}"/> ">
+<%--                                                        <a class="cart">--%>
+                                                            <i class="fas fa-shopping-bag"></i>
+<%--                                                        </a>--%>
                                                         </a>
                                                     </li>
                                                     <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>
@@ -701,3 +704,29 @@
         <!-- Single product end -->
     </div>
 </section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+    $(document).ready(function()
+    {
+        //khai báo biến submit form lấy đối tượng nút submit
+        var submit = $("button[type='submit']");
+        let addToCart = $(".add_to_cart");
+        //khi nút submit được click
+        addToCart.click(function()
+        {
+            //khai báo các biến dữ liệu gửi lên server
+            // var user = $("input[name='user']").val(); //lấy giá trị trong input user
+            let value = this.id;
+            //Sử dụng phương thức Ajax.
+            $.ajax({
+                type : 'GET', //Sử dụng kiểu gửi dữ liệu POST
+                url : 'cart/add', //gửi dữ liệu sang trang data.php
+                data : value, //dữ liệu sẽ được gửi
+                success : function(data)  // Hàm thực thi khi nhận dữ liệu được từ server
+                {
+                    response.sendRedirect(request.getContextPath() + "/home");
+                }
+            });
+            return false;
+        });
+    });
+</script>

@@ -20,6 +20,7 @@ public class AddToCartController extends HttpServlet {
     @Inject
     private IProductService productService;
 
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
     }
@@ -38,7 +39,7 @@ public class AddToCartController extends HttpServlet {
             itemModel.setProductModel(productModel);
             cart.put(itemModel);
             cart.commit(session);
-
+            response.sendRedirect(request.getContextPath() + "/home");
         }
 
     }

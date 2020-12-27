@@ -33,11 +33,12 @@ public class CartModel implements Serializable {
         cart.remove(id);
     }
 
-    public void total(){
+    public long total(){
         long sum = 0;
         for(ItemModel item : cart.values()){
             sum += item.getProductModel().getValue() * item.getQuantity();
         }
+        return sum;
     }
 
     public Collection<ItemModel> getCart(){
