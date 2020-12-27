@@ -16,18 +16,18 @@
                         <div class="margin_between">
                             <div class="input_box space_between" >
                                 <label >Họ  <span>*</span></label>
+                                <input type="text" name="fname" id="iFName">
                                 <div id="f_name_error"></div>
-                                <input type="text" name="fname" >
                             </div>
                             <div class="input_box space_between">
                                 <label >Tên<span>*</span></label>
+                                <input type="text" name="lname" id="iLName">
                                 <div id="l_name_error"></div>
-                                ===========================<input type="text" name="lname">
                             </div>
                         </div>
                         <div class="input_box">
                             <label>Giới tính<span>*</span></label>
-                            <select class="select__option" name="gender">
+                            <select class="select__option" name="gender" id="iGender">
                                 <option name="male">Nam</option>
                                 <option name="female">Nữ</option>
                                 <option name="other">Khác</option>
@@ -38,14 +38,14 @@
                                 <div class="input_box space_between">
                                     <label>Số nhà<span>*</span></label>
                                     <div id="address_error"></div>
-                                    <input type="text" name="address" >
+                                    <input type="text" name="address" id="iHouse">
 
                                 </div>
 
                                 <div class="input_box space_between">
                                     <label>Phường<span>*</span></label>
                                     <div id="ward_error"></div>
-                                    <input type="text" name="ward">
+                                    <input type="text" name="ward" id="iWard">
                                 </div>
                             </div>
                         </div>
@@ -54,11 +54,11 @@
                                 <div class="input_box space_between">
                                     <label>Xã<span>*</span></label>
                                     <div id="commune_error"></div>
-                                    <input type="text" name="commune" >
+                                    <input type="text" name="commune" id="iCommune">
                                 </div>
                                 <div class="input_box">
                                     <label>Thành phố<span>*</span></label>
-                                    <select class="select__option" name="city">
+                                    <select class="select__option" name="city" id="iCity">
                                         <option>Lựa chọn thành phố…</option>
                                         <option>	An Giang	</option>
                                         <option>	Bà Rịa - Vũng Tàu	</option>
@@ -134,29 +134,29 @@
                             <div class="input_box space_between">
                                 <label>Số điện thoại <span>*</span></label>
                                 <div id="phone_error"></div>
-                                <input type="text" name="phone">
+                                <input type="text" name="phone" id="iPhone">
                             </div>
 
                             <div class="input_box space_between">
                                 <label>Email <span>*</span></label>
                                 <div id="email_error"></div>
-                                <input type="email" name="email">
+                                <input type="email" name="email" id="iEmail">
                             </div>
                         </div>
                         <div class="input_box">
                             <label>Tài khoản<span>*</span></label>
                             <div id="username_error"></div>
-                            <input type="text" name="username" >
+                            <input type="text" name="username" id="'iUser">
                         </div>
                         <div class="input_box">
                             <label>Mật khẩu<span>*</span></label>
                             <div id="password_error"></div>
-                            <input type="password" name="password" >
+                            <input type="password" name="password" id="iPass">
                         </div>
                         <div class="input_box">
                             <label>Xác nhận mật khẩu<span>*</span></label>
                             <div id="password2_error"></div>
-                            <input type="password" name="password2">
+                            <input type="password" name="password2" id="iPass2">
                         </div>
                         <button type="submit" >Xác nhận</button>
                     </div><div class="wn__accountbox">
@@ -203,100 +203,207 @@
     email.addEventListener('blur', emailVerify, true);
 
 
-    function validate(){
-        if(fname.value == ""){
-            fname.style.border = "1px solid red";
-            f_name_error.textContent = "Yêu cầu họ";
-            fname.focus();
-            return false;
-        }
-        if(lname.value == ""){
-            lname.style.border = "1px solid red";
-            l_name_error.textContent = "Yêu cầu tên";
-            lname.focus();
-            return false;
-        }
-        if(address.value == ""){
-            address.style.border = "1px solid red";
-            address_error.textContent = "Yêu cầu số nhà";
-            address.focus();
-            return false;
-        }
-        if(ward.value == ""){
-            ward.style.border = "1px solid red";
-            ward_error.textContent = "Yêu cầu tên phường";
-            ward.focus();
-            return false;
-        }
-        if(commune.value == ""){
-            commune.style.border = "1px solid red";
-            commune_error.textContent = "Yêu cầu tên xã";
-            commune.focus();
-            return false;
-        }
-        if(phone.value == ""){
-            phone.style.border = "1px solid red";
-            phone_error.textContent = "Yêu cầu số điện thoại";
-            phone.focus();
-            return false;
-        }
-        if(email.value == ""){
-            email.style.border = "1px solid red";
-            email_error.textContent = "Yêu cầu số email";
-            email.focus();
-            return false;
-        }
-        if(username.value == ""){
-            username.style.border = "1px solid red";
-            username_error.textContent = "Yêu cầu tài khoản";
-            username.focus();
-            return false;
-        }
-        if(password.value == ""){
-            password.style.border = "1px solid red";
-            password_error.textContent = "Yêu cầu mật khẩu";
-            password.focus();
-            return false;
-        }
-        if(password2.value != password.value){
-            password2.style.border = "1px solid red";
-            password2_error.textContent = "Yêu cầu nhập lại mật khẩu";
-            password2.focus();
-            return false;
-        }
-    }
+    $(document).ready(function () {
 
-    function fNameVerify(){
-        if(fname.value != ""){
-            fname.style.border = "1px solid #5E6E66";
-            f_name_error.innerHTML = "";
-            return true;
+        function validatePhone(txtPhone){
+            var filter = /^[0-9-+]+$/;
+            if (filter.test(txtPhone + "") && txtPhone.length() >= 10 && txtPhone.length() <= 12) {
+                return true;
+            } else {
+                return false;
+            }
         }
-    }
 
-    function addressVerify(){
-        if(address.value != ""){
-            address.style.border = "1px solid #5E6E66";
-            address_error.innerHTML = "";
-            return true;
+        function validateEmail(sEmail) {
+            var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+            if (filter.test((sEmail)) {
+                return true;
+            } else {
+                return false;
+            }
         }
-    }
 
-    function phoneVerify(){
-        if(phone.value != ""){
-            lname.style.border = "1px solid #5E6E66";
-            l_name_error.innerHTML = "";
-            return true;
-        }
-    }
+        $('#wrapper').bind( {
+            'submit':function () {
+                if (!validateEmail($('#iEmail').val())) {
+                    $('#email_error').html('Email bạn nhập không phù hợp!!!');
+                    return false;
+                }
 
-    function emailVerify(){
-        if(email.value != ""){
-            lname.style.border = "1px solid #5E6E66";
-            l_name_error.innerHTML = "";
-            return true;
-        }
-    }
+                if (!validatePhone($('#iPhone').val())) {
+                    $('#phone_error').html('Số điện thoại bạn nhập không phù hợp!!!');
+                    return false;
+                }
+
+                if ($('#iPass').val() == '') {
+                    $('#password_error').html('Bạn không được bỏ trống trường này!!!');
+                    return false;
+                }
+
+                if ($('#iPass2').val() == '') {
+                    $('#password2_error').html('Bạn không được bỏ trống trường này!!!');
+                    return false;
+                }
+
+                if ($('#iFName').val() == '') {
+                    $('#f_name_error').html('Bạn không được bỏ trống trường này!!!');
+                    return false;
+                }
+
+                if ($('#iLName').val() == '') {
+                    $('#l_name_error').html('Bạn không được bỏ trống trường này!!!');
+                    return false;
+                }
+
+                if ($('#iHouse').val() == '') {
+                    $('#address_error').html('Bạn không được bỏ trống trường này!!!');
+                    return false;
+                }
+
+                if ($('#iWard').val() == '') {
+                    $('#ward_error').html('Bạn không được bỏ trống trường này!!!');
+                    return false;
+                }
+
+                if ($('#iCommune').val() == '') {
+                    $('#commune_error').html('Bạn không được bỏ trống trường này!!!');
+                    return false;
+                }
+
+                if ($('#'iUser').val() == '') {
+                    $('#username_error').html('Bạn không được bỏ trống trường này!!!');
+                    return false;
+                } return true;
+            },
+            'keydown': function() {
+                if ($('#FfName').val().length > 0) {
+                    $('#f_name_error').html('');
+                }
+                if ($('#iLName').val().length > 0) {
+                    $('#l_name_error').html('');
+                }
+                if ($('#iHouse').val().length > 0) {
+                    $('#address_error').html('');
+                }
+                if ($('#iWard').val().length > 0) {
+                    $('#ward_error').html('');
+                }
+                if ($('#iCommune').val().length > 0) {
+                    $('#commune_error').html('');
+                }
+                if ($('#iPhone').val().length > 0) {
+                    $('#phone_error').html('');
+                }
+                if ($('#iEmail').val().length > 0) {
+                    $('#email_error').html('');
+                }
+                if ($('#'iUser').val().length > 0) {
+                    $('#username_error').html('');
+                }
+                if ($('#iPass').val().length > 0) {
+                    $('#password_error').html('');
+                }
+
+        });
+    });
+
+
+
+
+    // function validate(){
+    //     if(fname.value == ""){
+    //         fname.style.border = "1px solid red";
+    //         f_name_error.textContent = "Yêu cầu họ";
+    //         fname.focus();
+    //         return false;
+    //     }
+    //     if(lname.value == ""){
+    //         lname.style.border = "1px solid red";
+    //         l_name_error.textContent = "Yêu cầu tên";
+    //         lname.focus();
+    //         return false;
+    //     }
+    //     if(address.value == ""){
+    //         address.style.border = "1px solid red";
+    //         address_error.textContent = "Yêu cầu số nhà";
+    //         address.focus();
+    //         return false;
+    //     }
+    //     if(ward.value == ""){
+    //         ward.style.border = "1px solid red";
+    //         ward_error.textContent = "Yêu cầu tên phường";
+    //         ward.focus();
+    //         return false;
+    //     }
+    //     if(commune.value == ""){
+    //         commune.style.border = "1px solid red";
+    //         commune_error.textContent = "Yêu cầu tên xã";
+    //         commune.focus();
+    //         return false;
+    //     }
+    //     if(phone.value == ""){
+    //         phone.style.border = "1px solid red";
+    //         phone_error.textContent = "Yêu cầu số điện thoại";
+    //         phone.focus();
+    //         return false;
+    //     }
+    //     if(email.value == ""){
+    //         email.style.border = "1px solid red";
+    //         email_error.textContent = "Yêu cầu số email";
+    //         email.focus();
+    //         return false;
+    //     }
+    //     if(username.value == ""){
+    //         username.style.border = "1px solid red";
+    //         username_error.textContent = "Yêu cầu tài khoản";
+    //         username.focus();
+    //         return false;
+    //     }
+    //     if(password.value == ""){
+    //         password.style.border = "1px solid red";
+    //         password_error.textContent = "Yêu cầu mật khẩu";
+    //         password.focus();
+    //         return false;
+    //     }
+    //     if(password2.value != password.value){
+    //         password2.style.border = "1px solid red";
+    //         password2_error.textContent = "Yêu cầu nhập lại mật khẩu";
+    //         password2.focus();
+    //         return false;
+    //     }
+    // }
+    //
+    // function fNameVerify(){
+    //     if(fname.value != ""){
+    //         fname.style.border = "1px solid #5E6E66";
+    //         f_name_error.innerHTML = "";
+    //         return true;
+    //     }
+    // }
+    //
+    // function addressVerify(){
+    //     if(address.value != ""){
+    //         address.style.border = "1px solid #5E6E66";
+    //         address_error.innerHTML = "";
+    //         return true;
+    //     }
+    // }
+    //
+    // function phoneVerify(){
+    //     if(phone.value != ""){
+    //         lname.style.border = "1px solid #5E6E66";
+    //         l_name_error.innerHTML = "";
+    //         return true;
+    //     }
+    // }
+    //
+    // function emailVerify(){
+    //     if(email.value != ""){
+    //         lname.style.border = "1px solid #5E6E66";
+    //         l_name_error.innerHTML = "";
+    //         return true;
+    //     }
+    // }
 
 
 </script>
