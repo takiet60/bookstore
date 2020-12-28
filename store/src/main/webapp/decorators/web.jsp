@@ -44,11 +44,11 @@
     <!-- //Header -->
     <!-- Start Search Popup -->
     <div class="brown--color box-search-content search_active block-bg close__top">
-        <form id="search_mini_form" class="minisearch" action="#">
+        <form id="search_mini_form" class="minisearch" action="search" method="get">
             <div class="field__search">
-                <input type="text" placeholder="Nhập sản phẩm muốn tìm kiếm">
+                <input type="text" placeholder="Nhập sản phẩm muốn tìm kiếm" name="search">
                 <div class="action">
-                    <a href="#"><i class="fas fa-search"></i></a>
+                    <button type="submit"><i class="fas fa-search"></i></button>
                 </div>
             </div>
         </form>

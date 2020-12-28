@@ -31,14 +31,11 @@
                         <div class="col-lg-6 col-12">
                             <div class="wn__fotorama__wrapper">
                                 <div class="fotorama wn__fotorama__action" data-nav="thumbs">
-                                    <a href="${product.images}"><img src="${product.images}" alt=""></a>
-                                    <a href="${product.images}"><img src="${product.images}" alt=""></a>
-                                    <a href="${product.images}"><img src="${product.images}" alt=""></a>
-                                    <a href="${product.images}"><img src="${product.images}" alt=""></a>
-                                    <a href="${product.images}"><img src="${product.images}" alt=""></a>
-                                    <a href="${product.images}"><img src="${product.images}" alt=""></a>
-                                    <a href="${product.images}"><img src="${product.images}" alt=""></a>
-                                    <a href="${product.images}"><img src="${product.images}" alt=""></a>
+                                    <a href="${product.image1}"><img src="${product.image1}" alt=""></a>
+                                    <a href="${product.image2}"><img src="${product.image2}" alt=""></a>
+                                    <a href="${product.image3}"><img src="${product.image3}" alt=""></a>
+                                    <a href="${product.image4}"><img src="${product.image4}" alt=""></a>
+                                    <a href="${product.image5}"><img src="${product.image5}" alt=""></a>
                                 </div>
                             </div>
                         </div>

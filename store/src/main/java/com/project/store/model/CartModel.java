@@ -41,6 +41,14 @@ public class CartModel implements Serializable {
         return sum;
     }
 
+    public int  totalQuantity(){
+        int result = 0;
+        for(ItemModel item : cart.values()){
+            result += item.getQuantity();
+        }
+        return result;
+    }
+
     public Collection<ItemModel> getCart(){
         return cart.values();
     }

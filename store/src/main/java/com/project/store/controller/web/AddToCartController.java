@@ -22,15 +22,15 @@ public class AddToCartController extends HttpServlet {
 
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        doGet(request, response);
+
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         Long id = Long.parseLong(request.getParameter("id"));
-        if(id == null) response.sendRedirect("home");
+        if(id == null) response.sendRedirect(request.getContextPath() + "/home");
         ProductModel productModel = productService.findById(id);
         if(productModel == null){
-            response.sendRedirect("home");
+            response.sendRedirect(request.getContextPath() + "/home");
             return;
         }else{
             HttpSession session = request.getSession();
@@ -39,7 +39,7 @@ public class AddToCartController extends HttpServlet {
             itemModel.setProductModel(productModel);
             cart.put(itemModel);
             cart.commit(session);
-            response.sendRedirect(request.getContextPath() + "/home");
+            response.sendRedirect( request.getContextPath() + "/home");
         }
 
     }

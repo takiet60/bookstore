@@ -22,9 +22,9 @@ public class ProductDAO extends AbtractDAO<ProductModel> implements IProductDAO 
 
     @Override
     public long save(ProductModel productModel) {
-        String sql = "INSERT into product(name, categoryId, cost, discount, value, images, shortDescription, description, production) values(?, ?, ?, ?, ?, ?, ?, ?, ?";
+        String sql = "INSERT into product(name, categoryId, cost, discount, value, image1, shortDescription, description, production) values(?, ?, ?, ?, ?, ?, ?, ?, ?";
         return insert(sql, productModel.getName(), productModel.getCategoryId(), productModel.getCost(), productModel.getDiscount(), productModel.getValue(),
-                productModel.getImages(), productModel.getShortDescription(), productModel.getDescription(), productModel.getProduction());
+                productModel.getImage1(), productModel.getShortDescription(), productModel.getDescription(), productModel.getProduction());
     }
 
     public List<ProductModel> findByCategory(int id) {
@@ -35,6 +35,12 @@ public class ProductDAO extends AbtractDAO<ProductModel> implements IProductDAO 
     @Override
     public List<ProductModel> findByNewest() {
         String sql = "SELECT * FROM product ORDER BY id DESC";
+        return query(sql, new ProductMapper());
+    }
+
+    @Override
+    public List<ProductModel> search(String search) {
+        String sql = "SELECT * FROM product WHERE name LIKE '%" + search + "%'";
         return query(sql, new ProductMapper());
     }
 

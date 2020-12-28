@@ -51,7 +51,7 @@
                         <li><a href="#">Mã giảm giá</a></li>
                         <li><a href="#">Áp dụng mã</a></li>
                         <li><a href="#">Cập nhật</a></li>
-                        <li><a href="checkout.html">Thanh toán</a></li>
+                        <li><a href="<c:url value="checkout"/>">Thanh toán</a></li>
                     </ul>
                 </div>
             </div>

@@ -58,7 +58,7 @@
                 <div class="product product__style--3">
                     <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                         <div class="product__thumb">
-                            <a class="first__img" href="<c:url value = "detail?id=${p.id}"/> "><img src="${p.images}" alt="product image"></a>
+                            <a class="first__img" href="<c:url value = "detail?id=${p.id}"/> "><img src="${p.image1}" alt="product image"></a>
                             <!-- <a class="second__img animation1" href="single-product.html"><img src="images/books/2.jpg" alt="product image"></a> -->
                             <div class="hot__box">
                                 <span class="hot-label">NEWEST</span>
@@ -154,7 +154,7 @@
                                     <div class="product__thumb">
                                         <a class="first__img"
                                            href="<c:url value = "detail?id=${p.id}"/> ">
-                                            <img src="${p.images}" alt="product image"></a>
+                                            <img src="${p.image1}" alt="product image"></a>
                                         <!-- <a class="second__img animation1" href="single-product.html"><img src="images/books/2.jpg" alt="product image"></a> -->
                                         <div class="hot__box">
                                             <span class="hot-label">BEST SALER</span>
@@ -176,9 +176,9 @@
 <%--                                                        </a>--%>
                                                         </a>
                                                     </li>
-                                                    <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>
-                                                    <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>
-                                                    <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>
+<%--                                                    <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>--%>
+<%--                                                    <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>--%>
+<%--                                                    <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>--%>
                                                 </ul>
                                             </div>
                                         </div>
@@ -210,7 +210,7 @@
                                     <div class="product__thumb">
                                         <a class="first__img"
                                            href="<c:url value = "detail?id=${p.id}"/> ">
-                                            <img src="${p.images}" alt="product image"></a>
+                                            <img src="${p.image1}" alt="product image"></a>
                                         <!-- <a class="second__img animation1" href="single-product.html"><img src="images/books/2.jpg" alt="product image"></a> -->
                                         <div class="hot__box">
                                             <span class="hot-label">BEST SALER</span>
@@ -226,9 +226,9 @@
                                             <div class="actions_inner">
                                                 <ul class="add_to_links">
                                                     <li><a class="cart" href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
-                                                    <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>
-                                                    <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>
-                                                    <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>
+<%--                                                    <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>--%>
+<%--                                                    <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>--%>
+<%--                                                    <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>--%>
                                                 </ul>
                                             </div>
                                         </div>
@@ -255,7 +255,7 @@
                             <div class="col-lg-3 col-md-4 col-sm-6 col-12">
                                 <div class="product product__style--3">
                                     <div class="product__thumb">
-                                        <a class="first__img" href="single-product.html"><img src="${p.images}" alt="product image"></a>
+                                        <a class="first__img" href="single-product.html"><img src="${p.image1}" alt="product image"></a>
                                         <!-- <a class="second__img animation1" href="single-product.html"><img src="images/books/2.jpg" alt="product image"></a> -->
                                         <div class="hot__box">
                                             <span class="hot-label">BEST SALLER</span>
@@ -271,9 +271,9 @@
                                             <div class="actions_inner">
                                                 <ul class="add_to_links">
                                                     <li><a class="cart" href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
-                                                    <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>
-                                                    <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>
-                                                    <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>
+<%--                                                    <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>--%>
+<%--                                                    <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>--%>
+<%--                                                    <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>--%>
                                                 </ul>
                                             </div>
                                         </div>
@@ -303,7 +303,7 @@
                                     <div class="product__thumb">
                                         <a class="first__img"
                                            href="<c:url value = "detail?id=${p.id}"/> ">
-                                            <img src="${p.images}" alt="product image"></a>
+                                            <img src="${p.image1}" alt="product image"></a>
                                         <!-- <a class="second__img animation1" href="single-product.html"><img src="images/books/2.jpg" alt="product image"></a> -->
                                         <div class="hot__box">
                                             <span class="hot-label">BEST SALER</span>
@@ -319,9 +319,9 @@
                                             <div class="actions_inner">
                                                 <ul class="add_to_links">
                                                     <li><a class="cart" href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
-                                                    <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>
-                                                    <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>
-                                                    <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>
+<%--                                                    <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>--%>
+<%--                                                    <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>--%>
+<%--                                                    <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>--%>
                                                 </ul>
                                             </div>
                                         </div>
@@ -329,9 +329,9 @@
                                             <ul class="rating d-flex">
                                                 <li class="on"><i class="fas fa-star"></i></li>
                                                 <li class="on"><i class="fas fa-star"></i></li>
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
+<%--                                                <li class="on"><i class="fas fa-star"></i></li>--%>
+<%--                                                <li><i class="fas fa-star"></i></li>--%>
+<%--                                                <li><i class="fas fa-star"></i></li>--%>
                                             </ul>
                                         </div>
                                     </div>
@@ -355,7 +355,7 @@
                                     <div class="product__thumb">
                                         <a class="first__img"
                                            href="<c:url value = "detail?id=${p.id}"/> ">
-                                            <img src="${p.images}" alt="product image"></a>
+                                            <img src="${p.image1}" alt="product image"></a>
                                         <!-- <a class="second__img animation1" href="single-product.html"><img src="images/books/2.jpg" alt="product image"></a> -->
                                         <div class="hot__box">
                                             <span class="hot-label">BEST SALER</span>
@@ -371,9 +371,9 @@
                                             <div class="actions_inner">
                                                 <ul class="add_to_links">
                                                     <li><a class="cart" href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
-                                                    <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>
-                                                    <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>
-                                                    <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>
+<%--                                                    <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>--%>
+<%--                                                    <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>--%>
+<%--                                                    <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>--%>
                                                 </ul>
                                             </div>
                                         </div>
@@ -544,9 +544,9 @@
                     <div class="actions_inner">
                         <ul class="add_to_links">
                             <li><a class="cart" href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
-                            <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>
-                            <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>
-                            <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>
+<%--                            <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>--%>
+<%--                            <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>--%>
+<%--                            <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>--%>
                         </ul>
                     </div>
                 </div>
@@ -572,9 +572,9 @@
                     <div class="actions_inner">
                         <ul class="add_to_links">
                             <li><a class="cart" href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
-                            <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>
-                            <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>
-                            <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>
+<%--                            <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>--%>
+<%--                            <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>--%>
+<%--                            <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>--%>
                         </ul>
                     </div>
                 </div>
@@ -704,29 +704,3 @@
         <!-- Single product end -->
     </div>
 </section>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js">
-    $(document).ready(function()
-    {
-        //khai báo biến submit form lấy đối tượng nút submit
-        var submit = $("button[type='submit']");
-        let addToCart = $(".add_to_cart");
-        //khi nút submit được click
-        addToCart.click(function()
-        {
-            //khai báo các biến dữ liệu gửi lên server
-            // var user = $("input[name='user']").val(); //lấy giá trị trong input user
-            let value = this.id;
-            //Sử dụng phương thức Ajax.
-            $.ajax({
-                type : 'GET', //Sử dụng kiểu gửi dữ liệu POST
-                url : 'cart/add', //gửi dữ liệu sang trang data.php
-                data : value, //dữ liệu sẽ được gửi
-                success : function(data)  // Hàm thực thi khi nhận dữ liệu được từ server
-                {
-                    response.sendRedirect(request.getContextPath() + "/home");
-                }
-            });
-            return false;
-        });
-    });
-</script>

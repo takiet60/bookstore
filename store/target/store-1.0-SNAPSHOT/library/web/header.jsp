@@ -112,7 +112,11 @@
                         <%
                             CartModel cart = CartModel.getCart(session);
                             Collection<ItemModel> data = cart.getCart();
+                            int totalQuantity = cart.totalQuantity();
+                            long total = cart.total();
+                            request.setAttribute("total", total);
                             request.setAttribute("data", data);
+                            request.setAttribute("totalQuantity", totalQuantity);
                         %>
                         <div class="block-minicart minicart__active">
                             <div class="minicart-content-wrapper">
@@ -120,14 +124,14 @@
                                     <span>Đóng</span>
                                 </div>
                                 <div class="items-total d-flex justify-content-between">
-                                    <span>3 món hàng</span>
+                                    <span>${totalQuantity} món hàng</span>
                                     <span>Tiền tạm tính</span>
                                 </div>
                                 <div class="total_amount text-right">
-                                    <span>$66.00</span>
+                                    <span>${total}₫</span>
                                 </div>
                                 <div class="mini_action checkout">
-                                    <a class="checkout__btn" href="cart.html">Thanh Toán</a>
+                                    <a class="checkout__btn" href="<c:url value="checkout"/>">Thanh Toán</a>
                                 </div>
                                 <div class="single__items">
                                     <div class="miniproduct">
@@ -155,7 +159,7 @@
                                     </div>
                                 </div>
                                 <div class="mini_action cart">
-                                    <a class="cart__btn" href="cart.html">Xem và chỉnh sửa giỏ hàng</a>
+                                    <a class="cart__btn" href="<c:url value="cart" />">Xem và chỉnh sửa giỏ hàng</a>
                                 </div>
                             </div>
                         </div>

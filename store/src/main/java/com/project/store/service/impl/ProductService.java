@@ -31,4 +31,9 @@ public class ProductService implements IProductService {
     public List<ProductModel> findByNewest() {
         return productDAO.findByNewest();
     }
+
+    @Override
+    public List<ProductModel> search(String item) {
+        return productDAO.search(item);
+    }
 }
