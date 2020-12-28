@@ -171,36 +171,36 @@
 
 <script type="text/javascript">
 
-    let fname = document.forms['vform']['fname'];
-    let lname = document.forms['vform']['lname'];
-    let address = document.forms['vform']['address'];
-    let ward = document.forms['vform']['ward'];
-    let commune = document.forms['vform']['commune'];
-    let city = document.forms['vform']['city'];
-    let phone = document.forms['vform']['phone'];
-    let email = document.forms['vform']['email'];
-    let username = document.forms['vform']['username'];
-    let password = document.forms['vform']['password'];
-    let password2 = document.forms['vform']['password2'];
-
-    let f_name_error = document.getElementById('f_name_error');
-    let l_name_error = document.getElementById('l_name_error');
-    let address_error = document.getElementById('address_error');
-    let ward_error = document.getElementById('ward_error');
-    let commune_error = document.getElementById('commune_error');
-    let phone_error = document.getElementById('phone_error');
-    let email_error = document.getElementById('email_error');
-    let username_error = document.getElementById('username_error');
-    let password_error = document.getElementById('password_error');
-    let password2_error = document.getElementById('password2_error');
-
-    fname.addEventListener('blur', fNameVerify, true);
-    lname.addEventListener('blur', fNameVerify, true);
-    address.addEventListener('blur', addressVerify, true);
-    ward.addEventListener('blur', addressVerify, true);
-    commune.addEventListener('blur', addressVerify, true);
-    phone.addEventListener('blur', phoneVerify, true);
-    email.addEventListener('blur', emailVerify, true);
+    // let fname = document.forms['vform']['fname'];
+    // let lname = document.forms['vform']['lname'];
+    // let address = document.forms['vform']['address'];
+    // let ward = document.forms['vform']['ward'];
+    // let commune = document.forms['vform']['commune'];
+    // let city = document.forms['vform']['city'];
+    // let phone = document.forms['vform']['phone'];
+    // let email = document.forms['vform']['email'];
+    // let username = document.forms['vform']['username'];
+    // let password = document.forms['vform']['password'];
+    // let password2 = document.forms['vform']['password2'];
+    //
+    // let f_name_error = document.getElementById('f_name_error');
+    // let l_name_error = document.getElementById('l_name_error');
+    // let address_error = document.getElementById('address_error');
+    // let ward_error = document.getElementById('ward_error');
+    // let commune_error = document.getElementById('commune_error');
+    // let phone_error = document.getElementById('phone_error');
+    // let email_error = document.getElementById('email_error');
+    // let username_error = document.getElementById('username_error');
+    // let password_error = document.getElementById('password_error');
+    // let password2_error = document.getElementById('password2_error');
+    //
+    // fname.addEventListener('blur', fNameVerify, true);
+    // lname.addEventListener('blur', lNameVerify, true);
+    // address.addEventListener('blur', addressVerify, true);
+    // ward.addEventListener('blur', addressVerify, true);
+    // commune.addEventListener('blur', addressVerify, true);
+    // phone.addEventListener('blur', phoneVerify, true);
+    // email.addEventListener('blur', emailVerify, true);
 
 
     $(document).ready(function () {
@@ -216,7 +216,7 @@
 
         function validateEmail(sEmail) {
             var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-            if (filter.test((sEmail)) {
+            if (filter.test((sEmail)) ){
                 return true;
             } else {
                 return false;
@@ -270,7 +270,7 @@
                     return false;
                 }
 
-                if ($('#'iUser').val() == '') {
+                if ($('#iUser').val() == '') {
                     $('#username_error').html('Bạn không được bỏ trống trường này!!!');
                     return false;
                 } return true;
@@ -297,13 +297,13 @@
                 if ($('#iEmail').val().length > 0) {
                     $('#email_error').html('');
                 }
-                if ($('#'iUser').val().length > 0) {
+                if ($('#iUser').val().length > 0) {
                     $('#username_error').html('');
                 }
                 if ($('#iPass').val().length > 0) {
                     $('#password_error').html('');
                 }
-
+            }
         });
     });
 
