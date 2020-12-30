@@ -9,21 +9,18 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Collection;
 
-@WebServlet(name = "Cart)", urlPatterns = "/cart")
-public class CartController extends HttpServlet {
+@WebServlet(name = "AfterAddToCartController)", urlPatterns = "/AfterAddToCartController")
+public class AfterAddToCartController extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request, response);
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        CartModel cart = CartModel.getCart(request.getSession());
-        Collection<ItemModel> data = cart.getCart();
-        request.setAttribute("data", data);
-        RequestDispatcher rd = request.getRequestDispatcher("/views/web/cart.jsp");
+
+        RequestDispatcher rd = request.getRequestDispatcher("/library/web/header.jsp");
         rd.forward(request, response);
     }
 }

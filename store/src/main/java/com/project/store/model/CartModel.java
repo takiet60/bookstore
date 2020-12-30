@@ -1,7 +1,5 @@
 package com.project.store.model;
 
-import com.mysql.cj.Session;
-
 import javax.servlet.http.HttpSession;
 import java.io.Serializable;
 import java.util.Collection;

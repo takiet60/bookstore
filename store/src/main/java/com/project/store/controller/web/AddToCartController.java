@@ -6,6 +6,7 @@ import com.project.store.model.ProductModel;
 import com.project.store.service.IProductService;
 
 import javax.inject.Inject;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,6 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.Collection;
 
 @WebServlet(name = "AddToCartController)", urlPatterns = "/cart/add")
 public class AddToCartController extends HttpServlet {
@@ -32,6 +34,7 @@ public class AddToCartController extends HttpServlet {
         if(productModel == null){
             response.sendRedirect(request.getContextPath() + "/home");
             return;
+
         }else{
             HttpSession session = request.getSession();
             CartModel cart = CartModel.getCart(session);
@@ -39,8 +42,19 @@ public class AddToCartController extends HttpServlet {
             itemModel.setProductModel(productModel);
             cart.put(itemModel);
             cart.commit(session);
-            response.sendRedirect( request.getContextPath() + "/home");
+            response.sendRedirect(request.getContextPath() + "/home");
+//            request.getRequestDispatcher("/views/web/home.jsp").forward(request, response);
+//            CartModel cart = CartModel.getCart(request.getSession());
+//            Collection<ItemModel> data = cart.getCart();
+//            int totalQuantity = cart.totalQuantity();
+//            long total = cart.total();
+//            request.setAttribute("total", total);
+//            request.setAttribute("data", data);
+//            request.setAttribute("totalQuantity", totalQuantity);
+//            RequestDispatcher rd = request.getRequestDispatcher("/library/web/header.jsp");
+//
         }
+
 
     }
 }

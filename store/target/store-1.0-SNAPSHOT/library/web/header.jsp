@@ -1,6 +1,4 @@
 <%@ page import="com.project.store.model.UserModel" %>
-<%@ page import="com.mysql.cj.Session" %>
-<%@ page import="javax.jws.soap.SOAPBinding" %>
 <%@ page import="com.project.store.model.CartModel" %>
 <%@ page import="java.util.Collection" %>
 <%@ page import="com.project.store.model.ItemModel" %>
@@ -109,15 +107,7 @@
                     <li class="wishlist"><a href="wishlist.html"></a></li>
                     <li class="shopcart"><a class="cartbox_active" href="#"><span class="product_qun">3</span></a>
                         <!-- Start Shopping Cart -->
-                        <%
-                            CartModel cart = CartModel.getCart(session);
-                            Collection<ItemModel> data = cart.getCart();
-                            int totalQuantity = cart.totalQuantity();
-                            long total = cart.total();
-                            request.setAttribute("total", total);
-                            request.setAttribute("data", data);
-                            request.setAttribute("totalQuantity", totalQuantity);
-                        %>
+
                         <div class="block-minicart minicart__active">
                             <div class="minicart-content-wrapper">
                                 <div class="micart__close">
@@ -135,11 +125,10 @@
                                 </div>
                                 <div class="single__items">
                                     <div class="miniproduct">
-
                                         <c:forEach items="${data}" var="d">
                                             <div class="item01 d-flex mt--20">
                                                 <div class="thumb">
-                                                    <a href="product-details.html"><img src="${d.productModel.images}" alt="product images"></a>
+                                                    <a href="product-details.html"><img src="${d.productModel.image1}" alt="product images"></a>
                                                 </div>
                                                 <div class="content">
                                                     <h6><a href="product-details.html">${d.productModel.name}</a></h6>

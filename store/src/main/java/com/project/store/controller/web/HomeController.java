@@ -1,5 +1,7 @@
 package com.project.store.controller.web;
 
+import com.project.store.model.CartModel;
+import com.project.store.model.ItemModel;
 import com.project.store.model.ProductModel;
 import com.project.store.service.IProductService;
 import com.project.store.service.impl.ProductService;
@@ -14,6 +16,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 @WebServlet(urlPatterns = {"/home"})
@@ -34,6 +37,14 @@ public class HomeController extends HttpServlet {
         req.setAttribute("listByNewest", listByNewest);
         req.setAttribute("listByCategory8", listByCategory8);
         req.setAttribute("listByCategory9", listByCategory9);
+        CartModel cart = CartModel.getCart(req.getSession());
+        Collection<ItemModel> data = cart.getCart();
+        req.setAttribute("data", data);
+        int totalQuantity = cart.totalQuantity();
+        long total = cart.total();
+        req.setAttribute("total", total);
+        req.setAttribute("data", data);
+        req.setAttribute("totalQuantity", totalQuantity);
         RequestDispatcher rd = req.getRequestDispatcher("/views/web/home.jsp");
         rd.forward(req, resp);
     }
