@@ -25,6 +25,7 @@ public class RegisterController extends HttpServlet {
     private IUserService userService;
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("utf-8");
         String fName = request.getParameter("fname");
         String lName = request.getParameter("lname");
         String gender = request.getParameter("gender");
@@ -51,7 +52,7 @@ public class RegisterController extends HttpServlet {
             response.sendRedirect("register");
         }else{
             userService.save(userModel);
-            response.sendRedirect("home");
+            response.sendRedirect("login");
         }
     }
 

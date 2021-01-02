@@ -85,7 +85,7 @@
                                         <td class="product-price"><span class="amount">${d.productModel.value}₫</span></td>
                                         <td class="product-quantity"><input type="number" value="${d.quantity}"></td>
                                         <td class="product-subtotal">${d.productModel.value * d.quantity}₫</td>
-                                        <td class="product-remove"><a href="#">X</a></td>
+                                        <td class="product-remove"><a href="<c:url value="cart/remove?id=${d.productModel.id}"/>">X</a></td>
                                     </tr>
                                 </c:forEach>
                                 </tbody>

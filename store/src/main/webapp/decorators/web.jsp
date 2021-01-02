@@ -43,725 +43,168 @@
     <%@include file="/library/web/header.jsp"%>
     <!-- //Header -->
     <!-- Start Search Popup -->
-    <div class="brown--color box-search-content search_active block-bg close__top">
-        <form id="search_mini_form" class="minisearch" action="search" method="get">
-            <div class="field__search">
-                <input type="text" placeholder="Nhập sản phẩm muốn tìm kiếm" name="search">
-                <div class="action">
-                    <button type="submit"><i class="fas fa-search"></i></button>
+    <div class="wrapper" >
+        <form method="POST" action="register" onsubmit="return validate()" name="vform">
+            <div class="row" style="margin-top: 100px; margin-left: 100px">
+                <div class="col-lg-6 col-12">
+                    <div class="customer_details">
+                        <h3>Đăng ký tài khoản</h3>
+                        <div class="customar__field">
+                            <div class="margin_between">
+                                <div class="input_box space_between" >
+                                    <label >Họ  <span>*</span></label>
+                                    <input type="text" name="fname" id="iFName">
+                                    <div id="f_name_error"></div>
+                                </div>
+                                <div class="input_box space_between">
+                                    <label >Tên<span>*</span></label>
+                                    <input type="text" name="lname" id="iLName">
+                                    <div id="l_name_error"></div>
+                                </div>
+                            </div>
+                            <div class="input_box">
+                                <label>Giới tính<span>*</span></label>
+                                <select class="select__option" name="gender" id="iGender">
+                                    <option name="male">Nam</option>
+                                    <option name="female">Nữ</option>
+                                    <option name="other">Khác</option>
+                                </select>
+                            </div>
+                            <div class="input_box">
+                                <div class="margin_between">
+                                    <div class="input_box space_between">
+                                        <label>Số nhà<span>*</span></label>
+                                        <div id="address_error"></div>
+                                        <input type="text" name="address" id="iHouse">
+
+                                    </div>
+
+                                    <div class="input_box space_between">
+                                        <label>Phường<span>*</span></label>
+                                        <div id="ward_error"></div>
+                                        <input type="text" name="ward" id="iWard">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input_box">
+                                <div class="margin_between">
+                                    <div class="input_box space_between">
+                                        <label>Xã<span>*</span></label>
+                                        <div id="commune_error"></div>
+                                        <input type="text" name="commune" id="iCommune">
+                                    </div>
+                                    <div class="input_box">
+                                        <label>Thành phố<span>*</span></label>
+                                        <select class="select__option" name="city" id="iCity">
+                                            <option>Lựa chọn thành phố…</option>
+                                            <option>	An Giang	</option>
+                                            <option>	Bà Rịa - Vũng Tàu	</option>
+                                            <option>	Bắc Giang	</option>
+                                            <option>	Bắc Kạn	</option>
+                                            <option>	Bạc Liêu	</option>
+                                            <option>	Bắc Ninh	</option>
+                                            <option>	Bến Tre	</option>
+                                            <option>	Bình Định	</option>
+                                            <option>	Bình Dương	</option>
+                                            <option>	Bình Phước	</option>
+                                            <option>	Bình Thuận	</option>
+                                            <option>	Cà Mau	</option>
+                                            <option>	Cao Bằng	</option>
+                                            <option>	Đắk Lắk	</option>
+                                            <option>	Đắk Nông	</option>
+                                            <option>	Điện Biên	</option>
+                                            <option>	Đồng Nai	</option>
+                                            <option>	Đồng Tháp	</option>
+                                            <option>	Gia Lai	</option>
+                                            <option>	Hà Giang	</option>
+                                            <option>	Hà Nam	</option>
+                                            <option>	Hà Tĩnh	</option>
+                                            <option>	Hải Dương	</option>
+                                            <option>	Hậu Giang	</option>
+                                            <option>	Hòa Bình	</option>
+                                            <option>	Hưng Yên	</option>
+                                            <option>	Khánh Hòa	</option>
+                                            <option>	Kiên Giang	</option>
+                                            <option>	Kon Tum	</option>
+                                            <option>	Lai Châu	</option>
+                                            <option>	Lâm Đồng	</option>
+                                            <option>	Lạng Sơn	</option>
+                                            <option>	Lào Cai	</option>
+                                            <option>	Long An	</option>
+                                            <option>	Nam Định	</option>
+                                            <option>	Nghệ An	</option>
+                                            <option>	Ninh Bình	</option>
+                                            <option>	Ninh Thuận	</option>
+                                            <option>	Phú Thọ	</option>
+                                            <option>	Quảng Bình	</option>
+                                            <option>	Quảng Nam	</option>
+                                            <option>	Quảng Ngãi	</option>
+                                            <option>	Quảng Ninh	</option>
+                                            <option>	Quảng Trị	</option>
+                                            <option>	Sóc Trăng	</option>
+                                            <option>	Sơn La	</option>
+                                            <option>	Tây Ninh	</option>
+                                            <option>	Thái Bình	</option>
+                                            <option>	Thái Nguyên	</option>
+                                            <option>	Thanh Hóa	</option>
+                                            <option>	Thừa Thiên Huế	</option>
+                                            <option>	Tiền Giang	</option>
+                                            <option>	Trà Vinh	</option>
+                                            <option>	Tuyên Quang	</option>
+                                            <option>	Vĩnh Long	</option>
+                                            <option>	Vĩnh Phúc	</option>
+                                            <option>	Yên Bái	</option>
+                                            <option>	Phú Yên	</option>
+                                            <option>	Cần Thơ	</option>
+                                            <option>	Đà Nẵng	</option>
+                                            <option>	Hải Phòng	</option>
+                                            <option>	Hà Nội	</option>
+                                            <option>	TP HCM	</option>
+
+                                        </select>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="margin_between">
+                                <div class="input_box space_between">
+                                    <label>Số điện thoại <span>*</span></label>
+                                    <div id="phone_error"></div>
+                                    <input type="text" name="phone" id="iPhone">
+                                </div>
+
+                                <div class="input_box space_between">
+                                    <label>Email <span>*</span></label>
+                                    <div id="email_error"></div>
+                                    <input type="email" name="email" id="iEmail">
+                                </div>
+                            </div>
+                            <div class="input_box">
+                                <label>Tài khoản<span>*</span></label>
+                                <div id="username_error"></div>
+                                <input type="text" name="username" id="'iUser">
+                            </div>
+                            <div class="input_box">
+                                <label>Mật khẩu<span>*</span></label>
+                                <div id="password_error"></div>
+                                <input type="password" name="password" id="iPass">
+                            </div>
+                            <div class="input_box">
+                                <label>Xác nhận mật khẩu<span>*</span></label>
+                                <div id="password2_error"></div>
+                                <input type="password" name="password2" id="iPass2">
+                            </div>
+                            <button type="submit" >Xác nhận</button>
+                        </div><div class="wn__accountbox">
+                        <span>Có tài khoản ?</span>
+                    </div>
+                    </div>
                 </div>
+
             </div>
         </form>
-        <div class="close__wrap">
-            <span>Đóng</span>
-        </div>
     </div>
-    <!-- End Search Popup -->
-    <!-- Start Slider area -->
-
-    <div class="slider-area brown__nav slider--15 slide__activation slide__arrow01 owl-carousel owl-theme">
-        <!-- Start Single Slide -->
-        <div class="slide animation__style10 bg-image--1 fullscreen align__center--left">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="slider__content">
-                            <div class="contentbox">
-                                <h2>Buy <span>your </span></h2>
-                                <h2>favourite <span>Book </span></h2>
-                                <h2>from <span>Here </span></h2>
-                                <a class="shopbtn" href="#product">Mua ngay</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Single Slide -->
-        <!-- Start Single Slide -->
-        <div class="slide animation__style10 bg-image--7 fullscreen align__center--left">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="slider__content">
-                            <div class="contentbox">
-                                <h2>Buy <span>your </span></h2>
-                                <h2>favourite <span>Book </span></h2>
-                                <h2>from <span>Here </span></h2>
-                                <a class="shopbtn" href="#">Mua ngay</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- End Single Slide -->
-    </div>
-    <!-- End Slider area -->
-    <!-- Start BEst Seller Area -->
-    <section class="wn__product__area brown--color pt--80  pb--30" id="product">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section__title text-center">
-                        <h2 class="title__be--2">Sản phẩm <span class="color--theme">mới</span></h2>
-                        <p>Những sản phẩm mới nhất của shop</p>
-                    </div>
-                </div>
-            </div>
-            <!-- Start Single Tab Content -->
-            <div class="furniture--4 border--round arrows_style owl-carousel owl-theme row mt--50">
-                <!-- Start Single Product -->
-                <c:forEach items="${listByNewest}" var = "p">
-                    <div class="product product__style--3">
-                        <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                            <div class="product__thumb">
-                                <a class="first__img" href="<c:url value = "detail?id=${p.id}"/> "><img src="${p.image1}" alt="product image"></a>
-                                <!-- <a class="second__img animation1" href="single-product.html"><img src="images/books/2.jpg" alt="product image"></a> -->
-                                <div class="hot__box">
-                                    <span class="hot-label">NEWEST</span>
-                                </div>
-                            </div>
-                            <div class="product__content content--center">
-                                <h4><a href="single-product.html">${p.name}</a></h4>
-                                <ul class="prize d-flex">
-                                    <li>${p.value}₫</li>
-                                    <li class="old_prize">${p.cost - p.value}₫</li>
-                                </ul>
-                                <div class="action">
-                                    <div class="actions_inner">
-                                        <ul class="add_to_links">
-                                            <li><a class="cart" href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
-                                            <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>
-                                            <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>
-                                            <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="product__hover--content">
-                                    <ul class="rating d-flex">
-                                        <li class="on"><i class="fas fa-star"></i></li>
-                                        <li class="on"><i class="fas fa-star"></i></li>
-                                        <li class="on"><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                        <li><i class="fas fa-star"></i></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </c:forEach>
-            </div>
-            <!-- End Single Tab Content -->
-        </div>
-    </section>
-    <!-- Start BEst Seller Area -->
-    <!-- Start NEwsletter Area -->
-    <section class="wn__newsletter__area bg-image--2">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7 offset-lg-5 col-md-12 col-12 ptb--150">
-                    <div class="section__title text-center">
-                        <h2>Đăng ký</h2>
-                    </div>
-                    <div class="newsletter__block text-center">
-                        <p>Để lại email để nhận thông báo về những bài viết hay của website.</p>
-                        <form action="#">
-                            <div class="newsletter__box">
-                                <input type="email" placeholder="Nhập e-mail">
-                                <button>Đăng ký</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End NEwsletter Area -->
-    <!-- Start Best Seller Area -->
-    <section class="wn__bestseller__area bg--white pt--80  pb--30">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section__title text-center">
-                        <h2 class="title__be--2">Tất cả <span class="color--theme">sản phẩm</span></h2>
-                        <p>Tất cả sản phẩm của sản phẩm của website</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt--50">
-                <div class="col-md-12 col-lg-12 col-sm-12">
-                    <div class="product__nav nav justify-content-center" role="tablist">
-                        <a class="nav-item nav-link active" data-toggle="tab" href="#nav-all" role="tab">Tất cả</a>
-                        <a class="nav-item nav-link" data-toggle="tab" href="#nav-biographic" role="tab">Khoa học</a>
-                        <a class="nav-item nav-link" data-toggle="tab" href="#nav-adventure" role="tab">Phiêu lưu</a>
-                        <a class="nav-item nav-link" data-toggle="tab" href="#nav-children" role="tab">Trẻ em</a>
-                        <a class="nav-item nav-link" data-toggle="tab" href="#nav-cook" role="tab">Nấu ăn</a>
-                    </div>
-                </div>
-            </div>
-            <div class="tab__container mt--60">
-                <!-- Start Single Tab Content -->
-                <div class="row single__tab tab-pane fade show active" id="nav-all" role="tabpanel">
-
-                    <div class="product__indicator--4 arrows_style owl-carousel owl-theme">
-                        <c:forEach items="${listProduct}" var = "p">
-                            <div class="single__product">
-                                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <div class="product product__style--3">
-                                        <div class="product__thumb">
-                                            <a class="first__img"
-                                               href="<c:url value = "detail?id=${p.id}"/> ">
-                                                <img src="${p.image1}" alt="product image"></a>
-                                            <!-- <a class="second__img animation1" href="single-product.html"><img src="images/books/2.jpg" alt="product image"></a> -->
-                                            <div class="hot__box">
-                                                <span class="hot-label">BEST SALER</span>
-                                            </div>
-                                        </div>
-                                        <div class="product__content content--center content--center">
-                                            <h4><a href="single-product.html">${p.name}</a></h4>
-                                            <ul class="prize d-flex">
-                                                <li>${p.value}₫</li>
-                                                <li class="old_prize">${p.cost - p.value}₫</li>
-                                            </ul>
-                                            <div class="action">
-                                                <div class="actions_inner">
-                                                    <ul class="add_to_links">
-                                                        <li id="${p.id}" class="add_to_cart">
-                                                            <a class="cart" href="<c:url value = "cart/add?id=${p.id}"/> ">
-                                                                    <%--                                                        <a class="cart">--%>
-                                                                <i class="fas fa-shopping-bag"></i>
-                                                                    <%--                                                        </a>--%>
-                                                            </a>
-                                                        </li>
-                                                            <%--                                                    <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>--%>
-                                                            <%--                                                    <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>--%>
-                                                            <%--                                                    <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>--%>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="product__hover--content">
-                                                <ul class="rating d-flex">
-                                                    <li class="on"><i class="fas fa-star"></i></li>
-                                                    <li class="on"><i class="fas fa-star"></i></li>
-                                                    <li class="on"><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </c:forEach>
-                    </div>
-
-                </div>
-                <!-- End Single Tab Content -->
-                <!-- Start Single Tab Content -->
-                <div class="row single__tab tab-pane fade" id="nav-biographic" role="tabpanel">
-                    <div class="product__indicator--4 arrows_style owl-carousel owl-theme">
-                        <c:forEach items="${listByCategory7}" var = "p">
-                            <div class="single__product">
-                                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <div class="product product__style--3">
-                                        <div class="product__thumb">
-                                            <a class="first__img"
-                                               href="<c:url value = "detail?id=${p.id}"/> ">
-                                                <img src="${p.image1}" alt="product image"></a>
-                                            <!-- <a class="second__img animation1" href="single-product.html"><img src="images/books/2.jpg" alt="product image"></a> -->
-                                            <div class="hot__box">
-                                                <span class="hot-label">BEST SALER</span>
-                                            </div>
-                                        </div>
-                                        <div class="product__content content--center content--center">
-                                            <h4><a href="single-product.html">${p.name}</a></h4>
-                                            <ul class="prize d-flex">
-                                                <li>${p.value}₫</li>
-                                                <li class="old_prize">${p.cost - p.value}₫</li>
-                                            </ul>
-                                            <div class="action">
-                                                <div class="actions_inner">
-                                                    <ul class="add_to_links">
-                                                        <li><a class="cart" href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
-                                                            <%--                                                    <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>--%>
-                                                            <%--                                                    <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>--%>
-                                                            <%--                                                    <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>--%>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="product__hover--content">
-                                                <ul class="rating d-flex">
-                                                    <li class="on"><i class="fas fa-star"></i></li>
-                                                    <li class="on"><i class="fas fa-star"></i></li>
-                                                    <li class="on"><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </c:forEach>
-                    </div>
-                </div>
-                <div class="row single__tab tab-pane fade" id="nav-adventure" role="tabpanel">
-                    <div class="product__indicator--4 arrows_style owl-carousel owl-theme">
-                        <c:forEach items="${listByCategory8}" var = "p">
-                            <div class="single__product">
-                                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <div class="product product__style--3">
-                                        <div class="product__thumb">
-                                            <a class="first__img" href="single-product.html"><img src="${p.image1}" alt="product image"></a>
-                                            <!-- <a class="second__img animation1" href="single-product.html"><img src="images/books/2.jpg" alt="product image"></a> -->
-                                            <div class="hot__box">
-                                                <span class="hot-label">BEST SALLER</span>
-                                            </div>
-                                        </div>
-                                        <div class="product__content content--center">
-                                            <h4><a href="single-product.html">${p.name}</a></h4>
-                                            <ul class="prize d-flex">
-                                                <li>${p.value}</li>
-                                                <li class="old_prize">${p.cost - p.value}₫</li>
-                                            </ul>
-                                            <div class="action">
-                                                <div class="actions_inner">
-                                                    <ul class="add_to_links">
-                                                        <li><a class="cart" href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
-                                                            <%--                                                    <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>--%>
-                                                            <%--                                                    <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>--%>
-                                                            <%--                                                    <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>--%>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="product__hover--content">
-                                                <ul class="rating d-flex">
-                                                    <li class="on"><i class="fas fa-star"></i></li>
-                                                    <li class="on"><i class="fas fa-star"></i></li>
-                                                    <li class="on"><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </c:forEach>
-                    </div>
-                </div>
-
-                <div class="row single__tab tab-pane fade" id="nav-children" role="tabpanel">
-                    <div class="product__indicator--4 arrows_style owl-carousel owl-theme">
-                        <c:forEach items="${listByCategory9}" var = "p">
-                            <div class="single__product">
-                                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <div class="product product__style--3">
-                                        <div class="product__thumb">
-                                            <a class="first__img"
-                                               href="<c:url value = "detail?id=${p.id}"/> ">
-                                                <img src="${p.image1}" alt="product image"></a>
-                                            <!-- <a class="second__img animation1" href="single-product.html"><img src="images/books/2.jpg" alt="product image"></a> -->
-                                            <div class="hot__box">
-                                                <span class="hot-label">BEST SALER</span>
-                                            </div>
-                                        </div>
-                                        <div class="product__content content--center content--center">
-                                            <h4><a href="single-product.html">${p.name}</a></h4>
-                                            <ul class="prize d-flex">
-                                                <li>${p.value}₫</li>
-                                                <li class="old_prize">${p.cost - p.value}₫</li>
-                                            </ul>
-                                            <div class="action">
-                                                <div class="actions_inner">
-                                                    <ul class="add_to_links">
-                                                        <li><a class="cart" href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
-                                                            <%--                                                    <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>--%>
-                                                            <%--                                                    <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>--%>
-                                                            <%--                                                    <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>--%>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="product__hover--content">
-                                                <ul class="rating d-flex">
-                                                    <li class="on"><i class="fas fa-star"></i></li>
-                                                    <li class="on"><i class="fas fa-star"></i></li>
-                                                        <%--                                                <li class="on"><i class="fas fa-star"></i></li>--%>
-                                                        <%--                                                <li><i class="fas fa-star"></i></li>--%>
-                                                        <%--                                                <li><i class="fas fa-star"></i></li>--%>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </c:forEach>
-
-
-
-                    </div>
-                </div>
-                <!-- End Single Tab Content -->
-                <!-- Start Single Tab Content -->
-                <div class="row single__tab tab-pane fade" id="nav-cook" role="tabpanel">
-                    <div class="product__indicator--4 arrows_style owl-carousel owl-theme">
-                        <c:forEach items="${listByCategory9}" var = "p">
-                            <div class="single__product">
-                                <div class="col-lg-3 col-md-4 col-sm-6 col-12">
-                                    <div class="product product__style--3">
-                                        <div class="product__thumb">
-                                            <a class="first__img"
-                                               href="<c:url value = "detail?id=${p.id}"/> ">
-                                                <img src="${p.image1}" alt="product image"></a>
-                                            <!-- <a class="second__img animation1" href="single-product.html"><img src="images/books/2.jpg" alt="product image"></a> -->
-                                            <div class="hot__box">
-                                                <span class="hot-label">BEST SALER</span>
-                                            </div>
-                                        </div>
-                                        <div class="product__content content--center content--center">
-                                            <h4><a href="single-product.html">${p.name}</a></h4>
-                                            <ul class="prize d-flex">
-                                                <li>${p.value}₫</li>
-                                                <li class="old_prize">${p.cost - p.value}₫</li>
-                                            </ul>
-                                            <div class="action">
-                                                <div class="actions_inner">
-                                                    <ul class="add_to_links">
-                                                        <li><a class="cart" href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
-                                                            <%--                                                    <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>--%>
-                                                            <%--                                                    <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>--%>
-                                                            <%--                                                    <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>--%>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                            <div class="product__hover--content">
-                                                <ul class="rating d-flex">
-                                                    <li class="on"><i class="fas fa-star"></i></li>
-                                                    <li class="on"><i class="fas fa-star"></i></li>
-                                                    <li class="on"><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                    <li><i class="fas fa-star"></i></li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </c:forEach>
-                    </div>
-                </div>
-                <!-- End Single Tab Content -->
-            </div>
-        </div>
-    </section>
-    <!-- Start BEst Seller Area -->
-    <!-- Start Recent Post Area -->
-    <section class="wn__recent__post bg--gray ptb--80">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section__title text-center">
-                        <h2 class="title__be--2">Bài <span class="color--theme">viết</span></h2>
-                        <p>Nơi lưu trữ bài viết hay nhất của website</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row mt--50">
-                <div class="col-md-6 col-lg-4 col-sm-12">
-                    <div class="post__itam">
-                        <div class="content">
-                            <h3><a href="blog-details.html">Top 5 cuốn sách dành cho giao tiếp</a></h3>
-                            <p>Nếu bạn muốn trở thành bậc thầy giao tiếp, thuyết phục mọi người thì đây là những cuốn sách bạn có thể tham khảo.</p>
-                            <div class="post__time">
-                                <span class="day">Dec 06, 18</span>
-                                <div class="post-meta">
-                                    <ul>
-                                        <li><a href="#"><i class="fas fa-heart"></i>72</a></li>
-                                        <li><a href="#"><i class="fas fa-comments"></i>27</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-sm-12">
-                    <div class="post__itam">
-                        <div class="content">
-                            <h3><a href="blog-details.html">Tại sao Harry Potter lại trở nên cuốn sách hay nhất</a></h3>
-                            <p>Harry Potter là những nhân vật phù thủy nhí học chung trường Howart và cùng phát triển với nhau, trải qua nhiều cuộc phiêu lưu, những tình tiết liên kết với nhau chặt chẽ.</p>
-                            <div class="post__time">
-                                <span class="day">Mar 08, 18</span>
-                                <div class="post-meta">
-                                    <ul>
-                                        <li><a href="#"><i class="fas fa-heart"></i>72</a></li>
-                                        <li><a href="#"><i class="fas fa-comments"></i>27</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4 col-sm-12">
-                    <div class="post__itam">
-                        <div class="content">
-                            <h3><a href="blog-details.html">Tình yêu có khó không?</a></h3>
-                            <p>Tình yêu đề tài muôn thuở của các nhà văn, nhà thơ tốn bao nhiêu giấy mực. Vậy ta thử tìm hiểu liệu rằng yêu hay tìm kiếm tình yêu thì nó có dễ dàng hay không.</p>
-                            <div class="post__time">
-                                <span class="day">Nov 11, 18</span>
-                                <div class="post-meta">
-                                    <ul>
-                                        <li><a href="#"><i class="fas fa-heart"></i>72</a></li>
-                                        <li><a href="#"><i class="fas fa-comments"></i>27</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Recent Post Area -->
-    <!-- Best Sale Area -->
-    <section class="best-seel-area pt--80 pb--60">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section__title text-center pb--50">
-                        <h2 class="title__be--2">Best <span class="color--theme">Seller </span></h2>
-                        <p>Những cuốn sách bạn chạy nhất trong website</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="slider center">
-            <!-- Single product start -->
-            <div class="product product__style--3">
-                <div class="product__thumb">
-                    <a class="first__img" href="single-product.html"><img src="images/best-sell-product/1.jpg" alt="product image"></a>
-                </div>
-                <div class="product__content content--center">
-                    <div class="action">
-                        <div class="actions_inner">
-                            <ul class="add_to_links">
-                                <li><a class="cart" href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
-                                <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>
-                                <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>
-                                <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product__hover--content">
-                        <ul class="rating d-flex">
-                            <li class="on"><i class="fas fa-star"></i></li>
-                            <li class="on"><i class="fas fa-star"></i></li>
-                            <li class="on"><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- Single product end -->
-            <!-- Single product start -->
-            <div class="product product__style--3">
-                <div class="product__thumb">
-                    <a class="first__img" href="single-product.html"><img src="images/best-sell-product/2.jpg" alt="product image"></a>
-                </div>
-                <div class="product__content content--center">
-                    <div class="action">
-                        <div class="actions_inner">
-                            <ul class="add_to_links">
-                                <li><a class="cart" href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
-                                <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>
-                                <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>
-                                <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product__hover--content">
-                        <ul class="rating d-flex">
-                            <li class="on"><i class="fas fa-star"></i></li>
-                            <li class="on"><i class="fas fa-star"></i></li>
-                            <li class="on"><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- Single product end -->
-            <!-- Single product start -->
-            <div class="product product__style--3">
-                <div class="product__thumb">
-                    <a class="first__img" href="single-product.html"><img src="images/best-sell-product/3.jpg" alt="product image"></a>
-                </div>
-                <div class="product__content content--center">
-                    <div class="action">
-                        <div class="actions_inner">
-                            <ul class="add_to_links">
-                                <li><a class="cart" href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
-                                <%--                            <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>--%>
-                                <%--                            <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>--%>
-                                <%--                            <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>--%>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product__hover--content">
-                        <ul class="rating d-flex">
-                            <li class="on"><i class="fas fa-star"></i></li>
-                            <li class="on"><i class="fas fa-star"></i></li>
-                            <li class="on"><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- Single product end -->
-            <!-- Single product start -->
-            <div class="product product__style--3">
-                <div class="product__thumb">
-                    <a class="first__img" href="single-product.html"><img src="images/best-sell-product/4.jpg" alt="product image"></a>
-                </div>
-                <div class="product__content content--center">
-                    <div class="action">
-                        <div class="actions_inner">
-                            <ul class="add_to_links">
-                                <li><a class="cart" href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
-                                <%--                            <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>--%>
-                                <%--                            <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>--%>
-                                <%--                            <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>--%>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product__hover--content">
-                        <ul class="rating d-flex">
-                            <li class="on"><i class="fas fa-star"></i></li>
-                            <li class="on"><i class="fas fa-star"></i></li>
-                            <li class="on"><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- Single product end -->
-            <!-- Single product start -->
-            <div class="product product__style--3">
-                <div class="product__thumb">
-                    <a class="first__img" href="single-product.html"><img src="images/best-sell-product/5.jpg" alt="product image"></a>
-                </div>
-                <div class="product__content content--center">
-                    <div class="action">
-                        <div class="actions_inner">
-                            <ul class="add_to_links">
-                                <li><a class="cart" href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
-                                <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>
-                                <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>
-                                <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product__hover--content">
-                        <ul class="rating d-flex">
-                            <li class="on"><i class="fas fa-star"></i></li>
-                            <li class="on"><i class="fas fa-star"></i></li>
-                            <li class="on"><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- Single product end -->
-            <!-- Single product start -->
-            <div class="product product__style--3">
-                <div class="product__thumb">
-                    <a class="first__img" href="single-product.html"><img src="images/best-sell-product/6.jpg" alt="product image"></a>
-                </div>
-                <div class="product__content content--center">
-                    <div class="action">
-                        <div class="actions_inner">
-                            <ul class="add_to_links">
-                                <li><a class="cart" href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
-                                <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>
-                                <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>
-                                <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product__hover--content">
-                        <ul class="rating d-flex">
-                            <li class="on"><i class="fas fa-star"></i></li>
-                            <li class="on"><i class="fas fa-star"></i></li>
-                            <li class="on"><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- Single product end -->
-            <!-- Single product start -->
-            <div class="product product__style--3">
-                <div class="product__thumb">
-                    <a class="first__img" href="single-product.html"><img src="images/best-sell-product/7.jpg" alt="product image"></a>
-                </div>
-                <div class="product__content content--center">
-                    <div class="action">
-                        <div class="actions_inner">
-                            <ul class="add_to_links">
-                                <li><a class="cart" href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
-                                <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>
-                                <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>
-                                <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product__hover--content">
-                        <ul class="rating d-flex">
-                            <li class="on"><i class="fas fa-star"></i></li>
-                            <li class="on"><i class="fas fa-star"></i></li>
-                            <li class="on"><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- Single product end -->
-            <!-- Single product start -->
-            <div class="product product__style--3">
-                <div class="product__thumb">
-                    <a class="first__img" href="single-product.html"><img src="images/best-sell-product/8.jpg" alt="product image"></a>
-                </div>
-                <div class="product__content content--center">
-                    <div class="action">
-                        <div class="actions_inner">
-                            <ul class="add_to_links">
-                                <li><a class="cart" href="cart.html"><i class="fas fa-shopping-bag"></i></a></li>
-                                <li><a class="wishlist" href="wishlist.html"><i class="fas fa-shopping-cart"></i></a></li>
-                                <li><a class="compare" href="#"><i class="fas fa-heart"></i></a></li>
-                                <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"><i class="fas fa-search"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="product__hover--content">
-                        <ul class="rating d-flex">
-                            <li class="on"><i class="fas fa-star"></i></li>
-                            <li class="on"><i class="fas fa-star"></i></li>
-                            <li class="on"><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                            <li><i class="fas fa-star"></i></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- Single product end -->
-        </div>
-    </section>
     <!-- Best Sale Area Area -->
     <!-- Footer Area -->
     <%@include file="/library/web/footer.jsp"%>
@@ -857,7 +300,243 @@
 <script src="<c:url value="/template/web/js/bootstrap.min.js"/>"></script>
 <script src="<c:url value="/template/web/js/plugins.js"/>"></script>
 <script src="<c:url value="/template/web/js/active.js"/>"></script>
+<script type="text/javascript">
 
+    let fname = document.forms['vform']['fname'];
+    let lname = document.forms['vform']['lname'];
+    let address = document.forms['vform']['address'];
+    let ward = document.forms['vform']['ward'];
+    let commune = document.forms['vform']['commune'];
+    let city = document.forms['vform']['city'];
+    let phone = document.forms['vform']['phone'];
+    let email = document.forms['vform']['email'];
+    let username = document.forms['vform']['username'];
+    let password = document.forms['vform']['password'];
+    let password2 = document.forms['vform']['password2'];
+
+    let f_name_error = document.getElementById('f_name_error');
+    let l_name_error = document.getElementById('l_name_error');
+    let address_error = document.getElementById('address_error');
+    let ward_error = document.getElementById('ward_error');
+    let commune_error = document.getElementById('commune_error');
+    let phone_error = document.getElementById('phone_error');
+    let email_error = document.getElementById('email_error');
+    let username_error = document.getElementById('username_error');
+    let password_error = document.getElementById('password_error');
+    let password2_error = document.getElementById('password2_error');
+
+    fname.addEventListener('blur', fNameVerify, true);
+    lname.addEventListener('blur', lNameVerify, true);
+    address.addEventListener('blur', addressVerify, true);
+    ward.addEventListener('blur', addressVerify, true);
+    commune.addEventListener('blur', addressVerify, true);
+    phone.addEventListener('blur', phoneVerify, true);
+    email.addEventListener('blur', emailVerify, true);
+
+
+    // $(document).ready(function () {
+    //
+    //     function validatePhone(txtPhone){
+    //         var filter = /^[0-9-+]+$/;
+    //         if (filter.test(txtPhone + "") && txtPhone.length() >= 10 && txtPhone.length() <= 12) {
+    //             return true;
+    //         } else {
+    //             return false;
+    //         }
+    //     }
+    //
+    //     function validateEmail(sEmail) {
+    //         var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+    //         if (filter.test((sEmail)) ){
+    //             return true;
+    //         } else {
+    //             return false;
+    //         }
+    //     }
+    //
+    //     $('#wrapper').bind( {
+    //         'submit':function () {
+    //             if (!validateEmail($('#iEmail').val())) {
+    //                 $('#email_error').html('Email bạn nhập không phù hợp!!!');
+    //                 return false;
+    //             }
+    //
+    //             if (!validatePhone($('#iPhone').val())) {
+    //                 $('#phone_error').html('Số điện thoại bạn nhập không phù hợp!!!');
+    //                 return false;
+    //             }
+    //
+    //             if ($('#iPass').val() == '') {
+    //                 $('#password_error').html('Bạn không được bỏ trống trường này!!!');
+    //                 return false;
+    //             }
+    //
+    //             if ($('#iPass2').val() == '') {
+    //                 $('#password2_error').html('Bạn không được bỏ trống trường này!!!');
+    //                 return false;
+    //             }
+    //
+    //             if ($('#iFName').val() == '') {
+    //                 $('#f_name_error').html('Bạn không được bỏ trống trường này!!!');
+    //                 return false;
+    //             }
+    //
+    //             if ($('#iLName').val() == '') {
+    //                 $('#l_name_error').html('Bạn không được bỏ trống trường này!!!');
+    //                 return false;
+    //             }
+    //
+    //             if ($('#iHouse').val() == '') {
+    //                 $('#address_error').html('Bạn không được bỏ trống trường này!!!');
+    //                 return false;
+    //             }
+    //
+    //             if ($('#iWard').val() == '') {
+    //                 $('#ward_error').html('Bạn không được bỏ trống trường này!!!');
+    //                 return false;
+    //             }
+    //
+    //             if ($('#iCommune').val() == '') {
+    //                 $('#commune_error').html('Bạn không được bỏ trống trường này!!!');
+    //                 return false;
+    //             }
+    //
+    //             if ($('#iUser').val() == '') {
+    //                 $('#username_error').html('Bạn không được bỏ trống trường này!!!');
+    //                 return false;
+    //             } return true;
+    //         },
+    //         'keydown': function() {
+    //             if ($('#FfName').val().length > 0) {
+    //                 $('#f_name_error').html('');
+    //             }
+    //             if ($('#iLName').val().length > 0) {
+    //                 $('#l_name_error').html('');
+    //             }
+    //             if ($('#iHouse').val().length > 0) {
+    //                 $('#address_error').html('');
+    //             }
+    //             if ($('#iWard').val().length > 0) {
+    //                 $('#ward_error').html('');
+    //             }
+    //             if ($('#iCommune').val().length > 0) {
+    //                 $('#commune_error').html('');
+    //             }
+    //             if ($('#iPhone').val().length > 0) {
+    //                 $('#phone_error').html('');
+    //             }
+    //             if ($('#iEmail').val().length > 0) {
+    //                 $('#email_error').html('');
+    //             }
+    //             if ($('#iUser').val().length > 0) {
+    //                 $('#username_error').html('');
+    //             }
+    //             if ($('#iPass').val().length > 0) {
+    //                 $('#password_error').html('');
+    //             }
+    //         }
+    //     });
+    // });
+
+
+
+    function validate(){
+        if(fname.value == ""){
+            fname.style.border = "1px solid red";
+            f_name_error.textContent = "Yêu cầu họ";
+            fname.focus();
+            return false;
+        }
+        if(lname.value == ""){
+            lname.style.border = "1px solid red";
+            l_name_error.textContent = "Yêu cầu tên";
+            lname.focus();
+            return false;
+        }
+        if(address.value == ""){
+            address.style.border = "1px solid red";
+            address_error.textContent = "Yêu cầu số nhà";
+            address.focus();
+            return false;
+        }
+        if(ward.value == ""){
+            ward.style.border = "1px solid red";
+            ward_error.textContent = "Yêu cầu tên phường";
+            ward.focus();
+            return false;
+        }
+        if(commune.value == ""){
+            commune.style.border = "1px solid red";
+            commune_error.textContent = "Yêu cầu tên xã";
+            commune.focus();
+            return false;
+        }
+        if(phone.value == ""){
+            phone.style.border = "1px solid red";
+            phone_error.textContent = "Yêu cầu số điện thoại";
+            phone.focus();
+            return false;
+        }
+        if(email.value == ""){
+            email.style.border = "1px solid red";
+            email_error.textContent = "Yêu cầu số email";
+            email.focus();
+            return false;
+        }
+        if(username.value == ""){
+            username.style.border = "1px solid red";
+            username_error.textContent = "Yêu cầu tài khoản";
+            username.focus();
+            return false;
+        }
+        if(password.value == ""){
+            password.style.border = "1px solid red";
+            password_error.textContent = "Yêu cầu mật khẩu";
+            password.focus();
+            return false;
+        }
+        if(password2.value != password.value){
+            password2.style.border = "1px solid red";
+            password2_error.textContent = "Yêu cầu nhập lại mật khẩu";
+            password2.focus();
+            return false;
+        }
+    }
+
+    function fNameVerify(){
+        if(fname.value != ""){
+            fname.style.border = "1px solid #5E6E66";
+            f_name_error.innerHTML = "";
+            return true;
+        }
+    }
+
+    function addressVerify(){
+        if(address.value != ""){
+            address.style.border = "1px solid #5E6E66";
+            address_error.innerHTML = "";
+            return true;
+        }
+    }
+
+    function phoneVerify(){
+        if(phone.value != ""){
+            lname.style.border = "1px solid #5E6E66";
+            l_name_error.innerHTML = "";
+            return true;
+        }
+    }
+
+    function emailVerify(){
+        if(email.value != ""){
+            lname.style.border = "1px solid #5E6E66";
+            l_name_error.innerHTML = "";
+            return true;
+        }
+    }
+
+
+</script>
 </body>
 
 </html>

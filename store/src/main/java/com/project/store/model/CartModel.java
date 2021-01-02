@@ -31,6 +31,15 @@ public class CartModel implements Serializable {
         cart.remove(id);
     }
 
+    public String printItem(){
+        StringBuilder sb = new StringBuilder();
+        for(Map.Entry<Long, ItemModel> map: cart.entrySet()){
+            sb.append(map.getValue().getProductModel().getName() + " x" +  map.getValue().getQuantity() + "\n");
+        }
+        sb.append("\nTổng tiền: " + total() + " ₫");
+        return sb.toString();
+    }
+
     public long total(){
         long sum = 0;
         for(ItemModel item : cart.values()){

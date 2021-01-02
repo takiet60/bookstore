@@ -5,6 +5,7 @@ import com.project.store.mapper.ProductMapper;
 import com.project.store.model.ProductModel;
 import com.project.store.model.UserModel;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 public class ProductDAO extends AbtractDAO<ProductModel> implements IProductDAO {
@@ -43,6 +44,7 @@ public class ProductDAO extends AbtractDAO<ProductModel> implements IProductDAO 
         String sql = "SELECT * FROM product WHERE name LIKE '%" + search + "%'";
         return query(sql, new ProductMapper());
     }
+
 
 
 }

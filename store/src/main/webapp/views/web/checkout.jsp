@@ -6,7 +6,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Trang chủ</title>
+    <title>Kết quả tìm kiếm</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -69,16 +69,16 @@
                             <a class="showlogin" href="#">Nhấn vào đây để đăng nhập</a>
                         </div>
                         <div class="checkout_login">
-                            <form class="wn__checkout__form" action="#">
+                            <form class="wn__checkout__form" action="login" method="post">
                                 <p>Nếu bạn đã giao dịch với chúng tôi hãy nhập thông tin bên dưới. Nếu đây là lần đầu hãy điền thông tin của bạn để thanh toán</p>
                                 <div class="input__box">
                                     <label>Tài khoản <span>*</span></label>
-                                    <input type="text">
+                                    <input type="text" name="username">
                                 </div>
 
                                 <div class="input__box">
                                     <label>Mật khẩu <span>*</span></label>
-                                    <input type="password">
+                                    <input type="password" name="password">
                                 </div>
                                 <div class="form__btn">
                                     <button>Đăng nhập</button>
@@ -88,6 +88,7 @@
                                     </label>
                                     <a href="#">Quên mật khẩu?</a>
                                 </div>
+                                <a href="<c:url value="register"/> ">Tạo tài khoản</a>
                             </form>
                         </div>
                         <div class="checkout_info">
@@ -123,8 +124,7 @@
                             <div class="input_box">
                                 <label>Hình thức thanh toán<span>*</span></label>
                                 <select class="select__option">
-                                    <option>Chọn hình thức thanh toán…</option>
-                                    <option>Giao tiền trực tiếp</option>
+                                    <option>Thanh toán trực tiếp</option>
                                     <option>Qua ZaloPay</option>
                                     <option>Qua Paypal</option>
                                     <option>Qua ATM</option>
@@ -178,8 +178,7 @@
                             <div class="input_box">
                                 <label>Hình thức thanh toán<span>*</span></label>
                                 <select class="select__option">
-                                    <option>Chọn hình thức thanh toán…</option>
-                                    <option>Giao tiền trực tiếp</option>
+                                    <option>Thanh toán thực tiếp</option>
                                     <option>Qua ZaloPay</option>
                                     <option>Qua Paypal</option>
                                     <option>Qua ATM</option>
@@ -287,36 +286,38 @@
                 %>
                 <div class="col-lg-6 col-12 md-mt-40 sm-mt-40">
                     <div class="wn__order__box">
-                        <h3 class="onder__title">Đơn hàng của bạn</h3>
-                        <ul class="order__total">
-                            <li>Sản phẩm</li>
-                            <li>Tổng</li>
-                        </ul>
-                        <ul class="order_product">
-                            <c:forEach items="${data}" var="d">
-                                <li>${d.productModel.name} × ${d.quantity}<span>${d.productModel.value * d.quantity}₫</span></li>
-                            </c:forEach>
-                        </ul>
-                        <ul class="shipping__method">
+                        <form action="checkout" method="post">
+                            <h3 class="onder__title">Đơn hàng của bạn</h3>
+                            <ul class="order__total">
+                                <li>Sản phẩm</li>
+                                <li>Tổng</li>
+                            </ul>
+                            <ul class="order_product">
+                                <c:forEach items="${data}" var="d">
+                                    <li>${d.productModel.name} × ${d.quantity}<span>${d.productModel.value * d.quantity}₫</span></li>
+                                </c:forEach>
+                            </ul>
+                            <ul class="shipping__method">
 
-                            <li>Tạm tính <span></span></li>
-                            <li>Phí vận chuyển
-                                <ul>
-                                    <li>
-                                        <input name="shipping_method[0]" data-index="0" value="legacy_flat_rate" checked="checked" type="radio">
-                                        <label>Giao thường:5000₫  </label>
-                                    </li>
-                                    <li>
-                                        <input name="shipping_method[0]" data-index="0" value="legacy_flat_rate" checked="checked" type="radio">
-                                        <label>Giao nhanh: 25000₫ </label>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul class="total__amount">
-                            <li>Tổng giá trị <span>${total + 5000} ₫ </span></li>
-                        </ul>
-                        <button type="submit" class="pay">Thanh toán</button>
+                                <li>Tạm tính <span></span></li>
+                                <li>Phí vận chuyển
+                                    <ul>
+                                        <li>
+                                            <input name="shipping_method[0]" data-index="0" value="legacy_flat_rate" checked="checked" type="radio">
+                                            <label>Giao thường:5000₫  </label>
+                                        </li>
+                                        <li>
+                                            <input name="shipping_method[0]" data-index="0" value="legacy_flat_rate" checked="checked" type="radio">
+                                            <label>Giao nhanh: 25000₫ </label>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="total__amount">
+                                <li>Tổng giá trị <span>${total + 5000} ₫ </span></li>
+                            </ul>
+                            <button type="submit" class="pay">Thanh toán</button>
+                        </form>
                     </div>
                     <div id="accordion" class="checkout_accordion mt--30" role="tablist">
                         <div class="payment">
@@ -329,26 +330,6 @@
                                 <div class="payment-body">Lựa chọn hình thức thanh toán qua ngân hàng</div>
                             </div>
                         </div>
-                        <!-- <div class="payment">
-                            <div class="che__header" role="tab" id="headingTwo">
-                                <a class="collapsed checkout__title" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                    <span>Cheque Payment</span>
-                                  </a>
-                            </div>
-                            <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordion">
-                                <div class="payment-body">Please send your cheque to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</div>
-                            </div>
-                        </div>
-                        <div class="payment">
-                            <div class="che__header" role="tab" id="headingThree">
-                                <a class="collapsed checkout__title" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                    <span>Cash on Delivery</span>
-                                  </a>
-                            </div>
-                            <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordion">
-                                <div class="payment-body">Pay with cash upon delivery.</div>
-                            </div>
-                        </div> -->
                         <div class="payment">
                             <div class="che__header" role="tab" id="headingFour">
                                 <a class="collapsed checkout__title" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">

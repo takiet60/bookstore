@@ -1,5 +1,7 @@
 package com.project.store.model;
 
+import java.sql.Timestamp;
+
 public class UserModel {
     private long id;
     private String name;
@@ -13,11 +15,12 @@ public class UserModel {
     private int permission;
     private String code;
     private long introducedId;
+    private Timestamp timeStart;
 
     public UserModel() {
     }
 
-    public UserModel(long id, String name, String gender, String address, String phone, String email, String username, String password, int categoryId, int permission, String code, long introducedId) {
+    public UserModel(long id, String name, String gender, String address, String phone, String email, String username, String password, int categoryId, int permission, String code, long introducedId, Timestamp timeStart) {
         this.id = id;
         this.name = name;
         this.gender = gender;
@@ -30,6 +33,15 @@ public class UserModel {
         this.permission = permission;
         this.code = code;
         this.introducedId = introducedId;
+        this.timeStart = timeStart;
+    }
+
+    public Timestamp getTimeStart() {
+        return timeStart;
+    }
+
+    public void setTimeStart(Timestamp timeStart) {
+        this.timeStart = timeStart;
     }
 
     public long getId() {

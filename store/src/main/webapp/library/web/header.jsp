@@ -136,8 +136,8 @@
                                                     <div class="product_prize d-flex justify-content-between">
                                                         <span class="qun">Số lượng: ${d.quantity}</span>
                                                         <ul class="d-flex justify-content-end">
-                                                            <li><a href="#"><i class="fas fa-cog"></i></a></li>
-                                                            <li><a href="#"><i class="far fa-trash-alt"></i></a></li>
+                                                            <li><a href="<c:url value="cart" />"><i class="fas fa-cog"></i></a></li>
+                                                            <li><a href="<c:url value="cart/remove?id=${d.productModel.id}" />"><i class="far fa-trash-alt"></i></a></li>
                                                         </ul>
                                                     </div>
                                                 </div>

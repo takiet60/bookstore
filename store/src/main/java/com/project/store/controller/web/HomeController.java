@@ -27,6 +27,7 @@ public class HomeController extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        req.setCharacterEncoding("utf-8");
         List<ProductModel> list = productService.findAll();
         List<ProductModel> listByCategory7 = productService.findByCategoryId(7);
         List<ProductModel> listByNewest = productService.findByNewest();

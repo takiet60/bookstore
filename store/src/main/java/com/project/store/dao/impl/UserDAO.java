@@ -4,6 +4,7 @@ import com.project.store.dao.IUserDAO;
 import com.project.store.mapper.UserMapper;
 import com.project.store.model.UserModel;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 public class UserDAO extends AbtractDAO<UserModel> implements IUserDAO {
@@ -35,5 +36,10 @@ public class UserDAO extends AbtractDAO<UserModel> implements IUserDAO {
         String sql = "SELECT * FROM user WHERE username = ?";
         List<UserModel> list = query(sql, new UserMapper(), username);
         return (list.size() == 0 ? null : list.get(0));
+    }
+
+    public void updateCode(String code, Timestamp time, String username){
+        String sql = "UPDATE user SET code = ?, time = ? WHERE username = ?";
+        update(sql, code, time, username);
     }
 }

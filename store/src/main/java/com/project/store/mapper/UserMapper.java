@@ -19,6 +19,8 @@ public class UserMapper implements RowMapper<UserModel>{
             userModel.setEmail(rs.getString("email"));
             userModel.setUsername(rs.getString("username"));
             userModel.setPassword(rs.getString("password"));
+            userModel.setCode(rs.getString("code"));
+            userModel.setTimeStart(rs.getTimestamp("time"));
             return userModel;
         } catch (SQLException throwables) {
             throwables.printStackTrace();
