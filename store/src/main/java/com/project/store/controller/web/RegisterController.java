@@ -47,13 +47,7 @@ public class RegisterController extends HttpServlet {
         userModel.setPassword(password);
 
 
-        UserModel user = userService.findByUserName(username);
-        if(user != null){
-            response.sendRedirect("register?message=fail&alert=danger");
-        }else{
-            userService.save(userModel);
-            response.sendRedirect("login?message=successs&alert=success");
-        }
+        
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
