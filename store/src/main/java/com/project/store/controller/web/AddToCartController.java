@@ -42,17 +42,9 @@ public class AddToCartController extends HttpServlet {
             itemModel.setProductModel(productModel);
             cart.put(itemModel);
             cart.commit(session);
+            long total = cart.total();
+            request.setAttribute("total", total);
             response.sendRedirect(request.getContextPath() + "/home");
-//            request.getRequestDispatcher("/views/web/home.jsp").forward(request, response);
-//            CartModel cart = CartModel.getCart(request.getSession());
-//            Collection<ItemModel> data = cart.getCart();
-//            int totalQuantity = cart.totalQuantity();
-//            long total = cart.total();
-//            request.setAttribute("total", total);
-//            request.setAttribute("data", data);
-//            request.setAttribute("totalQuantity", totalQuantity);
-//            RequestDispatcher rd = request.getRequestDispatcher("/library/web/header.jsp");
-//
         }
 
 

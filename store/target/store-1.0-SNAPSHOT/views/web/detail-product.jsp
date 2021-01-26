@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="/library/taglib.jsp"%>
+<c:url var="APIurl" value="/cart/add"/>
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -7,29 +8,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Trang chủ</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Favicons -->
-    <link rel="shortcut icon" href="<c:url value="/template/web/images/favicon.ico"/>"/>
-    <link rel="apple-touch-icon" href="images/icon.png">
-
-    <!-- Google font (font-family: 'Roboto', sans-serif; Poppins ; Satisfy) -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,600i,700,700i,800" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="<c:url value="/template/web/css/bootstrap.min.css"/>"/>
-    <link rel="stylesheet" href="<c:url value="/template/web/css/plugins.css"/>"/>
-    <link rel="stylesheet" href="<c:url value="/template/web/style.css"/>"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="<c:url value="/template/web/css/create-account.css"/>"/>
-    <!-- Cusom css -->
-    <link rel="stylesheet" href="<c:url value="/template/web/css/custom.css"/>"/>
-
-    <!-- Modernizer js -->
-    <script src="<c:url value="/template/web/js/vendor/modernizr-3.5.0.min.js"/>"></script>
+    <%@include file="/library/web/link.jsp"%>
 </head>
 
 <body>
@@ -41,24 +20,6 @@
 <div class="wrapper" id="wrapper">
     <!-- Header -->
     <%@include file="/library/web/header.jsp"%>
-    <!-- //Header -->
-    <!-- Start Search Popup -->
-    <div class="brown--color box-search-content search_active block-bg close__top">
-        <form id="search_mini_form" class="minisearch" action="search" method="get">
-            <div class="field__search">
-                <input type="text" placeholder="Nhập sản phẩm muốn tìm kiếm" name="search">
-                <div class="action">
-                    <button type="submit"><i class="fas fa-search"></i></button>
-                </div>
-            </div>
-        </form>
-        <div class="close__wrap">
-            <span>Đóng</span>
-        </div>
-    </div>
-    <!-- End Search Popup -->
-    <!-- Start Slider area -->
-
     <div class="maincontent bg--white pt--80 pb--55">
         <div class="container">
             <div class="row">
@@ -103,12 +64,10 @@
                                         <span>Số lượng</span>
                                         <input id="qty" class="input-text qty" name="qty" min="1" value="1" title="Qty" type="number">
                                         <div class="addtocart__actions">
-                                            <a href="<c:url value = "cart/add?id=${product.id}"/>">
-                                                <button class="tocart" type="submit" title="Add to Cart">
+                                                <button class="tocart" type="submit" title="Add to Cart" onclick="addProduct(${product.id})">
 
                                                     Thêm vào giỏ hàng
                                                 </button>
-                                            </a>
                                         </div>
                                     </div>
                                     <div class="product-addto-links clearfix">
@@ -254,36 +213,26 @@
                     </div>
                     <div class="wn__related__product pt--80 pb--50">
                         <div class="section__title text-center">
-                            <h2 class="title__be--2">Related Products</h2>
+                            <h2 class="title__be--2">Sản phẩm cùng thể loại</h2>
                         </div>
                         <div class="row mt--60">
                             <div class="productcategory__slide--2 arrows_style owl-carousel owl-theme">
-                                <!-- Start Single Product -->
+                                <c:forEach items="${listRelated}" var="item">
                                 <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                                     <div class="product">
                                         <div class="product__thumb">
-                                            <a class="first__img" href="single-product.html"><img src="images/product/1.jpg" alt="product image"></a>
-                                            <a class="second__img animation1" href="single-product.html"><img src="images/product/2.jpg" alt="product image"></a>
+                                            <a class="first__img" href="<c:url value="/detail?id=${item.id}"/> "><img src="${item.image1}" alt="product image"></a>
                                             <div class="new__box">
                                                 <span class="new-label">New</span>
                                             </div>
                                             <ul class="prize position__right__bottom d-flex">
-                                                <li>$35.00</li>
-                                                <li class="old_prize">$38.00</li>
+                                                <li>${item.value}₫</li>
+                                                <li class="old_prize">${item.cost - item.value}₫</li>
                                             </ul>
-                                            <div class="action">
-                                                <div class="actions_inner">
-                                                    <ul class="add_to_links">
-                                                        <li><a class="cart" href="cart.html"></a></li>
-                                                        <li><a class="wishlist" href="wishlist.html"></a></li>
-                                                        <li><a class="compare" href="compare.html"></a></li>
-                                                        <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
+
                                         </div>
                                         <div class="product__content">
-                                            <h4><a href="single-product.html">Crown Summit Backpack</a></h4>
+                                            <h4><a href="single-product.html">${item.name}</a></h4>
                                             <ul class="rating d-flex">
                                                 <li class="on"><i class="fas fa-star"></i></li>
                                                 <li class="on"><i class="fas fa-star"></i></li>
@@ -294,213 +243,28 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Start Single Product -->
-                                <!-- Start Single Product -->
-                                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                                    <div class="product">
-                                        <div class="product__thumb">
-                                            <a class="first__img" href="single-product.html"><img src="images/product/2.jpg" alt="product image"></a>
-                                            <a class="second__img animation1" href="single-product.html"><img src="images/product/4.jpg" alt="product image"></a>
-                                            <div class="new__box">
-                                                <span class="new-label">New</span>
-                                            </div>
-                                            <ul class="prize position__right__bottom d-flex">
-                                                <li>$35.00</li>
-                                                <li class="old_prize">$ ${product.cost}</li>
-                                            </ul>
-                                            <div class="action">
-                                                <div class="actions_inner">
-                                                    <ul class="add_to_links">
-                                                        <li><a class="cart" href="cart.html"></a></li>
-                                                        <li><a class="wishlist" href="wishlist.html"></a></li>
-                                                        <li><a class="compare" href="compare.html"></a></li>
-                                                        <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product__content">
-                                            <h4><a href="single-product.html">Crown Summit Backpack</a></h4>
-                                            <ul class="rating d-flex">
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Start Single Product -->
-                                <!-- Start Single Product -->
-                                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                                    <div class="product">
-                                        <div class="product__thumb">
-                                            <a class="first__img" href="single-product.html"><img src="images/product/3.jpg" alt="product image"></a>
-                                            <a class="second__img animation1" href="single-product.html"><img src="images/product/6.jpg" alt="product image"></a>
-                                            <div class="new__box">
-                                                <span class="new-label">New</span>
-                                            </div>
-                                            <ul class="prize position__right__bottom d-flex">
-                                                <li>$35.00</li>
-                                                <li class="old_prize">$38.00</li>
-                                            </ul>
-                                            <div class="action">
-                                                <div class="actions_inner">
-                                                    <ul class="add_to_links">
-                                                        <li><a class="cart" href="cart.html"></a></li>
-                                                        <li><a class="wishlist" href="wishlist.html"></a></li>
-                                                        <li><a class="compare" href="compare.html"></a></li>
-                                                        <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product__content">
-                                            <h4><a href="single-product.html">Crown Summit Backpack</a></h4>
-                                            <ul class="rating d-flex">
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Start Single Product -->
-                                <!-- Start Single Product -->
-                                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                                    <div class="product">
-                                        <div class="product__thumb">
-                                            <a class="first__img" href="single-product.html"><img src="images/product/4.jpg" alt="product image"></a>
-                                            <a class="second__img animation1" href="single-product.html"><img src="images/product/8.jpg" alt="product image"></a>
-                                            <div class="new__box">
-                                                <span class="new-label">New</span>
-                                            </div>
-                                            <ul class="prize position__right__bottom d-flex">
-                                                <li>$35.00</li>
-                                                <li class="old_prize">$38.00</li>
-                                            </ul>
-                                            <div class="action">
-                                                <div class="actions_inner">
-                                                    <ul class="add_to_links">
-                                                        <li><a class="cart" href="cart.html"></a></li>
-                                                        <li><a class="wishlist" href="wishlist.html"></a></li>
-                                                        <li><a class="compare" href="compare.html"></a></li>
-                                                        <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product__content">
-                                            <h4><a href="single-product.html">Crown Summit Backpack</a></h4>
-                                            <ul class="rating d-flex">
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Start Single Product -->
-                                <!-- Start Single Product -->
-                                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                                    <div class="product">
-                                        <div class="product__thumb">
-                                            <a class="first__img" href="single-product.html"><img src="images/product/9.jpg" alt="product image"></a>
-                                            <a class="second__img animation1" href="single-product.html"><img src="images/product/2.jpg" alt="product image"></a>
-                                            <div class="new__box">
-                                                <span class="new-label">New</span>
-                                            </div>
-                                            <ul class="prize position__right__bottom d-flex">
-                                                <li>$35.00</li>
-                                                <li class="old_prize">$38.00</li>
-                                            </ul>
-                                            <div class="action">
-                                                <div class="actions_inner">
-                                                    <ul class="add_to_links">
-                                                        <li><a class="cart" href="cart.html"></a></li>
-                                                        <li><a class="wishlist" href="wishlist.html"></a></li>
-                                                        <li><a class="compare" href="compare.html"></a></li>
-                                                        <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product__content">
-                                            <h4><a href="single-product.html">Crown Summit Backpack</a></h4>
-                                            <ul class="rating d-flex">
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Start Single Product -->
-                                <!-- Start Single Product -->
-                                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                                    <div class="product">
-                                        <div class="product__thumb">
-                                            <a class="first__img" href="single-product.html"><img src="images/product/9.jpg" alt="product image"></a>
-                                            <a class="second__img animation1" href="single-product.html"><img src="images/product/8.jpg" alt="product image"></a>
-                                            <div class="new__box">
-                                                <span class="new-label">New</span>
-                                            </div>
-                                            <ul class="prize position__right__bottom d-flex">
-                                                <li>$35.00</li>
-                                                <li class="old_prize">$38.00</li>
-                                            </ul>
-                                            <div class="action">
-                                                <div class="actions_inner">
-                                                    <ul class="add_to_links">
-                                                        <li><a class="cart" href="cart.html"></a></li>
-                                                        <li><a class="wishlist" href="wishlist.html"></a></li>
-                                                        <li><a class="compare" href="compare.html"></a></li>
-                                                        <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product__content">
-                                            <h4><a href="single-product.html">Crown Summit Backpack</a></h4>
-                                            <ul class="rating d-flex">
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Start Single Product -->
+                                </c:forEach>
                             </div>
                         </div>
                     </div>
                     <div class="wn__related__product">
                         <div class="section__title text-center">
-                            <h2 class="title__be--2">upsell products</h2>
+                            <h2 class="title__be--2">Sản phẩm khác</h2>
                         </div>
                         <div class="row mt--60">
                             <div class="productcategory__slide--2 arrows_style owl-carousel owl-theme">
                                 <!-- Start Single Product -->
+                                <c:forEach items="${listAll}" var="item">
                                 <div class="col-lg-4 col-md-4 col-sm-6 col-12">
                                     <div class="product">
                                         <div class="product__thumb">
-                                            <a class="first__img" href="single-product.html"><img src="images/product/2.jpg" alt="product image"></a>
-                                            <a class="second__img animation1" href="single-product.html"><img src="images/product/1.jpg" alt="product image"></a>
+                                            <a class="first__img" href="<c:url value="/detail?id=${item.id}"/> "><img src="${item.image1}" alt="product image"></a>
                                             <div class="new__box">
                                                 <span class="new-label">New</span>
                                             </div>
                                             <ul class="prize position__right__bottom d-flex">
-                                                <li>$35.00</li>
-                                                <li class="old_prize">$38.00</li>
+                                                <li>${item.value}₫</li>
+                                                <li class="old_prize">${item.cost - item.value}₫</li>
                                             </ul>
                                             <div class="action">
                                                 <div class="actions_inner">
@@ -514,7 +278,7 @@
                                             </div>
                                         </div>
                                         <div class="product__content">
-                                            <h4><a href="single-product.html">Crown Summit Backpack</a></h4>
+                                            <h4><a href="single-product.html">${item.name}</a></h4>
                                             <ul class="rating d-flex">
                                                 <li class="on"><i class="fas fa-star"></i></li>
                                                 <li class="on"><i class="fas fa-star"></i></li>
@@ -525,192 +289,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!-- Start Single Product -->
-                                <!-- Start Single Product -->
-                                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                                    <div class="product">
-                                        <div class="product__thumb">
-                                            <a class="first__img" href="single-product.html"><img src="images/product/4.jpg" alt="product image"></a>
-                                            <a class="second__img animation1" href="single-product.html"><img src="images/product/3.jpg" alt="product image"></a>
-                                            <div class="new__box">
-                                                <span class="new-label">New</span>
-                                            </div>
-                                            <ul class="prize position__right__bottom d-flex">
-                                                <li>$35.00</li>
-                                                <li class="old_prize">$38.00</li>
-                                            </ul>
-                                            <div class="action">
-                                                <div class="actions_inner">
-                                                    <ul class="add_to_links">
-                                                        <li><a class="cart" href="cart.html"></a></li>
-                                                        <li><a class="wishlist" href="wishlist.html"></a></li>
-                                                        <li><a class="compare" href="compare.html"></a></li>
-                                                        <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product__content">
-                                            <h4><a href="single-product.html">Crown Summit Backpack</a></h4>
-                                            <ul class="rating d-flex">
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Start Single Product -->
-                                <!-- Start Single Product -->
-                                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                                    <div class="product">
-                                        <div class="product__thumb">
-                                            <a class="first__img" href="single-product.html"><img src="images/product/6.jpg" alt="product image"></a>
-                                            <a class="second__img animation1" href="single-product.html"><img src="images/product/5.jpg" alt="product image"></a>
-                                            <div class="new__box">
-                                                <span class="new-label">New</span>
-                                            </div>
-                                            <ul class="prize position__right__bottom d-flex">
-                                                <li>$35.00</li>
-                                                <li class="old_prize">$38.00</li>
-                                            </ul>
-                                            <div class="action">
-                                                <div class="actions_inner">
-                                                    <ul class="add_to_links">
-                                                        <li><a class="cart" href="cart.html"></a></li>
-                                                        <li><a class="wishlist" href="wishlist.html"></a></li>
-                                                        <li><a class="compare" href="compare.html"></a></li>
-                                                        <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product__content">
-                                            <h4><a href="single-product.html">Crown Summit Backpack</a></h4>
-                                            <ul class="rating d-flex">
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Start Single Product -->
-                                <!-- Start Single Product -->
-                                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                                    <div class="product">
-                                        <div class="product__thumb">
-                                            <a class="first__img" href="single-product.html"><img src="images/product/8.jpg" alt="product image"></a>
-                                            <a class="second__img animation1" href="single-product.html"><img src="images/product/7.jpg" alt="product image"></a>
-                                            <div class="new__box">
-                                                <span class="new-label">New</span>
-                                            </div>
-                                            <ul class="prize position__right__bottom d-flex">
-                                                <li>$35.00</li>
-                                                <li class="old_prize">$38.00</li>
-                                            </ul>
-                                            <div class="action">
-                                                <div class="actions_inner">
-                                                    <ul class="add_to_links">
-                                                        <li><a class="cart" href="cart.html"></a></li>
-                                                        <li><a class="wishlist" href="wishlist.html"></a></li>
-                                                        <li><a class="compare" href="compare.html"></a></li>
-                                                        <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product__content">
-                                            <h4><a href="single-product.html">Crown Summit Backpack</a></h4>
-                                            <ul class="rating d-flex">
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Start Single Product -->
-                                <!-- Start Single Product -->
-                                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                                    <div class="product">
-                                        <div class="product__thumb">
-                                            <a class="first__img" href="single-product.html"><img src="images/product/9.jpg" alt="product image"></a>
-                                            <a class="second__img animation1" href="single-product.html"><img src="images/product/2.jpg" alt="product image"></a>
-                                            <div class="new__box">
-                                                <span class="new-label">New</span>
-                                            </div>
-                                            <ul class="prize position__right__bottom d-flex">
-                                                <li>$35.00</li>
-                                                <li class="old_prize">$38.00</li>
-                                            </ul>
-                                            <div class="action">
-                                                <div class="actions_inner">
-                                                    <ul class="add_to_links">
-                                                        <li><a class="cart" href="cart.html"></a></li>
-                                                        <li><a class="wishlist" href="wishlist.html"></a></li>
-                                                        <li><a class="compare" href="compare.html"></a></li>
-                                                        <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product__content">
-                                            <h4><a href="single-product.html">Crown Summit Backpack</a></h4>
-                                            <ul class="rating d-flex">
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Start Single Product -->
-                                <!-- Start Single Product -->
-                                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
-                                    <div class="product">
-                                        <div class="product__thumb">
-                                            <a class="first__img" href="single-product.html"><img src="images/product/9.jpg" alt="product image"></a>
-                                            <a class="second__img animation1" href="single-product.html"><img src="images/product/8.jpg" alt="product image"></a>
-                                            <div class="new__box">
-                                                <span class="new-label">New</span>
-                                            </div>
-                                            <ul class="prize position__right__bottom d-flex">
-                                                <li>$35.00</li>
-                                                <li class="old_prize">$38.00</li>
-                                            </ul>
-                                            <div class="action">
-                                                <div class="actions_inner">
-                                                    <ul class="add_to_links">
-                                                        <li><a class="cart" href="cart.html"></a></li>
-                                                        <li><a class="wishlist" href="wishlist.html"></a></li>
-                                                        <li><a class="compare" href="compare.html"></a></li>
-                                                        <li><a data-toggle="modal" title="Quick View" class="quickview modal-view detail-link" href="#productmodal"></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product__content">
-                                            <h4><a href="single-product.html">Crown Summit Backpack</a></h4>
-                                            <ul class="rating d-flex">
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li class="on"><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                                <li><i class="fas fa-star"></i></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Start Single Product -->
+                                </c:forEach>
                             </div>
                         </div>
                     </div>
@@ -720,22 +299,9 @@
                         <aside class="wedget__categories poroduct--cat">
                             <h3 class="wedget__title">Thể loại</h3>
                             <ul>
-                                <li><a href="#">Sinh học <span>(3)</span></a></li>
-                                <li><a href="#">Kinh doanh <span>(4)</span></a></li>
-                                <li><a href="#">Nấu ăn <span>(6)</span></a></li>
-                                <li><a href="#">Sức khỏe và thể thao <span>(7)</span></a></li>
-                                <li><a href="#">Lịch sử <span>(8)</span></a></li>
-                                <li><a href="#">Bí ẩn <span>(9)</span></a></li>
-                                <li><a href="#">Truyền cảm hứng <span>(13)</span></a></li>
-                                <li><a href="#">Lãng mạn <span>(20)</span></a></li>
-                                <li><a href="#">Thú vị <span>(22)</span></a></li>
-                                <li><a href="#">Kỹ năng sống <span>(13)</span></a></li>
-                                <li><a href="#">Hài hước <span>(17)</span></a></li>
-                                <li><a href="#">Kinh dị <span>(20)</span></a></li>
-                                <li><a href="#">Thần thoại <span>(34)</span></a></li>
-                                <li><a href="#">Tác phẩm kinh điển <span>(60)</span></a></li>
-                                <li><a href="#">Phiêu lưu <span>(3)</span></a></li>
-                                <li><a href="#">Trinh thám <span>(3)</span></a></li>
+                                <c:forEach items="${listCategory}" var="item">
+                                <li><a href="<c:url value="/category?id=${item.id}&page=1&maxPageItem=10&sortName=name&sortBy=desc"/>">${item.name} <span>(3)</span></a></li>
+                                </c:forEach>
                             </ul>
                         </aside>
                         <aside class="wedget__categories pro--range">
@@ -886,11 +452,25 @@
 <!-- //Main wrapper -->
 
 <!-- JS Files -->
-<script src="<c:url value="/template/web/js/vendor/jquery-3.2.1.min.js"/>"></script>
-<script src="<c:url value="/template/web/js/popper.min.js"/>"></script>
-<script src="<c:url value="/template/web/js/bootstrap.min.js"/>"></script>
-<script src="<c:url value="/template/web/js/plugins.js"/>"></script>
-<script src="<c:url value="/template/web/js/active.js"/>"></script>
+<%@include file="/library/web/script.jsp"%>
+<script type="text/javascript">
+    function addProduct(id){
+        let data = {}
+        data["id"] = id;
+        $.ajax({
+            url: '${APIurl}',
+            type: 'GET',
+            data: data,
+            success: function (result){
+                alert("Thêm vào giỏ hàng thành công")
+                <%--window.location.href = "${NewURL}?type=list&maxPageItem=10&page=1&message=INSERT_SUCCESS&alert=success";--%>
+            },
+            error: function (error){
+                <%--window.location.href = "${NewURL}?type=add&maxPageItem=10&page=1&message=INSERT_SUCCESS&alert=success";--%>
+            }
+        })
+    }
+</script>
 
 </body>
 

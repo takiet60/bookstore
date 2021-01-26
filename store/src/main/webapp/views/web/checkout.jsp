@@ -6,30 +6,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Kết quả tìm kiếm</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Favicons -->
-    <link rel="shortcut icon" href="<c:url value="/template/web/images/favicon.ico"/>"/>
-    <link rel="apple-touch-icon" href="images/icon.png">
-
-    <!-- Google font (font-family: 'Roboto', sans-serif; Poppins ; Satisfy) -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,600i,700,700i,800" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="<c:url value="/template/web/css/bootstrap.min.css"/>"/>
-    <link rel="stylesheet" href="<c:url value="/template/web/css/plugins.css"/>"/>
-    <link rel="stylesheet" href="<c:url value="/template/web/style.css"/>"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="<c:url value="/template/web/css/create-account.css"/>"/>
-    <!-- Cusom css -->
-    <link rel="stylesheet" href="<c:url value="/template/web/css/custom.css"/>"/>
-
-    <!-- Modernizer js -->
-    <script src="<c:url value="/template/web/js/vendor/modernizr-3.5.0.min.js"/>"></script>
+    <title>Thanh toán</title>
+    <%@include file="/library/web/link.jsp"%>
 </head>
 
 <body>
@@ -41,29 +19,13 @@
 <div class="wrapper" id="wrapper">
     <!-- Header -->
     <%@include file="/library/web/header.jsp"%>
-    <!-- //Header -->
-    <!-- Start Search Popup -->
-    <div class="brown--color box-search-content search_active block-bg close__top">
-        <form id="search_mini_form" class="minisearch" action="search" method="get">
-            <div class="field__search">
-                <input type="text" placeholder="Nhập sản phẩm muốn tìm kiếm" name="search">
-                <div class="action">
-                    <button type="submit"><i class="fas fa-search"></i></button>
-                </div>
-            </div>
-        </form>
-        <div class="close__wrap">
-            <span>Đóng</span>
-        </div>
-    </div>
-    <!-- End Search Popup -->
-    <!-- Start Slider area -->
 
     <section class="wn__checkout__area section-padding--lg bg__white">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="wn_checkout_wrap">
+                        <c:if test="${empty USERMODEL}">
                         <div class="checkout_info">
                             <span>Trở thành thành viên ?</span>
                             <a class="showlogin" href="#">Nhấn vào đây để đăng nhập</a>
@@ -91,6 +53,7 @@
                                 <a href="<c:url value="register"/> ">Tạo tài khoản</a>
                             </form>
                         </div>
+                        </c:if>
                         <div class="checkout_info">
                             <span>Bạn có mã giảm giá? </span>
                             <a class="showcoupon" href="#">Nhấn vào đây là nhập mã giảm giá</a>
@@ -110,7 +73,7 @@
                 <div class="col-lg-6 col-12">
                     <div class="customer_details">
                         <%
-                            UserModel userModel =(UserModel) session.getAttribute("user");
+                            UserModel userModel =(UserModel) session.getAttribute("USERMODEL");
                             request.setAttribute("user", userModel);
                         %>
                         <h3>Thông tin khách hàng</h3>
@@ -146,135 +109,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="create__account">
-                            <div class="wn__accountbox">
-                                <input class="input-checkbox" name="createaccount" value="1" type="checkbox">
-                                <span>Tạo tài khoản ?</span>
-                            </div>
-                            <div class="account__field">
-                                <form action="#">
-                                    <label>Mật khẩu <span>*</span></label>
-                                    <input type="text" placeholder="password">
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="customer_details mt--20">
-                        <div class="differt__address">
-                            <input name="ship_to_different_address" value="1" type="checkbox">
-                            <span>Gửi tới địa chỉ khác ?</span>
-                        </div>
-                        <div class="customar__field differt__form mt--40">
-                            <div class="margin_between">
-                                <div class="input_box space_between">
-                                    <label>Họ <span>*</span></label>
-                                    <input type="text">
-                                </div>
-                                <div class="input_box space_between">
-                                    <label>Tên <span>*</span></label>
-                                    <input type="text">
-                                </div>
-                            </div>
-                            <div class="input_box">
-                                <label>Hình thức thanh toán<span>*</span></label>
-                                <select class="select__option">
-                                    <option>Thanh toán thực tiếp</option>
-                                    <option>Qua ZaloPay</option>
-                                    <option>Qua Paypal</option>
-                                    <option>Qua ATM</option>
-                                </select>
-                            </div>
-                            <div class="input_box">
-                                <label>Địa chỉ <span>*</span></label>
-                                <input type="text" placeholder="Số nhà">
-                            </div>
-                            <div class="input_box">
-                                <input type="text" placeholder="Phường">
-                            </div>
-                            <div class="input_box">
-                                <input type="text" placeholder="Xã">
-                            </div>
-                            <div class="input_box">
-                                <label>Thành phố<span>*</span></label>
-                                <select class="select__option">
-                                    <option>Lựa chọn thành phố…</option>
-                                    <option>	An Giang	</option>
-                                    <option>	Bà Rịa - Vũng Tàu	</option>
-                                    <option>	Bắc Giang	</option>
-                                    <option>	Bắc Kạn	</option>
-                                    <option>	Bạc Liêu	</option>
-                                    <option>	Bắc Ninh	</option>
-                                    <option>	Bến Tre	</option>
-                                    <option>	Bình Định	</option>
-                                    <option>	Bình Dương	</option>
-                                    <option>	Bình Phước	</option>
-                                    <option>	Bình Thuận	</option>
-                                    <option>	Cà Mau	</option>
-                                    <option>	Cao Bằng	</option>
-                                    <option>	Đắk Lắk	</option>
-                                    <option>	Đắk Nông	</option>
-                                    <option>	Điện Biên	</option>
-                                    <option>	Đồng Nai	</option>
-                                    <option>	Đồng Tháp	</option>
-                                    <option>	Gia Lai	</option>
-                                    <option>	Hà Giang	</option>
-                                    <option>	Hà Nam	</option>
-                                    <option>	Hà Tĩnh	</option>
-                                    <option>	Hải Dương	</option>
-                                    <option>	Hậu Giang	</option>
-                                    <option>	Hòa Bình	</option>
-                                    <option>	Hưng Yên	</option>
-                                    <option>	Khánh Hòa	</option>
-                                    <option>	Kiên Giang	</option>
-                                    <option>	Kon Tum	</option>
-                                    <option>	Lai Châu	</option>
-                                    <option>	Lâm Đồng	</option>
-                                    <option>	Lạng Sơn	</option>
-                                    <option>	Lào Cai	</option>
-                                    <option>	Long An	</option>
-                                    <option>	Nam Định	</option>
-                                    <option>	Nghệ An	</option>
-                                    <option>	Ninh Bình	</option>
-                                    <option>	Ninh Thuận	</option>
-                                    <option>	Phú Thọ	</option>
-                                    <option>	Quảng Bình	</option>
-                                    <option>	Quảng Nam	</option>
-                                    <option>	Quảng Ngãi	</option>
-                                    <option>	Quảng Ninh	</option>
-                                    <option>	Quảng Trị	</option>
-                                    <option>	Sóc Trăng	</option>
-                                    <option>	Sơn La	</option>
-                                    <option>	Tây Ninh	</option>
-                                    <option>	Thái Bình	</option>
-                                    <option>	Thái Nguyên	</option>
-                                    <option>	Thanh Hóa	</option>
-                                    <option>	Thừa Thiên Huế	</option>
-                                    <option>	Tiền Giang	</option>
-                                    <option>	Trà Vinh	</option>
-                                    <option>	Tuyên Quang	</option>
-                                    <option>	Vĩnh Long	</option>
-                                    <option>	Vĩnh Phúc	</option>
-                                    <option>	Yên Bái	</option>
-                                    <option>	Phú Yên	</option>
-                                    <option>	Cần Thơ	</option>
-                                    <option>	Đà Nẵng	</option>
-                                    <option>	Hải Phòng	</option>
-                                    <option>	Hà Nội	</option>
-                                    <option>	TP HCM	</option>
-
-                                </select>
-                            </div>
-                            <div class="margin_between">
-                                <div class="input_box space_between">
-                                    <label>Số điện thoại <span>*</span></label>
-                                    <input type="text">
-                                </div>
-                                <div class="input_box space_between">
-                                    <label>Email <span>*</span></label>
-                                    <input type="email">
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 <%
@@ -307,7 +141,7 @@
                                             <label>Giao thường:5000₫  </label>
                                         </li>
                                         <li>
-                                            <input name="shipping_method[0]" data-index="0" value="legacy_flat_rate" checked="checked" type="radio">
+                                            <input name="shipping_method[0]" data-index="0" value="legacy_flat_rate" type="radio">
                                             <label>Giao nhanh: 25000₫ </label>
                                         </li>
                                     </ul>
@@ -319,28 +153,7 @@
                             <button type="submit" class="pay">Thanh toán</button>
                         </form>
                     </div>
-                    <div id="accordion" class="checkout_accordion mt--30" role="tablist">
-                        <div class="payment">
-                            <div class="che__header" role="tab" id="headingOne">
-                                <a class="checkout__title" data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                    <span>Thanh toán qua ngân hàng</span>
-                                </a>
-                            </div>
-                            <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion">
-                                <div class="payment-body">Lựa chọn hình thức thanh toán qua ngân hàng</div>
-                            </div>
-                        </div>
-                        <div class="payment">
-                            <div class="che__header" role="tab" id="headingFour">
-                                <a class="collapsed checkout__title" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    <span>PayPal <img src="images/icons/payment.png" alt="payment images"> </span>
-                                </a>
-                            </div>
-                            <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour" data-parent="#accordion">
-                                <div class="payment-body">Thanh toán qua các thẻ tín dụng</div>
-                            </div>
-                        </div>
-                    </div>
+
 
                 </div>
             </div>
@@ -436,11 +249,7 @@
 <!-- //Main wrapper -->
 
 <!-- JS Files -->
-<script src="<c:url value="/template/web/js/vendor/jquery-3.2.1.min.js"/>"></script>
-<script src="<c:url value="/template/web/js/popper.min.js"/>"></script>
-<script src="<c:url value="/template/web/js/bootstrap.min.js"/>"></script>
-<script src="<c:url value="/template/web/js/plugins.js"/>"></script>
-<script src="<c:url value="/template/web/js/active.js"/>"></script>
+<%@include file="/library/web/script.jsp"%>
 
 </body>
 

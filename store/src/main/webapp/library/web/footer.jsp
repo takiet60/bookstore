@@ -8,7 +8,7 @@
                     <div class="footer__widget footer__menu">
                         <div class="ft__logo">
                             <a href="index.html">
-                                <img src="images/logo/3.png" alt="logo">
+                                <img src="<c:url value="/template/web/images/logo/3.png" />" alt="logo">
                             </a>
                             <p>Website mong muốn được phục vụ mọi người với nhiều mục tiêu, mua sản phẩm, đọc những bài viết hay. Mong được phục vụ khách hàng tốt nhất.</p>
                         </div>

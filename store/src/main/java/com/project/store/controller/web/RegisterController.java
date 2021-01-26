@@ -47,18 +47,27 @@ public class RegisterController extends HttpServlet {
         userModel.setPassword(password);
 
 
-        UserModel user = userService.findByUsername(username);
+        UserModel user = userService.findByUserName(username);
         if(user != null){
-            response.sendRedirect("register");
+            response.sendRedirect("register?message=fail&alert=danger");
         }else{
             userService.save(userModel);
-            response.sendRedirect("login");
+            response.sendRedirect("login?message=successs&alert=success");
         }
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        RequestDispatcher rd = request.getRequestDispatcher("/views/web/register.jsp");
-        rd.forward(request, response);
+        String message = request.getParameter("message");
+        if(message != null){
+            request.setAttribute("message", "Tên tài khoản hiện đang tồn tại");
+            request.setAttribute("alert", "danger");
+            RequestDispatcher rd = request.getRequestDispatcher("/views/web/register.jsp");
+            rd.forward(request, response);
+        }else{
+            RequestDispatcher rd = request.getRequestDispatcher("/views/web/register.jsp");
+            rd.forward(request, response);
+        }
+
     }
 }
 

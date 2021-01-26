@@ -29,8 +29,8 @@ public class ForgotPasswordController extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String username1 = request.getParameter("username");
-        request.setAttribute("username", username1);
-        UserModel user = userService.findByUsername(username1);
+        UserModel user = userService.findByUserName(username1);
+        request.getSession().setAttribute("username", username1);
         String randomPassword = RandomStringUtils.randomAlphanumeric(15, 20);
         Properties prop  = new Properties();
         prop.put("mail.smtp.host", "smtp.gmail.com");
@@ -60,8 +60,11 @@ public class ForgotPasswordController extends HttpServlet {
                         InternetAddress.parse(user.getEmail()));
                 message.setSubject("Valid Password");
                 message.setContent("Đây là mã xác nhận của bạn: " + randomPassword  + " .Vui lòng xác nhận sau 5 phút khi nhận được email", "text/html; charset=utf8");
-                long start = System.currentTimeMillis();Transport.send(message);
+                long start = System.currentTimeMillis();
+                request.getSession().setAttribute("start", start);
+                Transport.send(message);
                 userService.updateCode(randomPassword, new Timestamp(start), username1);
+
                 response.sendRedirect(request.getContextPath() + "/getNewPassword");
             }catch (MessagingException e) {
                 e.printStackTrace();

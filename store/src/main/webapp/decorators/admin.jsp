@@ -1,95 +1,108 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="/library/taglib.jsp"%>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <title>Trang chủ</title>
 
-    <title>SB Admin - Dashboard</title>
+    <!-- GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500|Poppins:400,500,600,700|Roboto:400,500"
+          rel="stylesheet" />
+    <link href="https://cdn.materialdesignicons.com/3.0.39/css/materialdesignicons.min.css" rel="stylesheet" />
 
-    <!-- Custom fonts for this template-->
-    <link href="<c:url value="/template/admin/vendor/fontawesome-free/css/all.min.css"/>" rel="stylesheet" type="text/css">
+    <!-- PLUGINS CSS STYLE -->
+    <link href="<c:url value="/template/admin/plugins/toaster/toastr.min.css"/>" rel="stylesheet" />
+    <link href="<c:url value="/template/admin/plugins/nprogress/nprogress.css"/>" rel="stylesheet" />
+    <link href="<c:url value="/template/admin/plugins/flag-icons/css/flag-icon.min.css"/>" rel="stylesheet" />
+    <link href="<c:url value="/template/admin/plugins/jvectormap/jquery-jvectormap-2.0.3.css"/>" rel="stylesheet" />
+    <link href="<c:url value="/template/admin/plugins/ladda/ladda.min.css"/>" rel="stylesheet" />
+    <link href="<c:url value="/template/admin/plugins/select2/css/select2.min.css"/>" rel="stylesheet" />
+    <link href="<c:url value="/template/admin/plugins/daterangepicker/daterangepicker.css"/>" rel="stylesheet" />
 
-    <!-- Page level plugin CSS-->
-    <link href="<c:url value="/template/admin/vendor/datatables/dataTables.bootstrap4.css"/>" rel="stylesheet">
+    <!-- SLEEK CSS -->
+    <link id="sleek-css" rel="stylesheet" href="<c:url value="/template/admin/css/sleek.css"/>" />
 
-    <!-- Custom styles for this template-->
-    <link href="<c:url value="/template/admin/css/sb-admin.css"/>" rel="stylesheet">
 
+
+    <!-- FAVICON -->
+    <link href="<c:url value="/template/admin/img/favicon.png"/>" rel="shortcut icon" />
+
+    <!--
+      HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries
+    -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="<c:url value="/template/admin/plugins/nprogress/nprogress.js"/>"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="<c:url value="/template/paging/jquery.twbsPagination.js"/>" type="text/javascript"></script>
+    <script src="<c:url value="/ckeditor/ckeditor.js"/>" type="text/javascript"></script>
 </head>
 
-<body id="page-top">
 
+<body class="sidebar-fixed sidebar-dark header-light header-fixed" id="body">
+<script>
+    NProgress.configure({ showSpinner: false });
+    NProgress.start();
+</script>
 
+<div class="mobile-sticky-body-overlay"></div>
 
-<div id="wrapper">
+<div class="wrapper">
 
+    <!--
+          ====================================
+          ——— LEFT SIDEBAR WITH FOOTER
+          =====================================
+        -->
 
     <%@include file="/library/admin/menu.jsp"%>
-    <div id="content-wrapper">
 
-        <div class="container-fluid">
+    <div class="page-wrapper">
+        <!-- Header -->
+        <%@include file="/library/admin/header.jsp"%>
 
-            <decorator:body />
 
+        <div class="content-wrapper">
+            <decorator:body></decorator:body>
         </div>
-        <!-- /.container-fluid -->
 
         <%@include file="/library/admin/footer.jsp"%>
 
     </div>
-    <!-- /.content-wrapper -->
-
-</div>
-<!-- /#wrapper -->
-
-<!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-</a>
-
-<!-- Logout Modal-->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="login.html">Logout</a>
-            </div>
-        </div>
-    </div>
 </div>
 
-<!-- Bootstrap core JavaScript-->
-<script src="<c:url value="/template/admin/vendor/jquery/jquery.min.js"/>"></script>
-<script src="<c:url value="/template/admin/vendor/bootstrap/js/bootstrap.bundle.min.js"/>"></script>
 
-<!-- Core plugin JavaScript-->
-<script src="<c:url value="/template/admin/vendor/jquery-easing/jquery.easing.min.js"/>"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDCn8TFXGg17HAUcNpkwtxxyT9Io9B_NcM" defer></script>
+<script src="<c:url value="/template/admin/plugins/jquery/jquery.min.js"/>"></script>
+<script src="<c:url value="/template/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"/>"></script>
+<script src="<c:url value="/template/admin/plugins/toaster/toastr.min.js"/>"></script>
+<script src="<c:url value="/template/admin/plugins/slimscrollbar/jquery.slimscroll.min.js"/>"></script>
+<script src="<c:url value="/template/admin/plugins/charts/Chart.min.js"/>"></script>
+<script src="<c:url value="/template/admin/plugins/ladda/spin.min.js"/>"></script>
+<script src="<c:url value="/template/admin/plugins/ladda/ladda.min.js"/>"></script>
+<script src="<c:url value="/template/admin/plugins/jquery-mask-input/jquery.mask.min.js"/>"></script>
+<script src="<c:url value="/template/admin/plugins/select2/js/select2.min.js"/>"></script>
+<script src="<c:url value="/template/admin/plugins/jvectormap/jquery-jvectormap-2.0.3.min.js"/>"></script>
+<script src="<c:url value="/template/admin/plugins/jvectormap/jquery-jvectormap-world-mill.js"/>"></script>
+<script src="<c:url value="/template/admin/plugins/daterangepicker/moment.min.js"/>"></script>
+<script src="<c:url value="/template/admin/plugins/daterangepicker/daterangepicker.js"/>"></script>
+<script src="<c:url value="/template/admin/plugins/jekyll-search.min.js"/>"></script>
+<script src="<c:url value="/template/admin/js/sleek.js"/>"></script>
+<script src="<c:url value="/template/admin/js/chart.js"/>"></script>
+<script src="<c:url value="/template/admin/js/date-range.js"/>"></script>
+<script src="<c:url value="/template/admin/js/map.js"/>"></script>
+<script src="<c:url value="/template/admin/js/custom.js"/>"></script>
 
-<!-- Page level plugin JavaScript-->
-<script src="<c:url value="/template/admin/vendor/chart.js/Chart.min.js"/>"></script>
-<script src="<c:url value="/template/admin/vendor/datatables/jquery.dataTables.js"/>"></script>
-<script src="<c:url value="/template/admin/vendor/datatables/dataTables.bootstrap4.js"/>"></script>
 
-<!-- Custom scripts for all pages-->
-<script src="<c:url value="/template/admin/js/sb-admin.min.js"/>"></script>
 
-<!-- Demo scripts for this page-->
-<script src="<c:url value="/template/admin/js/demo/datatables-demo.js"/>"></script>
-<script src="<c:url value="/template/admin/js/demo/chart-area-demo.js"/>"></script>
 
 </body>
 

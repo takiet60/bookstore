@@ -2,7 +2,7 @@ package com.project.store.model;
 
 import java.sql.Timestamp;
 
-public class UserModel {
+public class UserModel extends PagingModel<UserModel>{
     private long id;
     private String name;
     private String gender;
@@ -13,14 +13,16 @@ public class UserModel {
     private String password;
     private int categoryId;
     private int permission;
-    private String code;
+    private String forgotCode;
     private long introducedId;
     private Timestamp timeStart;
+    private RoleModel roleModel;
+
 
     public UserModel() {
     }
 
-    public UserModel(long id, String name, String gender, String address, String phone, String email, String username, String password, int categoryId, int permission, String code, long introducedId, Timestamp timeStart) {
+    public UserModel(long id, String name, String gender, String address, String phone, String email, String username, String password, int categoryId, int permission, String code, long introducedId, Timestamp timeStart, RoleModel roleModel) {
         this.id = id;
         this.name = name;
         this.gender = gender;
@@ -31,9 +33,18 @@ public class UserModel {
         this.password = password;
         this.categoryId = categoryId;
         this.permission = permission;
-        this.code = code;
+        this.forgotCode = code;
         this.introducedId = introducedId;
         this.timeStart = timeStart;
+        this.roleModel = roleModel;
+    }
+
+    public RoleModel getRoleModel() {
+        return roleModel;
+    }
+
+    public void setRoleModel(RoleModel roleModel) {
+        this.roleModel = roleModel;
     }
 
     public Timestamp getTimeStart() {
@@ -125,11 +136,11 @@ public class UserModel {
     }
 
     public String getCode() {
-        return code;
+        return forgotCode;
     }
 
     public void setCode(String code) {
-        this.code = code;
+        this.forgotCode = code;
     }
 
     public long getIntroducedId() {

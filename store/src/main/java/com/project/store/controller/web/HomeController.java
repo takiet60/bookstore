@@ -1,8 +1,8 @@
 package com.project.store.controller.web;
 
-import com.project.store.model.CartModel;
-import com.project.store.model.ItemModel;
-import com.project.store.model.ProductModel;
+import com.project.store.model.*;
+import com.project.store.service.IBlogService;
+import com.project.store.service.ICategoryService;
 import com.project.store.service.IProductService;
 import com.project.store.service.impl.ProductService;
 
@@ -25,19 +25,31 @@ public class HomeController extends HttpServlet {
     @Inject
     private IProductService productService;
 
+    @Inject
+    private ICategoryService categoryService;
+
+    @Inject
+    private IBlogService blogService;
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");
         List<ProductModel> list = productService.findAll();
-        List<ProductModel> listByCategory7 = productService.findByCategoryId(7);
+        List<ProductModel> listByCategory1 = productService.findByCategoryId(1);
         List<ProductModel> listByNewest = productService.findByNewest();
-        List<ProductModel> listByCategory8 = productService.findByCategoryId(8);
-        List<ProductModel> listByCategory9 = productService.findByCategoryId(9);
+        List<ProductModel> listByCategory2 = productService.findByCategoryId(2);
+        List<ProductModel> listByCategory3 = productService.findByCategoryId(3);
+        List<ProductModel> listByCategory4 = productService.findByCategoryId(4);
+        List<ProductModel> listByCategory5 = productService.findByCategoryId(5);
+        List<CategoryModel> findAll = categoryService.findAll();
         req.setAttribute("listProduct", list);
-        req.setAttribute("listByCategory7", listByCategory7);
+        req.setAttribute("listByCategory1", listByCategory1);
         req.setAttribute("listByNewest", listByNewest);
-        req.setAttribute("listByCategory8", listByCategory8);
-        req.setAttribute("listByCategory9", listByCategory9);
+        req.setAttribute("listByCategory2", listByCategory2);
+        req.setAttribute("listByCategory3", listByCategory3);
+        req.setAttribute("listByCategory4", listByCategory4);
+        req.setAttribute("listByCategory5", listByCategory5);
+        req.setAttribute("findAll", findAll);
         CartModel cart = CartModel.getCart(req.getSession());
         Collection<ItemModel> data = cart.getCart();
         req.setAttribute("data", data);
@@ -46,6 +58,10 @@ public class HomeController extends HttpServlet {
         req.setAttribute("total", total);
         req.setAttribute("data", data);
         req.setAttribute("totalQuantity", totalQuantity);
+        List<BlogModel> listBlog = blogService.findTop3();
+        req.setAttribute("listBlog", listBlog);
+        List<ProductModel> listBestSeller = productService.findBestSeller();
+        req.setAttribute("listBestSeller", listBestSeller);
         RequestDispatcher rd = req.getRequestDispatcher("/views/web/home.jsp");
         rd.forward(req, resp);
     }

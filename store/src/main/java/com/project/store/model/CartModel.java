@@ -2,9 +2,7 @@ package com.project.store.model;
 
 import javax.servlet.http.HttpSession;
 import java.io.Serializable;
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class CartModel implements Serializable {
     Map<Long, ItemModel> cart = new HashMap<>();
@@ -29,6 +27,14 @@ public class CartModel implements Serializable {
 
     public void remove(long id){
         cart.remove(id);
+    }
+
+    public List<ItemModel> getItem(){
+        List<ItemModel> list = new ArrayList<>();
+        for(Map.Entry<Long, ItemModel> map: cart.entrySet()){
+            list.add(map.getValue());
+        }
+        return list;
     }
 
     public String printItem(){
@@ -62,6 +68,10 @@ public class CartModel implements Serializable {
 
     public void commit(HttpSession session){
         session.setAttribute("cart", this);
+    }
+
+    public void remove(HttpSession session){
+        session.removeAttribute("cart");
     }
 
 }

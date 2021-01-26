@@ -2,7 +2,7 @@ package com.project.store.model;
 
 import java.io.Serializable;
 
-public class ProductModel implements Serializable {
+public class ProductModel extends PagingModel<ProductModel> implements Serializable {
     private long id;
     private String name;
     private int categoryId;
@@ -17,6 +17,9 @@ public class ProductModel implements Serializable {
     private String shortDescription;
     private String description;
     private String production;
+    private DetailOrderModel detailOrderModel;
+
+
 
     public ProductModel(){
 
@@ -151,5 +154,11 @@ public class ProductModel implements Serializable {
         this.production = production;
     }
 
+    public DetailOrderModel getDetailOrderModel() {
+        return detailOrderModel;
+    }
 
+    public void setDetailOrderModel(DetailOrderModel detailOrderModel) {
+        this.detailOrderModel = detailOrderModel;
+    }
 }

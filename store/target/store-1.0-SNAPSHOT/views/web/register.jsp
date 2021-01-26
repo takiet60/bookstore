@@ -7,29 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Trang chủ</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Favicons -->
-    <link rel="shortcut icon" href="<c:url value="/template/web/images/favicon.ico"/>"/>
-    <link rel="apple-touch-icon" href="images/icon.png">
-
-    <!-- Google font (font-family: 'Roboto', sans-serif; Poppins ; Satisfy) -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,600i,700,700i,800" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="<c:url value="/template/web/css/bootstrap.min.css"/>"/>
-    <link rel="stylesheet" href="<c:url value="/template/web/css/plugins.css"/>"/>
-    <link rel="stylesheet" href="<c:url value="/template/web/style.css"/>"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="<c:url value="/template/web/css/create-account.css"/>"/>
-    <!-- Cusom css -->
-    <link rel="stylesheet" href="<c:url value="/template/web/css/custom.css"/>"/>
-
-    <!-- Modernizer js -->
-    <script src="<c:url value="/template/web/js/vendor/modernizr-3.5.0.min.js"/>"></script>
+    <%@include file="/library/web/link.jsp"%>
 </head>
 
 <body>
@@ -50,6 +28,11 @@
                     <div class="customer_details">
                         <h3>Đăng ký tài khoản</h3>
                         <div class="customar__field">
+                            <c:if test="${not empty message}">
+                                <div class="alert alert-${alert}">
+                                        ${message}
+                                </div>
+                            </c:if>
                             <div class="margin_between">
                                 <div class="input_box space_between" >
                                     <label >Họ  <span>*</span></label>
@@ -195,7 +178,7 @@
                                 <div id="password2_error"></div>
                                 <input type="password" name="password2" id="iPass2">
                             </div>
-                            <button type="submit" >Xác nhận</button>
+                            <button type="submit" class="btn-primary btn" >Xác nhận</button>
                         </div><div class="wn__accountbox">
                         <span>Có tài khoản ?</span>
                     </div>
@@ -205,101 +188,9 @@
             </div>
         </form>
     </div>
-    <!-- Best Sale Area Area -->
-    <!-- Footer Area -->
     <%@include file="/library/web/footer.jsp"%>
-    <!-- //Footer Area -->
-    <!-- QUICKVIEW PRODUCT -->
-    <div id="quickview-wrapper">
-        <!-- Modal -->
-        <div class="modal fade" id="productmodal" tabindex="-1" role="dialog">
-            <div class="modal-dialog modal__container" role="document">
-                <div class="modal-content">
-                    <div class="modal-header modal__header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    </div>
-                    <div class="modal-body">
-                        <div class="modal-product">
-                            <!-- Start product images -->
-                            <div class="product-images">
-                                <div class="main-image images">
-                                    <img alt="big images" src="images/product/big-img/1.jpg">
-                                </div>
-                            </div>
-                            <!-- end product images -->
-                            <div class="product-info">
-                                <h1>Simple Fabric Bags</h1>
-                                <div class="rating__and__review">
-                                    <ul class="rating">
-                                        <li><span class="ti-star"></span></li>
-                                        <li><span class="ti-star"></span></li>
-                                        <li><span class="ti-star"></span></li>
-                                        <li><span class="ti-star"></span></li>
-                                        <li><span class="ti-star"></span></li>
-                                    </ul>
-                                    <div class="review">
-                                        <a href="#">4 customer reviews</a>
-                                    </div>
-                                </div>
-                                <div class="price-box-3">
-                                    <div class="s-price-box">
-                                        <span class="new-price">$17.20</span>
-                                        <span class="old-price">$45.00</span>
-                                    </div>
-                                </div>
-                                <div class="quick-desc">
-                                    Designed for simplicity and made from high quality materials. Its sleek geometry and material combinations creates a modern look.
-                                </div>
-                                <div class="select__color">
-                                    <h2>Select color</h2>
-                                    <ul class="color__list">
-                                        <li class="red"><a title="Red" href="#">Red</a></li>
-                                        <li class="gold"><a title="Gold" href="#">Gold</a></li>
-                                        <li class="orange"><a title="Orange" href="#">Orange</a></li>
-                                        <li class="orange"><a title="Orange" href="#">Orange</a></li>
-                                    </ul>
-                                </div>
-                                <div class="select__size">
-                                    <h2>Select size</h2>
-                                    <ul class="color__list">
-                                        <li class="l__size"><a title="L" href="#">L</a></li>
-                                        <li class="m__size"><a title="M" href="#">M</a></li>
-                                        <li class="s__size"><a title="S" href="#">S</a></li>
-                                        <li class="xl__size"><a title="XL" href="#">XL</a></li>
-                                        <li class="xxl__size"><a title="XXL" href="#">XXL</a></li>
-                                    </ul>
-                                </div>
-                                <div class="social-sharing">
-                                    <div class="widget widget_socialsharing_widget">
-                                        <h3 class="widget-title-modal">Share this product</h3>
-                                        <ul class="social__net social__net--2 d-flex justify-content-start">
-                                            <li class="facebook"><a href="#" class="rss social-icon"><i class="zmdi zmdi-rss"></i></a></li>
-                                            <li class="linkedin"><a href="#" class="linkedin social-icon"><i class="zmdi zmdi-linkedin"></i></a></li>
-                                            <li class="pinterest"><a href="#" class="pinterest social-icon"><i class="zmdi zmdi-pinterest"></i></a></li>
-                                            <li class="tumblr"><a href="#" class="tumblr social-icon"><i class="zmdi zmdi-tumblr"></i></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="addtocart-btn">
-                                    <a href="#">Add to cart</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END QUICKVIEW PRODUCT -->
 </div>
-<!-- //Main wrapper -->
-
-<!-- JS Files -->
-<script src="<c:url value="/template/web/js/vendor/jquery-3.2.1.min.js"/>"></script>
-<script src="<c:url value="/template/web/js/popper.min.js"/>"></script>
-<script src="<c:url value="/template/web/js/bootstrap.min.js"/>"></script>
-<script src="<c:url value="/template/web/js/plugins.js"/>"></script>
-<script src="<c:url value="/template/web/js/active.js"/>"></script>
+<%@include file="/library/web/script.jsp"%>
 <script type="text/javascript">
 
     let fname = document.forms['vform']['fname'];
@@ -332,113 +223,6 @@
     commune.addEventListener('blur', addressVerify, true);
     phone.addEventListener('blur', phoneVerify, true);
     email.addEventListener('blur', emailVerify, true);
-
-
-    // $(document).ready(function () {
-    //
-    //     function validatePhone(txtPhone){
-    //         var filter = /^[0-9-+]+$/;
-    //         if (filter.test(txtPhone + "") && txtPhone.length() >= 10 && txtPhone.length() <= 12) {
-    //             return true;
-    //         } else {
-    //             return false;
-    //         }
-    //     }
-    //
-    //     function validateEmail(sEmail) {
-    //         var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
-    //         if (filter.test((sEmail)) ){
-    //             return true;
-    //         } else {
-    //             return false;
-    //         }
-    //     }
-    //
-    //     $('#wrapper').bind( {
-    //         'submit':function () {
-    //             if (!validateEmail($('#iEmail').val())) {
-    //                 $('#email_error').html('Email bạn nhập không phù hợp!!!');
-    //                 return false;
-    //             }
-    //
-    //             if (!validatePhone($('#iPhone').val())) {
-    //                 $('#phone_error').html('Số điện thoại bạn nhập không phù hợp!!!');
-    //                 return false;
-    //             }
-    //
-    //             if ($('#iPass').val() == '') {
-    //                 $('#password_error').html('Bạn không được bỏ trống trường này!!!');
-    //                 return false;
-    //             }
-    //
-    //             if ($('#iPass2').val() == '') {
-    //                 $('#password2_error').html('Bạn không được bỏ trống trường này!!!');
-    //                 return false;
-    //             }
-    //
-    //             if ($('#iFName').val() == '') {
-    //                 $('#f_name_error').html('Bạn không được bỏ trống trường này!!!');
-    //                 return false;
-    //             }
-    //
-    //             if ($('#iLName').val() == '') {
-    //                 $('#l_name_error').html('Bạn không được bỏ trống trường này!!!');
-    //                 return false;
-    //             }
-    //
-    //             if ($('#iHouse').val() == '') {
-    //                 $('#address_error').html('Bạn không được bỏ trống trường này!!!');
-    //                 return false;
-    //             }
-    //
-    //             if ($('#iWard').val() == '') {
-    //                 $('#ward_error').html('Bạn không được bỏ trống trường này!!!');
-    //                 return false;
-    //             }
-    //
-    //             if ($('#iCommune').val() == '') {
-    //                 $('#commune_error').html('Bạn không được bỏ trống trường này!!!');
-    //                 return false;
-    //             }
-    //
-    //             if ($('#iUser').val() == '') {
-    //                 $('#username_error').html('Bạn không được bỏ trống trường này!!!');
-    //                 return false;
-    //             } return true;
-    //         },
-    //         'keydown': function() {
-    //             if ($('#FfName').val().length > 0) {
-    //                 $('#f_name_error').html('');
-    //             }
-    //             if ($('#iLName').val().length > 0) {
-    //                 $('#l_name_error').html('');
-    //             }
-    //             if ($('#iHouse').val().length > 0) {
-    //                 $('#address_error').html('');
-    //             }
-    //             if ($('#iWard').val().length > 0) {
-    //                 $('#ward_error').html('');
-    //             }
-    //             if ($('#iCommune').val().length > 0) {
-    //                 $('#commune_error').html('');
-    //             }
-    //             if ($('#iPhone').val().length > 0) {
-    //                 $('#phone_error').html('');
-    //             }
-    //             if ($('#iEmail').val().length > 0) {
-    //                 $('#email_error').html('');
-    //             }
-    //             if ($('#iUser').val().length > 0) {
-    //                 $('#username_error').html('');
-    //             }
-    //             if ($('#iPass').val().length > 0) {
-    //                 $('#password_error').html('');
-    //             }
-    //         }
-    //     });
-    // });
-
-
 
     function validate(){
         if(fname.value == ""){

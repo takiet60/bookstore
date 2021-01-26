@@ -7,26 +7,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Trang chủ</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Favicons -->
-    <link rel="shortcut icon" href="<c:url value="/template/web/images/favicon.ico"/>"/>
-    <link rel="apple-touch-icon" href="images/icon.png">
-
-    <!-- Google font (font-family: 'Roboto', sans-serif; Poppins ; Satisfy) -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,500,600,600i,700,700i,800" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
-
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="<c:url value="/template/web/css/bootstrap.min.css"/>"/>
-    <link rel="stylesheet" href="<c:url value="/template/web/css/plugins.css"/>"/>
-    <link rel="stylesheet" href="<c:url value="/template/web/style.css"/>"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="<c:url value="/template/web/css/create-account.css"/>"/>
-    <!-- Cusom css -->
-    <link rel="stylesheet" href="<c:url value="/template/web/css/custom.css"/>"/>
+    <%@include file="/library/web/link.jsp"%>
 
     <!-- Modernizer js -->
     <script src="<c:url value="/template/web/js/vendor/modernizr-3.5.0.min.js"/>"></script>
@@ -41,23 +22,6 @@
 <div class="wrapper" id="wrapper">
     <!-- Header -->
     <%@include file="/library/web/header.jsp"%>
-    <!-- //Header -->
-    <!-- Start Search Popup -->
-    <div class="brown--color box-search-content search_active block-bg close__top">
-        <form id="search_mini_form" class="minisearch" action="search" method="get">
-            <div class="field__search">
-                <input type="text" placeholder="Nhập sản phẩm muốn tìm kiếm" name="search">
-                <div class="action">
-                    <button type="submit"><i class="fas fa-search"></i></button>
-                </div>
-            </div>
-        </form>
-        <div class="close__wrap">
-            <span>Đóng</span>
-        </div>
-    </div>
-    <!-- End Search Popup -->
-    <!-- Start Slider area -->
 
     <div class="ht__bradcaump__area bg-image--6">
         <div class="container">
@@ -68,7 +32,7 @@
                         <nav class="bradcaump-content">
                             <a class="breadcrumb_item" href="index.html">Trang chủ</a>
                             <span class="brd-separetor">/</span>
-                            <span class="breadcrumb_item active">Đăng nhập</span>
+                            <span class="breadcrumb_item active">Xác nhận mật khẩu</span>
                         </nav>
                     </div>
                 </div>
@@ -82,13 +46,13 @@
             <div class="row">
                 <div class="col-lg-8 col-12">
                     <div class="my__account__wrapper">
-                        <h3 class="account__title">Đăng nhập</h3>
+                        <h3 class="account__title">Xác nhận mật khẩu</h3>
                         <form action="getNewPassword" method="post" name="lform" onsubmit="return validate()">
                             <div class="account__form">
                                 <div class="input__box">
                                     <label>Mật khẩu xác nhận<span>*</span></label>
                                     <div id="username_error"></div>
-                                    <input type="text" name="username">
+                                    <input type="text" name="code">
                                 </div>
                                 <div class="input__box">
                                     <label>Mật khẩu<span>*</span></label>
@@ -98,7 +62,7 @@
                                 <div class="input__box">
                                     <label>Mật khẩu mới<span>*</span></label>
                                     <div id="password_error1"></div>
-                                    <input type="password1" name="password1">
+                                    <input type="password" name="password1">
                                 </div>
                                 <div class="form__btn">
                                     <button type="submit">Xác nhận</button>
@@ -207,11 +171,7 @@
 
 
 <!-- JS Files -->
-<script src="<c:url value="/template/web/js/vendor/jquery-3.2.1.min.js"/>"></script>
-<script src="<c:url value="/template/web/js/popper.min.js"/>"></script>
-<script src="<c:url value="/template/web/js/bootstrap.min.js"/>"></script>
-<script src="<c:url value="/template/web/js/plugins.js"/>"></script>
-<script src="<c:url value="/template/web/js/active.js"/>"></script>
+<%@include file="/library/web/script.jsp"%>
 <script type="text/javascript">
     let username = document.forms['lform']['username'];
     let password = document.forms['lform']['password'];

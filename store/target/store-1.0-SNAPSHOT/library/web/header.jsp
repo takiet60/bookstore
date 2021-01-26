@@ -4,13 +4,14 @@
 <%@ page import="com.project.store.model.ItemModel" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@include file="/library/taglib.jsp"%>
+
 <header id="wn__header" class="header__area header__absolute sticky__header">
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-6 col-sm-6 col-6 col-lg-2">
                 <div class="logo">
                     <a href="<c:url value="/home"/>">
-                        <img src="images/logo/logo.png" alt="logo images">
+                        <img src="<c:url value="/template/web/images/logo/logo.png" />" alt="logo images">
                     </a>
                 </div>
             </div>
@@ -18,94 +19,33 @@
                 <nav class="mainmenu__nav">
                     <ul class="meninmenu d-flex justify-content-start">
                         <li class="drop with--one--item"><a href="<c:url value="/home"/>">Trang chủ</a>
+                        </li>
+                        <li class="drop with--one--item"><a href="<c:url value="/blog?type=list&page=1&maxPageItem=10&sortName=title&sortBy=desc"/>">Blog</a>
+                        </li>
+                        <li class="drop with--one--item"><a href="<c:url value="/cart"/>">Giỏ hàng</a>
+                        </li>
+                        <li class="drop with--one--item"><a href="<c:url value="/wishlist"/>">Yêu thích</a>
+                        </li>
+                        <c:if test="${not empty USERMODEL}">
+                            <li class="drop with--one--item"><a href="<c:url value="/logout"/>">Đăng xuất</a>
+                            </li>
+                        </c:if>
+                        <c:if test="${empty USERMODEL}">
+                            <li class="drop with--one--item"><a href="<c:url value="/login"/>">Đăng nhập</a>
+                            </li>
+                            <li class="drop with--one--item"><a href="<c:url value="/register"/>">Đăng ký</a>
+                            </li>
+                        </c:if>
 
-                        </li>
-                        <li class="drop"><a href="#">Shop</a>
-                            <div class="megamenu mega03">
-                                <!--  -->
-                                <ul class="item item03">
-                                    <li class="title">Trang bán hàng</li>
-                                    <li><a href="cart.html">Giỏ hàng</a></li>
-                                    <li><a href="wishlist.html">Danh sách yêu thích</a></li>
-                                    <li><a href="faq.html">Câu hỏi nhanh</a></li>
-                                </ul>
-                                <ul class="item item03">
-                                    <li class="title">Thể loại đang hot</li>
-                                    <li><a href="shop-grid.html">Bestsellers</a></li>
-                                    <li><a href="shop-grid.html">Hoạt động của trẻ em</a></li>
-                                    <li><a href="shop-grid.html">B&N Classics</a></li>
-                                    <li><a href="shop-grid.html">Sách dưới 50000Vnd</a></li>
-                                    <li><a href="shop-grid.html">Sách kinh điển</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="drop"><a href="shop-grid.html">Sách</a>
-                            <div class="megamenu mega03">
-                                <ul class="item item03">
-                                    <li class="title">Thể loại</li>
-                                    <li><a href="shop-grid.html">Kỹ năng sống</a></li>
-                                    <li><a href="shop-grid.html">Kinh doanh </a></li>
-                                    <li><a href="shop-grid.html">Khoa học </a></li>
-                                    <li><a href="shop-grid.html">Học ngoại ngữ</a></li>
-                                    <li><a href="shop-grid.html">Tác phẩm kinh điển </a></li>
-                                </ul>
-                                <ul class="item item03">
-                                    <li class="title">Khách hàng ưa thích</li>
-                                    <li><a href="shop-grid.html">Bí ẩn</a></li>
-                                    <li><a href="shop-grid.html">Tôn giáo và tín ngưỡng</a></li>
-                                    <li><a href="shop-grid.html">Lãng mạn</a></li>
-                                    <li><a href="shop-grid.html">Phiêu lưu</a></li>
-                                    <li><a href="shop-grid.html">Kinh dị</a></li>
-                                </ul>
-                                <ul class="item item03">
-                                    <li class="title">Bộ sưu tập</li>
-                                    <li><a href="shop-grid.html">Khoa học </a></li>
-                                    <li><a href="shop-grid.html">Tác phẩm kinh điển</a></li>
-                                    <li><a href="shop-grid.html">Kỹ năng sống</a></li>
-                                    <li><a href="shop-grid.html">Tình yêu</a></li>
-                                    <li><a href="shop-grid.html">Hài hước</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="drop"><a href="shop-grid.html">Trẻ em</a>
-                            <div class="megamenu mega02">
-                                <ul class="item item02">
-                                    <li class="title">Bộ sưu tập hot</li>
-                                    <li><a href="shop-grid.html">American Girl</a></li>
-                                    <li><a href="shop-grid.html">Diary Wimpy Kid</a></li>
-                                    <li><a href="shop-grid.html">Finding Dory</a></li>
-                                    <li><a href="shop-grid.html">Harry Potter</a></li>
-                                    <li><a href="shop-grid.html">Land of Stories</a></li>
-                                </ul>
-                                <ul class="item item02">
-                                    <li class="title">Nhiều hơn cho trẻ em</li>
-                                    <li><a href="shop-grid.html">B&N Educators</a></li>
-                                    <li><a href="shop-grid.html">B&N Kids' Club</a></li>
-                                    <li><a href="shop-grid.html">Kids' Music</a></li>
-                                    <li><a href="shop-grid.html">Toys & Games</a></li>
-                                    <li><a href="shop-grid.html">Hoodies</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="drop"><a href="#">Trang</a>
-                            <div class="megamenu dropdown">
-                                <ul class="item item01">
-                                    <li><a href="my-account.html">Đăng nhập</a></li>
-                                    <li><a href="create-account.html">Tạo tài khoản</a></li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="drop"><a href="blog.html">Blog</a>
-                        </li>
-                        <li><a href="contact.html">Liên hệ</a></li>
+                        <li><a href="<c:url value="/contact"/>">Liên hệ</a></li>
                     </ul>
                 </nav>
             </div>
             <div class="col-md-6 col-sm-6 col-6 col-lg-2">
                 <ul class="header__sidebar__right d-flex justify-content-end align-items-center">
                     <li class="shop_search"><a class="search__active" href="#"></a></li>
-                    <li class="wishlist"><a href="wishlist.html"></a></li>
-                    <li class="shopcart"><a class="cartbox_active" href="#"><span class="product_qun">3</span></a>
+                    <li class="wishlist"><a href="<c:url value="wishlist"></c:url> "></a></li>
+                    <li class="shopcart"><a class="cartbox_active" href="#"><span class="product_qun">${totalQuantity}</span></a>
                         <!-- Start Shopping Cart -->
 
                         <div class="block-minicart minicart__active">
@@ -159,40 +99,9 @@
                             <div class="content-inner">
                                 <div class="switcher-currency">
                                     <strong class="label switcher-label">
-                                        <span>Tiền tệ</span>
-                                    </strong>
-                                    <div class="switcher-options">
-                                        <div class="switcher-currency-trigger">
-                                            <span class="currency-trigger">USD - US Dollar</span>
-                                            <ul class="switcher-dropdown">
-                                                <li>VND - VietNam Dong</li>
-                                                <li>EUR - Euro</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="switcher-currency">
-                                    <strong class="label switcher-label">
-                                        <span>Ngôn ngữ</span>
-                                    </strong>
-                                    <div class="switcher-options">
-                                        <div class="switcher-currency-trigger">
-                                            <span class="currency-trigger">English01</span>
-                                            <ul class="switcher-dropdown">
-                                                <li>English02</li>
-                                                <li>English03</li>
-                                                <li>English04</li>
-                                                <li>English05</li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="switcher-currency">
-                                    <strong class="label switcher-label">
                                         <span>
                                             <%
-                                                UserModel user =(UserModel) session.getAttribute("user");
+                                                UserModel user =(UserModel) session.getAttribute("USERMODEL");
                                                 if(user != null){
                                                     out.print("Xin chào " + user.getName());
                                                 }else{
@@ -205,24 +114,31 @@
                                         <div class="switcher-currency-trigger">
                                             <div class="setting__menu">
                                                 <span><a href="<c:url value="/cart"/>">Giỏ hàng</a></span>
-                                                <span><a href="wishlist.html">Yêu thích</a></span>
-                                                <span><a href="<c:url value="/login"/> ">
-                                                    <%
-                                                        if(user == null){
-                                                            out.print("Đăng nhập");
-                                                        }
-                                                    %>
+                                                <span><a href="<c:url value="/wishlist"/>">Yêu thích</a></span>
+                                                <c:if test="${empty USERMODEL}">
+                                                    <span><a href="<c:url value="/login"/> ">
+                                                    Đăng nhập
                                                    </a>
                                                 </span>
-                                                <span><a href="<c:url value="/register"/> ">Tạo tài khoản</a></span>
-                                                <span><a href="<c:url value="/logout"/> ">
-                                                    <%
-                                                        if(user != null){
-                                                            out.print("Đăng xuất");
-                                                        }
-                                                    %>
+                                                    <span><a href="<c:url value="/register"/> ">
+                                                    Đăng ký
+                                                </a></span>
+                                                </c:if>
+                                                <c:if test="${not empty USERMODEL}">
+                                                    <span><a href="<c:url value="/info"/> ">
+                                                    Thông tin khách hàng
                                                     </a>
                                                 </span>
+                                                    <span><a href="<c:url value="/change-password"/> ">
+                                                    Thay đổi mật khẩu
+                                                    </a>
+                                                </span>
+                                                    <span><a href="<c:url value="/logout"/> ">
+                                                    Đăng xuất
+                                                    </a>
+                                                </span>
+                                                </c:if>
+
                                             </div>
                                         </div>
                                     </div>
@@ -293,3 +209,20 @@
         <!-- Mobile Menu -->
     </div>
 </header>
+<div class="brown--color box-search-content search_active block-bg close__top">
+    <form id="search_mini_form" class="minisearch" action="<c:url value="/search"/>" method="get">
+        <div class="field__search">
+            <input type="text" placeholder="Nhập sản phẩm muốn tìm kiếm" name="search">
+            <input type="hidden" value="1" id="page" name="page"/>
+            <input type="hidden" value="15" id="maxPageItem" name="maxPageItem"/>
+            <input type="hidden" value="name" id="sortName" name="sortName"/>
+            <input type="hidden" value="desc" id="sortBy" name="sortBy"/>
+            <div class="action">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </form>
+    <div class="close__wrap">
+        <span>Đóng</span>
+    </div>
+</div>

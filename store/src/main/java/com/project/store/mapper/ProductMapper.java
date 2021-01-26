@@ -1,5 +1,6 @@
 package com.project.store.mapper;
 
+import com.project.store.model.DetailOrderModel;
 import com.project.store.model.ProductModel;
 
 import java.sql.ResultSet;
@@ -18,6 +19,15 @@ public class ProductMapper implements RowMapper<ProductModel> {
             productModel.setValue(rs.getInt("value"));
             productModel.setProduction(rs.getString("production"));
             productModel.setImage1(rs.getString("image1"));
+            try{
+                DetailOrderModel detailOrderModel = new DetailOrderModel();
+                detailOrderModel.setProductId(rs.getLong("productId"));
+                detailOrderModel.setOrderId(rs.getLong("orderId"));
+                detailOrderModel.setQuantity(rs.getInt("quantity"));
+                detailOrderModel.setDiscountCode(rs.getString("discountCode"));
+            }catch (Exception e){
+
+            }
 //            productModel.setImage2(rs.getString("image2"));
 //            productModel.setImage3(rs.getString("image3"));
 //            productModel.setImage4(rs.getString("image4"));
