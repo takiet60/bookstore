@@ -37,6 +37,21 @@ public class SearchController extends HttpServlet {
 
     }
 
-    
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String search = request.getParameter("search");
+        ProductModel model = FormUtil.toModel(ProductModel.class, request);
+        Pageble pageble = new PageRequest(model.getPage(), model.getMaxPageItem(),
+                new Sorter(model.getSortName(), model.getSortBy()));
+        model.setListResult(productService.search(search, pageble));
+        model.setTotalItem(productService.getTotalItem());
+        model.setTotalPage((int) Math.ceil((double) model.getTotalItem() / model.getMaxPageItem()));
+        request.setAttribute(SystemConstant.MODEL, model);
+        request.setAttribute("search", search);
+        List<CategoryModel> categoryModelList = categoryService.findAll();
+        request.setAttribute("categoryList", categoryModelList);
+        RequestDispatcher rd = request.getRequestDispatcher("/views/web/search.jsp");
+        rd.forward(request, response);
+    }
+
 }
 

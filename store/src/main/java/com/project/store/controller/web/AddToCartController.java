@@ -35,7 +35,18 @@ public class AddToCartController extends HttpServlet {
             response.sendRedirect(request.getContextPath() + "/home");
             return;
 
+        } else{
+            HttpSession session = request.getSession();
+            CartModel cart = CartModel.getCart(session);
+            ItemModel itemModel = new ItemModel();
+            itemModel.setProductModel(productModel);
+            cart.put(itemModel);
+            cart.commit(session);
+            long total = cart.total();
+            request.setAttribute("total", total);
+            response.sendRedirect(request.getContextPath() + "/home");
         }
+
 
 
     }
